@@ -1,0 +1,24 @@
+<article class="bcls-article">
+  <h1>{{ page.title }}</h1>
+  <summary>{{ page.description }}</summary>
+  <section class="bcls-section">
+    {% if site.product_short == "Video Cloud" %}
+    <div class="training-video-player-ipx" data-experience="5a73630f7afd7a00101bc1b5" data-video-ids="6052172921001">&nbsp;</div>
+    <script src="https://players.brightcove.net/20318290001/experience_5a73630f7afd7a00101bc1b5/live.js"></script>
+   {% endif %}
+    <h3>Steps</h3>
+    <ol class="bcls-tasklist-restart">
+      <li>In the primary navigation, open the <strong>Media</strong> module.</li>
+      <li>Click on a video title to open the video properties page.</li>
+      <li>Locate the <strong>Images</strong> section.</li>
+      <li>Hover over the poster image and click the browse icon (<img alt="" src="/assets/images/s-media-img/browse-icon.png" />).</li>
+      <li>Browse and select a new poster image.</li>
+      <li>Hover over the thumbnail image and click the browse icon.</li>
+      <li>Browse and select a new thumbnail image.</li>
+{% if site.product_short == "Beacon" or site.product_short == "CorpTV" %}
+      <li>For the <strong>Wide</strong>, <strong>Portrait</strong> and <strong>Ultrawide</strong> images, click the <strong>Upload new image</strong> link and browse and select an image.</li>
+   {% endif %}
+    </ol>
+    <p>Note that it may take a minute for the processing to complete and for the images to appear in the Media module.</p>
+  </section>
+</article>
