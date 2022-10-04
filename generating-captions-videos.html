@@ -1,170 +1,135 @@
 <article class="bcls-article">
-  <h1>{{ page.title }}</h1>
-  <summary>{{ page.description }}</summary>
-  <section class="bcls-section">
-    {% if site.product_short == "Video Cloud" %}
-    <div class="training-video-player-ipx" data-experience="5a73630f7afd7a00101bc1b5" data-video-ids="1710999192206152489">&nbsp;</div>
-    <script src="https://players.brightcove.net/20318290001/experience_5a73630f7afd7a00101bc1b5/live.js"></script>
-   {% endif %}
-    <p>{{ site.product }} provides the ability to  generate video captions for newly uploaded or existing videos. After the caption files are generated, they are automatically configured as part of the video's text tracks properties. Brightcove recommends <a href="#review">reviewing the generated captions</a> for accuracy. Processing time to generate the captions will vary but  it generally takes about 1.5x the length of the video to generate  captions for a video. </p>
-    <p>In order to generate captions, the following are required:</p>
+  <h1>{{page.title}}</h1> <summary>{{page.description}}</summary> <section class="bcls-section"> {% if site.product_short == Video Cloud-fr/ %}
+    <div class="training-video-player-ipx" data-experience="5a73630f7afd7a00101bc1b5" data-video-ids="1710999192206152489">&nbsp;</div> <script src="https://players.brightcove.net/20318290001/experience_5a73630f7afd7a00101bc1b5/live.js"></script> {% endif %}
+    <p>{{site.product}} permet de générer des sous-titres vidéo pour les vidéos récemment mises en ligne ou existantes. Une fois les fichiers de sous-titres générés, ils sont automatiquement configurés dans le cadre des propriétés des pistes de texte de la vidéo. Brightcove<a href="#review"> recommande de vérifier l'exactitude</a> des sous-titres générés. Le temps de traitement pour générer les sous-titres varie, mais il faut généralement environ 1,5 fois la longueur de la vidéo pour générer les sous-titres d'une vidéo. </p>
+    <p>Pour générer des légendes, les éléments suivants sont requis:</p>
     <ul>
-      <li>The videos must have been transcoded using a Context Aware or Dynamic Delivery ingest profile</li>
-      <li> The minimum length of a video to generate auto captions is:
+      <li>Les vidéos doivent avoir été transcodées à l'aide d'un profil d'acquisition Context Aware ou Dynamic Delivery</li>
+      <li> La longueur minimale d'une vidéo pour générer des sous-titres automatiques est la suivante:
         <ul>
-          <li>5 seconds, if the language is specified</li>
-          <li>15 seconds, if the language is auto-detected</li>
+          <li>5 secondes, si la langue est spécifiée</li>
+          <li>15 secondes, si la langue est détectée automatiquement</li>
         </ul>
       </li>
-      <li>The maximum length of a video that can be auto-captioned is 4 hours</li>
+      <li>La durée maximale d'une vidéo pouvant être sous-titrée automatiquement est de 4 heures</li>
     </ul>
-    <p>{{ site.product_short }} uses the follow process to determine the source that will be used to generate the captions.</p>
+    <p>{{site.product_short}} utilise le processus de suivi pour déterminer la source qui sera utilisée pour générer les légendes.</p>
     <ul>
-      <li>If the video has default audio track, that will be used as the captions source file (supported by default in the Media module)</li>
-      <li>If the video has no default audio track but a master/mezzanine file exists, that will be used as the  source file (supported by default in the Media module)</li>
-      <li>If the video has no default audio track or master/mezzanine files, but audio tracks are specified in the Dynamic Ingest call, the specified audio track will be used  (not yet supported in the Media module)</li>
-      <li>If the video has no default audio track, no master/mezzanine files, and no audio track is specified, captions cannot be generated</li>
+      <li>Si la vidéo possède une piste audio par défaut, elle sera utilisée comme fichier source des sous-titres (prise en charge par défaut dans le module Médias)</li>
+      <li>Si la vidéo n'a pas de piste audio par défaut mais qu'il existe un fichier master/mezzanine, celui-ci sera utilisé comme fichier source (pris en charge par défaut dans le module Media)</li>
+      <li>Si la vidéo n'a pas de piste audio par défaut ou de fichiers maître/mezzanine, mais que des pistes audio sont spécifiées dans l'appel Dynamic Ingest, la piste audio spécifiée sera utilisée (pas encore prise en charge dans le module Media)</li>
+      <li>Si la vidéo ne possède aucune piste audio par défaut, aucun fichier maître/mezzanine et qu'aucune piste audio n'est spécifiée, les sous-titres ne peuvent pas être générés</li>
     </ul>
-{% if site.product_short == "Campaign" %}
-    <p>If you are using a third-party to generate caption files, see <a href="adding-text-tracks-to-a-video.html">Adding Text Tracks to a Video</a> for information on how to associate caption files with videos.</p>
+{% if site.product_short == Campagne-fr/ %}
+    <p>Si vous faites appel à un tiers pour générer des fichiers de sous-titres, consultez<a href="adding-text-tracks-to-a-video.html"> Ajout de pistes de texte à une vidéo</a> pour plus d'informations sur la façon d'associer des fichiers de sous-titres à des vidéos.</p>
 {% else %}
-    <p>If you are using a third-party to generate caption files, see <a href="adding-captions-videos-using-media-module.html">Adding Captions to Videos using the Media Module</a> for information on how to associate caption files with videos.</p>
- {% endif %}
-    <aside class="bcls-aside bcls-aside--information">Note: Please contact your Brightcove Account Manager to have this feature enabled.</aside>
-  </section>
-{% if site.product_short != "Campaign" %}
-  <section class="bcls-section">
-    <h2 id="upload">Generating captions when uploading videos</h2>
-    <p>The Upload module provides an option to generate caption files when videos are uploaded. To generate a caption file during upload, follow these steps.</p>
+    <p>Si vous faites appel à un tiers pour générer des fichiers de sous-titres, consultez<a href="adding-captions-videos-using-media-module.html"> Ajout de sous-titres aux vidéos à l'aide du module Médias</a> pour plus d'informations sur la façon d'associer des fichiers de sous-titres à des vidéos.</p>
+ {% endif %}<aside class="bcls-aside bcls-aside--information"> Remarque: Veuillez contacter votre responsable de compte Brightcove pour activer cette fonctionnalité. </aside> </section>{% if site.product_short != Campagne-fr/ %} <section class="bcls-section">
+    <h2 id="upload">Générer des légendes lors du chargement de vidéos</h2>
+    <p>Le module Upload fournit une option permettant de générer des fichiers de sous-titres lorsque des vidéos sont téléchargées. Pour générer un fichier de sous-titres lors du chargement, procédez comme suit.</p>
     <ol class="bcls-tasklist-restart">
-      <li>Open the <strong>Upload</strong> module.</li>
-      <li>Enable the <strong>Auto captioning</strong> option, the <strong>Automatic captioning settings </strong>dialog will open.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/gen-captions-settings.png" /></figure>
+      <li>Ouvrez le<strong> module</strong> Upload.</li>
+      <li>Activez l'<strong></strong>option Sous-titrage<strong> automatique, la boîte de</strong> dialogue Paramètres de sous-titrage automatique s'ouvre. <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/gen-captions-settings.png" /></figure>
       </li>
-      <li>Select the <strong>Language</strong> to generate the captions in or select <strong>auto-detect</strong> to generate captions in the language spoken in the video. If a <strong>Language </strong>is not selected, the video language is auto-detected. Selecting a language will improve the caption file generation time and may improve overall accuracy.</li>
-      <li>Enter a <strong>Label</strong>. The label is typically set to the language used in the video. The label will be displayed in the CC dropdown in the video player and will be used by viewers to select the captions to be displayed.</li>
-      <li>Click <span class="button-blue">Done</span>.</li>
-    </ol>
-  </section>
- {% endif %}
-  <section class="bcls-section">
-    <h2 id="existing">Generating captions for an existing video</h2>
-    <p>The {% if site.product_short == "Campaign" %}
-       <strong>Videos</strong> page 
-{% else %} <strong>Media</strong> module
- {% endif %} provides the option to generate  caption files for existing videos in your account.  To generate a caption file for an existing video, follow these steps.</p>
+      <li>Sélectionnez la<strong> langue dans laquelle</strong> générer les sous-titres ou sélectionnez<strong> Détection automatique</strong> pour générer des sous-titres dans la langue parlée dans la vidéo. Si aucune<strong> langue n'</strong>est sélectionnée, la langue de la vidéo est détectée automatiquement. La sélection d'une langue améliore le temps de génération du fichier de sous-titres et peut améliorer la précision globale.</li>
+      <li>Saisissez une<strong> étiquette</strong>. L'étiquette est généralement définie sur la langue utilisée dans la vidéo. L'étiquette sera affichée dans la liste déroulante CC du lecteur vidéo et sera utilisée par les spectateurs pour sélectionner les légendes à afficher.</li>
+      <li>Cliquez sur<span class="button-blue"> Terminé</span>.</li>
+    </ol> </section> {% endif %} <section class="bcls-section">
+    <h2 id="existing">Générer des sous-titres pour une vidéo existante</h2>
+    <p>Le module multimédia {% if site.product_short == Campaign-fr/ %}<strong> Videos</strong> page {% else %}<strong> Media</strong> module {% endif %} fournit la possibilité de générer des fichiers de sous-titres pour les vidéos existantes dans votre compte. Pour générer un fichier de sous-titres pour une vidéo existante, procédez comme suit.</p>
     <ol class="bcls-tasklist-restart">
-{% if site.product_short == "Campaign" %}
-      <li>Open the <strong>Videos</strong> page.</li>
+{% if site.product_short == Campagne-fr/ %}
+      <li>Ouvrez la<strong> page</strong> Vidéos.</li>
 {% else %}
-      <li>Open the <strong>Media</strong> module.</li>
+      <li>Ouvrez le<strong> module</strong> Médias.</li>
  {% endif %}
-      <li>Click the link for the video you want to edit to open the video properties.</li>
-{% if site.product_short == "Beacon" or site.product_short == "CorpTV" %}
-      <li>Click the <strong>Video and Tracks</strong> tab.</li>
+      <li>Cliquez sur le lien de la vidéo que vous souhaitez modifier pour ouvrir les propriétés de la vidéo.</li>
+{% if site.product_short == Beacon-fr/ ou site.product_short == CorpTV-fr/ %}
+      <li>Cliquez sur l'<strong>onglet</strong> Vidéo et pistes.</li>
 {% endif %}
-      <li>Locate the <strong>Text Tracks</strong> section and click <span class="button-blue-text-bordered">Edit</span></li>
-      <li>Select the <strong>Auto caption</strong> option.</li>
-      <li>Select the <strong>Language</strong> to generate the captions in. If a <strong>Language</strong> is not selected, the video language is auto-detected. Selecting a language will improve the caption file generation time and may improve overall accuracy.</li>
-      <li>Enter a <strong>Label</strong>. The label is typically set to the language used in the video. The label will be displayed in the CC dropdown in the video player and will be used by viewers to select the captions to be displayed.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/gen-captions-auto-caption.png" /></figure>
+      <li>Localisez la<strong> section Pistes de</strong> texte et cliquez sur<span class="button-blue-text-bordered"> Modifier</span></li>
+      <li>Sélectionnez l'<strong>option Légende</strong> automatique.</li>
+      <li>Sélectionnez la<strong> langue</strong> dans laquelle générer les légendes. Si aucune<strong> langue n'</strong>est sélectionnée, la langue de la vidéo est détectée automatiquement. La sélection d'une langue améliore le temps de génération du fichier de sous-titres et peut améliorer la précision globale.</li>
+      <li>Saisissez une<strong> étiquette</strong>. L'étiquette est généralement définie sur la langue utilisée dans la vidéo. L'étiquette sera affichée dans la liste déroulante CC du lecteur vidéo et sera utilisée par les spectateurs pour sélectionner les légendes à afficher. <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/gen-captions-auto-caption.png" /></figure>
       </li>
-      <li>Click <span class="button-blue">Add Text Track</span>
-      <li>Click <span class="button-blue">Save</span>.</li>
+      <li>Cliquez sur<span class="button-blue"> Ajouter une piste de texte</span>
+      <li>Cliquez sur<span class="button-blue"> Enregistrer</span>.</li>
     </ol>
-    <p>The caption generation process will begin. When complete, a message will be displayed.</p>
-    <p>
-      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/gen-captions-complete.png" /></figure>
+    <p>Le processus de génération de sous-titres va commencer. Une fois terminé, un message s'affiche.</p>
+    <p> <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/gen-captions-complete.png" /></figure>
     </p>
-    <p>After the captions are generated, Brightcove recommends <a href="#review">reviewing the captions</a>.</p>
-  </section>
-{% if site.product_short != "Campaign" %}
-  <section class="bcls-section">
-    <h2 id="multiple">Generating captions for multiple videos</h2>
-    <p>The Media module also provides the option to generate  caption files for multiple videos at once.  A maximum of 100 videos can be captioned at once. To generate a caption files for multiple videos, follow these steps.</p>
+    <p>Une fois les sous-titres générés, Brightcove recommande de les<a href="#review"> revoir</a>.</p> </section> {% if site.product_short != Campagne-fr/ %} <section class="bcls-section">
+    <h2 id="multiple">Générer des légendes pour plusieurs vidéos</h2>
+    <p>Le module Médias offre également la possibilité de générer des fichiers de sous-titres pour plusieurs vidéos à la fois. Un maximum de 100 vidéos peuvent être sous-titrées à la fois. Pour générer des fichiers de sous-titres pour plusieurs vidéos, procédez comme suit.</p>
     <ol class="bcls-tasklist-restart">
-      <li>Open the <strong>Media</strong> module.</li>
-      <li>Select the check box next to the videos  you want to generate captions for.</li>
-      <li>Click <strong>More</strong> &gt; <strong>Auto caption</strong>.</li>
-    </ol>
-  </section>
- {% endif %}
-  <section class="bcls-section">
-    <h2 id="review">Reviewing caption files</h2>
-    <p>After the caption files are generated, they are automatically configured as part of the video's text tracks properties. Captions  will have a status of <strong>Published</strong> and appear immediately during video playback. Brightcove recommends reviewing the generated captions.</p>
+      <li>Ouvrez le<strong> module</strong> Médias.</li>
+      <li>Cochez la case en regard des vidéos pour lesquelles vous souhaitez générer des sous-titres.</li>
+      <li>Cliquez sur<strong> Plus</strong> &gt;<strong> Sous-titre automatique</strong>.</li>
+    </ol> </section> {% endif %} <section class="bcls-section">
+    <h2 id="review">Vérification des fichiers de sous-titres</h2>
+    <p>Une fois les fichiers de sous-titres générés, ils sont automatiquement configurés dans le cadre des propriétés des pistes de texte de la vidéo. Les sous-titres auront le statut<strong> Publié</strong> et apparaîtront immédiatement pendant la lecteur de la vidéo. Brightcove recommande de passer en revue les légendes générées.</p>
     <ol class="bcls-tasklist-restart">
-{% if site.product_short == "Campaign" %}
-      <li>Open the <strong>Videos</strong> page.</li>
+{% if site.product_short == Campagne-fr/ %}
+      <li>Ouvrez la<strong> page</strong> Vidéos.</li>
 {% else %}
-      <li>Open the <strong>Media</strong> module.</li>
+      <li>Ouvrez le<strong> module</strong> Médias.</li>
  {% endif %}
-      <li>Click on the video to open the video properties.</li>
-      <li>At the top of the page, click the <strong>CC</strong> button to open the caption editor.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/capedit-cc-icon.png" /></figure>
+      <li>Cliquez sur la vidéo pour ouvrir les propriétés de la vidéo.</li>
+      <li>En haut de la page, cliquez sur le<strong> bouton</strong> CC pour ouvrir l'éditeur de légende. <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/capedit-cc-icon.png" /></figure>
       </li>
-      <li>Edit the caption text as needed. Tab out of the field to save the changes.</li>
-      <li>Clicking <strong>Save draft</strong> will set the caption status to <strong>Draft</strong> and the captions will not be displayed. Clicking <span class="button-blue">Publish text track</span> will set the caption status to <strong>Published</strong> and the captions will  be displayed.  </li>
-    </ol>
-  </section>
-  <section class="bcls-section">
-    <h2 id="download">Downloading caption files</h2>
-    <p>Chances are the caption generation process will not be perfect and you may need to edit  names used in the video and/or  punctuation. The Media module provides the ability to download  caption files. To download a caption file, follow these steps.</p>
+      <li>Modifiez le texte de la légende selon vos besoins. Appuyez sur la touche Tabulation en dehors du champ pour enregistrer les modifications.</li>
+      <li>Cliquez sur<strong> Enregistrer le brouillon</strong> pour définir le statut de la légende sur<strong> Brouillon</strong> et les légendes ne seront pas affichées. Cliquez sur<span class="button-blue"> Publier la piste</span> de texte pour définir le statut de la légende sur<strong> Publié</strong> et les légendes seront affichées.  </li>
+    </ol>  </section><section class="bcls-section">
+    <h2 id="download">Téléchargement de fichiers de sous-titres</h2>
+    <p>Il y a de fortes chances que le processus de génération des sous-titres ne soit pas parfait et que vous deviez modifier les noms utilisés dans la vidéo et/ou la ponctuation. Le module Media permet de télécharger des fichiers de sous-titres. Pour télécharger un fichier de sous-titres, procédez comme suit.</p>
     <ol class="bcls-tasklist-restart">
-      {% if site.product_short == "Campaign" %}
-      <li>Open the <strong>Videos</strong> page.</li>
+      {% if site.product_short == Campagne-fr/ %}
+      <li>Ouvrez la<strong> page</strong> Vidéos.</li>
       {% else %}
-      <li>Open the <strong>Media</strong> module.</li>
+      <li>Ouvrez le<strong> module</strong> Médias.</li>
       {% endif %}
-      <li>Click the link for the video you want to edit.</li>
-      <li>Locate the <strong>Text Tracks</strong> section and click <span class="button-blue-text-bordered">Edit</span> .
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/gen-captions-edit-text-track.png" /></figure>
+      <li>Cliquez sur le lien correspondant à la vidéo que vous souhaitez modifier.</li>
+      <li>Localisez la<strong> section Pistes de</strong> texte et cliquez sur<span class="button-blue-text-bordered"> Modifier</span>. <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/gen-captions-edit-text-track.png" /></figure>
         </li>
-      <li>Click the download icon (<img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/icon-download.png" />) in the <strong>Actions</strong> column to download the caption file.</li>
+      <li>Cliquez sur l'icône de téléchargement (<img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/icon-download.png" />) dans la<strong> colonne</strong> Actions pour télécharger le fichier de sous-titres.</li>
       </ol>
-    <p>The caption file is a formatted WEBVTT file and can be edited using any text editor. Once the changes are made, delete the existing caption file by clicking on the delete icon (<img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/icon-red-delete.png" />) in the <strong>Actions</strong> column. The edited caption file can then be uploaded. For information on how to upload a new text tracks file, see  {% if site.product_short == "Campaign" %}
-      <a href="adding-text-tracks-to-a-video#texttrack">Adding Text Tracks to a Video</a> 
-      {% else %} <a href="adding-captions-videos-using-media-module.html#texttrack">Configuring the text track properties</a>
-      {% endif %}.</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="supported_languages">Supported languages</h2>
-    <p>Currently, auto captions are limited to the following languages.</p>
+    <p>Le fichier de légende est un fichier WEBVTT formaté et peut être édité à l'aide de n'importe quel éditeur de texte. Une fois les modifications apportées, supprimez le fichier de sous-titres existant en cliquant sur l'icône de suppression (<img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/icon-red-delete.png" />) dans la<strong> colonne</strong> Actions. Le fichier de sous-titres modifié peut ensuite être téléchargé. Pour plus d'informations sur la façon de charger un nouveau fichier de pistes de texte, voir {% if site.product_short == Campaign-fr/ %}<a href="adding-text-tracks-to-a-video#texttrack"> Ajouter des pistes de texte à une vidéo</a> {% else %}<a href="adding-captions-videos-using-media-module.html#texttrack"> Configuration des propriétés de la piste de texte</a> {% endif %}.</p>  </section><section class="bcls-section">
+    <h2 id="supported_languages">Langues prises en charge</h2>
+    <p>Actuellement, les sous-titres automatiques sont limités aux langues suivantes.</p>
     <table>
       <tr>
         <td width="311"><ul>
-          <li>Arabic (Gulf)</li>
-          <li>Arabic (Modern Standard)</li>
-          <li>Chinese (Mandarin)</li>
-          <li>Dutch</li>
-          <li>English (Australian)</li>
-          <li>English (British)</li>
-          <li>English (Indian)</li>
-          <li>English (Irish)</li>
-          <li>English (US)</li>
+          <li>Arabe (Golfe)</li>
+          <li>Arabe (standard moderne)</li>
+          <li>Chinois (mandarin)</li>
+          <li>néerlandais</li>
+          <li>Anglais (australien)</li>
+          <li>Anglais (britannique)</li>
+          <li>Anglais (indien)</li>
+          <li>Anglais (irlandais)</li>
+          <li>Anglais (États-Unis)</li>
           <li>Farsi</li>
-          <li>French</li>
-          <li>French (Canadian)</li>
-          <li>German</li>
-          <li>German (Swiss)</li>
-          <li>Hebrew</li>
+          <li>français</li>
+          <li>Français (canadien)</li>
+          <li>allemand</li>
+          <li>Allemand (Suisse)</li>
+          <li>Hébreu</li>
         </ul></td>
         <td width="255"><ul>
-          <li>Hindi (Indian)</li>
-          <li>Indonesian</li>
-          <li>Italian</li>
-          <li>Japanese</li>
-          <li>Korean</li>
-          <li>Malay</li>
-          <li>Portuguese</li>
-          <li>Portuguese (Brazilian)</li>
-          <li>Russian</li>
-          <li>Spanish</li>
-          <li>Spanish (US)</li>
-          <li>Tamil</li>
-          <li>Telugu</li>
-          <li>Turkish</li>
+          <li>Hindi (indien)</li>
+          <li>indonésien</li>
+          <li>italien</li>
+          <li>japonais</li>
+          <li>coréen</li>
+          <li>malais</li>
+          <li>portugais</li>
+          <li>portugais (brésilien)</li>
+          <li>russe</li>
+          <li>espagnol</li>
+          <li>espagnol (États-Unis)</li>
+          <li>Tamoul</li>
+          <li>télougou</li>
+          <li>turc</li>
         </ul></td>
       </tr>
-    </table>
-  </section>
-</article>
+    </table>   </section></article>

@@ -1,66 +1,46 @@
-<h1>{{ page.title }}</h1>
-<article class="bcls-article">
-  <summary>{{ page.description }}</summary>
-  <section class="bcls-section">
-    <h2 id="intro">Introduction</h2>
-    <p>Closed captions can be added to videos to provide additional or interpretive information to individuals who wish to access it. Captions are necessary so the deaf and hard of hearing can access the audio portion of video presentations.</p>
-    <figure class="bcls-figure"><img class="bcls-image" alt="Example of Captions" src="/assets/images/s-media-img/overview-captions-sample.png" />
-      <figcaption class="bcls-caption--image">Example of Captions</figcaption>
-    </figure>
-    <p>Such text may be used for accessibility, to provide translations of the audio track or some other purpose, but the underlying technology used is the same.</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="filelocation">Captions file location</h2>
-    <p>You can choose where to host the WebVTT captions file:</p>
+<h1>{{page.title}}</h1> <article class="bcls-article"> <summary>{{page.description}}</summary> <section class="bcls-section">
+    <h2 id="intro">Présentation</h2>
+    <p>Des sous-titres codés peuvent être ajoutés aux vidéos pour fournir des informations supplémentaires ou interprétatives aux personnes qui souhaitent y accéder. Les sous-titres sont nécessaires pour que les personnes sourdes et malentendantes puissent accéder à la partie audio des présentations vidéo.</p> <figure class="bcls-figure"><img class="bcls-image" alt="Exemple de légendes" src="/assets/images/s-media-img/overview-captions-sample.png" /> <figcaption class="bcls-caption--image">Exemple de légendes</figcaption> </figure>
+    <p>Ce texte peut être utilisé à des fins d'accessibilité, pour fournir des traductions de la piste audio ou à d'autres fins, mais la technologie sous-jacente utilisée est la même.</p>  </section><section class="bcls-section">
+    <h2 id="filelocation">Emplacement du fichier de sous-titres</h2>
+    <p>Vous pouvez choisir où héberger le fichier de sous-titres WebVTT:</p>
     <ol>
-      <li><strong>At a Remote URL (remote asset)</strong> - In this case, the WebVTT file is hosted on your server and you add the URL for the file to the video metadata.
-        <aside class="bcls-aside bcls-aside--information">Note: If you are hosting captions files on your own server, make sure the file is located at a URL that can be accessed by the Brightcove player. The server hosting the captions file should also have Cross-Origin Resource Sharing (CORS) enabled. You can read more about CORS <a href="https://general.support.brightcove.com/developer/concepts-cors.html">here</a>.</aside>
+      <li><strong>À une URL distante (ressource distante)</strong>: dans ce cas, le fichier WebVTT est hébergé sur votre serveur et vous ajoutez l'URL du fichier aux métadonnées de la vidéo. <aside class="bcls-aside bcls-aside--information">Remarque: Si vous hébergez des fichiers de sous-titres sur votre propre serveur, assurez-vous que le fichier se trouve sur une URL accessible par le lecteur Brightcove. Le serveur hébergeant le fichier de sous-titres doit également avoir activé le partage de ressources inter-origines (CORS). Pour en savoir plus sur CORS,<a href="https://general.support.brightcove.com/developer/concepts-cors.html"> cliquez ici</a>.</aside>
       </li>
-      <li><strong>Uploaded using {{ site.product_short }}</strong> (<strong>ingested</strong>) - In this case, the WebVTT file is uploaded (ingested) to {{ site.product_short }}. This can be done using the Media module or using the APIs.</li>
-    </ol>
-    <aside class="bcls-aside bcls-aside--information">
-      <p>Note: If the video source file you ingest into {{ site.product_short }} has embedded 608/708 captions, they will be ignored during the processing of the video, and <strong>not</strong> present in the video renditions. To have captions with your videos, you have a few options:</p>
+      <li><strong>Téléchargé en utilisant {{site.product_short}}</strong> (<strong>ingested</strong>) - Dans ce cas, le fichier WebVTT est chargé (ingéré) sur {{site.product_short}}. Cela peut être fait à l'aide du module Media ou des API.</li>
+    </ol> <aside class="bcls-aside bcls-aside--information">
+      <p>Remarque: Si le fichier source vidéo que vous intégrez dans {{site.product_short}} contient des légendes 608/708 intégrées, elles seront ignorées pendant le traitement de la vidéo et<strong> ne seront pas</strong> présentes dans les rendus vidéo. Pour ajouter des sous-titres à vos vidéos, plusieurs options s'offrent à vous:</p>
       <ul>
-        <li><a href="/media/generating-captions-videos.html">Let {{ site.product_short }} generate caption files</a></li>
-        <li><a href="/media/adding-captions-videos-using-media-module.html">Manually add captions</a></li>
-        <li><a href="https://apis.support.brightcove.com/dynamic-ingest/ingest-guides/ingesting-webvtt-files-text-trackscaptions.html">Use the Dynamic Ingest API</a></li>
-        <li><a href="https://apis.support.brightcove.com/cms/managing-videos/using-cms-api-add-webvtt-captions-text-tracks.html">Use the CMS API (for remotely hosted captions)</a></li>
-      </ul>
-    </aside>
-  </section>
-  <section class="bcls-section">
-    <h2 id="associate">Associating captions with a video</h2>
-    <p>There are several ways to associate a captions file with a video:</p>
+        <li><a href="/media/generating-captions-videos.html">Laissons {{site.product_short}} générer des fichiers de sous-titres</a></li>
+        <li><a href="/media/adding-captions-videos-using-media-module.html">Ajout manuel de légendes</a></li>
+        <li><a href="https://apis.support.brightcove.com/dynamic-ingest/ingest-guides/ingesting-webvtt-files-text-trackscaptions.html">Utiliser l'API Dynamic Ingest</a></li>
+        <li><a href="https://apis.support.brightcove.com/cms/managing-videos/using-cms-api-add-webvtt-captions-text-tracks.html">Utiliser l'API CMS (pour les sous-titres hébergés à distance)</a></li>
+      </ul>   </aside></section><section class="bcls-section">
+    <h2 id="associate">Associer des sous-titres à une vidéo</h2>
+    <p>Il existe plusieurs manières d'associer un fichier de sous-titres à une vidéo:</p>
     <ol>
-      <li>Using Studio</li>
-      <li>Modifying the player publishing code</li>
-      <li>Using the APIs</li>
+      <li>Utilisation de Studio</li>
+      <li>Modifier le code de publication du lecteur</li>
+      <li>Utilisation des API</li>
     </ol>
-    <h3 id="cap_gen">Automatically generating captions for videos</h3>
-    <p>{{ site.product }} can  generate captions for videos. For information, see <a href="/media/generating-captions-videos.html">Generating Captions for Videos</a>.</p>
-    <h3 id="studio">Adding captions in Studio</h3>
-    <p>Captions can be associated with a video using the Media module. For information, see <a href="/media/adding-captions-videos-using-media-module.html">Adding Captions to Videos using the Media Module</a>.</p>
-    <h3 id="pubcode">Modifying the player publishing code</h3>
-    <p>In this case, a <code translate="No">&lt;track&gt;</code> tag is added to the player publishing code. For more information, see <a href="https://player.support.brightcove.com/general/adding-captions-videos-programmatically.html">Adding Captions to Videos Programmatically</a>.</p>
-    <h3 id="api">Adding captions via the APIs</h3>
-    <p>How you add captions via the APIs varies depending on whether the captions file will be ingested or used as a remote asset.</p>
+    <h3 id="cap_gen">Génération automatique de sous-titres pour les vidéos</h3>
+    <p>{{site.product}} peut générer des sous-titres pour les vidéos. Pour plus d'informations, consultez la section<a href="/media/generating-captions-videos.html"> Génération de sous-titres pour les vidéos</a>.</p>
+    <h3 id="studio">Ajout de légendes dans Studio</h3>
+    <p>Les sous-titres peuvent être associés à une vidéo à l'aide du module Médias. Pour plus d'informations, consultez la section<a href="/media/adding-captions-videos-using-media-module.html"> Ajout de sous-titres aux vidéos à l'aide du module Médias</a>.</p>
+    <h3 id="pubcode">Modifier le code de publication du lecteur</h3>
+    <p>Dans ce cas, une<code translate="No"> balise </code>&lt;track&gt; est ajoutée au code de publication du lecteur. Pour plus d'informations, consultez la section<a href="https://player.support.brightcove.com/general/adding-captions-videos-programmatically.html"> Ajout de sous-titres aux vidéos par programmation</a>.</p>
+    <h3 id="api">Ajout de légendes via les API</h3>
+    <p>La façon dont vous ajoutez des sous-titres via les API varie selon que le fichier de sous-titres sera ingéré ou utilisé en tant que ressource distante.</p>
     <ul>
       <li>
-        <p><strong>Remote asset captions</strong> - If you prefer to host the captions yourself (or have a captions provider who hosts them), then you can associate the captions with a video using the CMS API. For information, see <a href="https://apis.support.brightcove.com/cms/managing-videos/using-cms-api-add-webvtt-captions-text-tracks.html">Using the CMS API: Add WebVTT Captions</a>.</p>
+        <p><strong>Légendes des ressources distantes</strong> - Si vous préférez héberger les sous-titres vous-même (ou si un fournisseur de sous-titres les héberge), vous pouvez associer les sous-titres à une vidéo à l'aide de l'API CMS. Pour plus d'informations, consultez la section<a href="https://apis.support.brightcove.com/cms/managing-videos/using-cms-api-add-webvtt-captions-text-tracks.html"> Utilisation de l'API CMS: Ajoutez des légendes WebVTT</a>.</p>
       </li>
       <li>
-        <p><strong>Add captions to {{ site.product }}</strong> - If you want to have Brightcove host your captions, you can ingest your WebVTT file using the Dynamic Ingest API. For information, see <a href="https://apis.support.brightcove.com/dynamic-ingest/ingest-guides/ingesting-webvtt-files-text-trackscaptions.html">Ingesting WebVTT Files</a>.</p>
+        <p><strong>Ajouter des légendes à {{site.product}}</strong> - Si vous souhaitez que Brightcove héberge vos sous-titres, vous pouvez intégrer votre fichier WebVTT à l'aide de l'API Dynamic Ingest. Pour plus d'informations, consultez<a href="https://apis.support.brightcove.com/dynamic-ingest/ingest-guides/ingesting-webvtt-files-text-trackscaptions.html"> la section Ingestion de fichiers WebVTT</a>.</p>
       </li>
-    </ul>
-    <aside class="bcls-aside bcls-aside--information">Note: Regardless of the method used to add caption files to a video, no more than 1000 text tracks may be added.</aside>
-  </section>
-  <section class="bcls-section">
-    <h2 id="remove">Removing captions</h2>
-    <p>Captions can be removed from videos using the Media module or via the CMS API. In Studio, open the  <strong>Media</strong>  module and edit the video properties. Edit the <strong>Text Tracks</strong> property as needed.</p>
-    <p>Captions can also be removed using the <span translate="No">CMS API</span> by making an <a href="https://apis.support.brightcove.com/cms/references/reference.html#api-videoGroup-Update_Video">Update Video</a> request and submitting a request body with an empty <code translate="No">text_tracks</code> array (or an array from which the object associated with that set of captions has been removed).</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="styling">Styling captions</h2>
-    <p>Styling can be applied to WebVTT captions using CSS. See <a href="/media/styling-captions.html">Styling Captions</a> for details.</p>
-  </section>
-</article>
+    </ul> <aside class="bcls-aside bcls-aside--information">Remarque: Quelle que soit la méthode utilisée pour ajouter des fichiers de sous-titres à une vidéo, vous ne pouvez pas ajouter plus de 1 000 pistes de texte.</aside> </section> <section class="bcls-section">
+    <h2 id="remove">Suppression des légendes</h2>
+    <p>Les sous-titres peuvent être supprimés des vidéos à l'aide du module Médias ou via l'API CMS. Dans Studio, ouvrez le<strong> module</strong> Media et modifiez les propriétés de la vidéo. Modifiez la<strong> propriété</strong> Text Tracks si nécessaire.</p>
+    <p>Les sous-titres peuvent également être supprimés à l'aide de l'API<span translate="No"> CMS</span> en effectuant une<a href="https://apis.support.brightcove.com/cms/references/reference.html#api-videoGroup-Update_Video"> demande de</a> mise à jour de la vidéo et en soumettant un corps de demande avec un<code translate="No"> tableau</code> text_tracks vide (ou un tableau dont l'objet associé à cet ensemble de légendes a été supprimé).</p>  </section><section class="bcls-section">
+    <h2 id="styling">Légendes de style</h2>
+    <p>Le style peut être appliqué aux légendes WebVTT à l'aide de CSS. Voir Légendes de<a href="/media/styling-captions.html"> style</a> pour plus de détails.</p>   </section></article>

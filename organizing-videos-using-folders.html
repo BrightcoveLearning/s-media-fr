@@ -1,116 +1,83 @@
 <article class="bcls-article">
-  <h1>{{ page.title }}</h1>
-  <summary>{{ page.description }}</summary>
-  <section class="bcls-section"> {% if site.product_short == "Video Cloud" %}
-    <div class="training-video-player-ipx" data-experience="5a73630f7afd7a00101bc1b5" data-video-ids="4172570294001">&nbsp;</div>
-    <script src="https://players.brightcove.net/20318290001/experience_5a73630f7afd7a00101bc1b5/live.js"></script> 
-    {% endif %}
-    <p>Folders can be created inside of the <strong>Media</strong> module and can be used to organize videos. You may choose to organize videos by subject, author, product, region, etc. Having videos in folders makes them easier to manage in an account with hundreds or thousands of videos. Folders are displayed in the side navigation panel. The number of videos in each folder is displayed next to the folder name. Click the side navigation button <img alt="" src="/assets/images/s-media-img/node15095-side-nav-button.png" /> to hide or show the side navigation panel.</p>
-    {% if site.product_short == "Video Cloud" %}
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/node15095-folder-list-vc.png" /></figure>
-    {% endif %}
-    {% if site.product_short == "Beacon" %}
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/folders-list-beacon.png" /></figure>
-    {% endif %}
-    <aside class="bcls-aside bcls-aside--information">Notes:
+  <h1>{{page.title}}</h1> <summary>{{page.description}}</summary> <section class="bcls-section"> {% if site.product_short == Video Cloud-fr/ %}
+    <div class="training-video-player-ipx" data-experience="5a73630f7afd7a00101bc1b5" data-video-ids="4172570294001">&nbsp;</div> <script src="https://players.brightcove.net/20318290001/experience_5a73630f7afd7a00101bc1b5/live.js"></script> {% endif %}
+    <p>Les dossiers peuvent être créés dans le<strong> module</strong> Médias et peuvent être utilisés pour organiser des vidéos. Vous pouvez choisir d'organiser les vidéos par sujet, auteur, produit, région, etc. Le fait d'avoir des vidéos dans des dossiers facilite leur gestion dans un compte contenant des centaines ou des milliers de vidéos. Les dossiers sont affichés dans le panneau de navigation latéral. Le nombre de vidéos de chaque dossier s'affiche en regard du nom du dossier. Cliquez sur le bouton de navigation latéral<img alt="" src="/assets/images/s-media-img/node15095-side-nav-button.png" /> pour masquer ou afficher le panneau de navigation latéral.</p>
+    {% if site.product_short == Video Cloud-fr/ %}<figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/node15095-folder-list-vc.png" /></figure> {% endif %} {% if site.product_short == Beacon-fr/ %}<figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/folders-list-beacon.png" /></figure> {% endif %}<aside class="bcls-aside bcls-aside--information"> Remarques:
       <ul>
-        <li>Nested folders are not supported.</li>
-        <li>A maximum of 100 videos can be moved to a folder at the same time.</li>
-        <li>Each account can have a maximum of 1000 folders.</li>
-      </ul>
-    </aside>
-  </section>
-  <section class="bcls-section">
-    <h2 id="create">Creating folders</h2>
-    <p>To create a new folder, follow these steps:</p>
+        <li>Les dossiers imbriqués ne sont pas pris en charge.</li>
+        <li>Un maximum de 100 vidéos peuvent être déplacées dans un dossier en même temps.</li>
+        <li>Chaque compte peut contenir un maximum de 1 000 dossiers.</li>
+      </ul>   </aside></section><section class="bcls-section">
+    <h2 id="create">Création de dossiers</h2>
+    <p>Pour créer un nouveau dossier, procédez comme suit:</p>
     <ol class="bcls-tasklist-restart">
-      <li>Open the <i data-feather="video"></i> <strong>Media</strong> module.</li>
-      <li>Click <strong>Create folder</strong> in the side navigation panel.</li>
-      <li>Enter a name for the folder using the following guidelines. Press enter.
+      <li>Ouvrez le<strong> module</strong> Médias.</li>
+      <li>Cliquez sur<strong> Créer un dossier</strong> dans le panneau de navigation latéral.</li>
+      <li>Entrez un nom pour le dossier en suivant les instructions suivantes. Appuyez sur Entrée.
         <ul>
-          <li>Name is limited to 100 characters</li>
-          <li>Folder names must be unique within an account</li>
-          <li>Illegal character: /</li>
-        </ul>
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/node15095-new-folder.png" /></figure>
+          <li>Le nom est limité à 100 caractères</li>
+          <li>Les noms de dossiers doivent être uniques au sein d'un compte</li>
+          <li>Caractère illégal:/</li>
+        </ul> <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/node15095-new-folder.png" /></figure>
       </li>
-    </ol>
-    <aside class="bcls-aside bcls-aside--information">Note: A maximum of 1000 folders can be created.</aside>
-    <p>To quickly delete the folder, click the <strong>X</strong> after the folder name.</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="add">Adding videos to folders</h2>
-    <p>There are a couple of ways to add videos to a folder. You can:</p>
+    </ol> <aside class="bcls-aside bcls-aside--information">Remarque: Il est possible de créer un maximum de 1 000 dossiers.</aside>
+    <p>Pour supprimer rapidement le dossier, cliquez sur le<strong> X</strong> après le nom du dossier.</p>  </section><section class="bcls-section">
+    <h2 id="add">Ajout de vidéos aux dossiers</h2>
+    <p>Il existe plusieurs manières d'ajouter des vidéos à un dossier. Vous pouvez:</p>
     <ul>
-      <li><a href="#multipleadd">Add multiple videos to a folder</a></li>
-      <li><a href="#propertiesadd">Edit the video properties to assign a folder</a></li>
-    </ul>
-    <aside class="bcls-aside bcls-aside--information">Note: There is no limit to the number of videos that can be in a folder.</aside>
+      <li><a href="#multipleadd">Ajouter plusieurs vidéos à un dossier</a></li>
+      <li><a href="#propertiesadd">Modifier les propriétés de la vidéo pour attribuer un dossier</a></li>
+    </ul> <aside class="bcls-aside bcls-aside--information">Remarque: Il n'y a pas de limite au nombre de vidéos pouvant se trouver dans un dossier.</aside>
     <div class="BCL-subsection" id="multipleadd">
-      <h3>Adding multiple videos to a folder</h3>
-      <p>Multiple videos at a time can be added to a folder by following these steps.</p>
+      <h3>Ajout de plusieurs vidéos à un dossier</h3>
+      <p>Vous pouvez ajouter plusieurs vidéos à la fois à un dossier en suivant ces étapes.</p>
       <ol class="bcls-tasklist-restart">
-        <li>Open the <i data-feather="video"></i> <strong>Media</strong> module. </li>
-        <li> Click <strong>All videos</strong> in the side navigation panel to display all the videos.
-          <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/node15095-select-videos.png" /></figure>
-          <aside class="bcls-aside bcls-aside--information">Note: The number after the folder name indicates how many videos are in that folder.</aside>
+        <li>Ouvrez le<strong> module</strong> Médias. </li>
+        <li> Cliquez sur<strong> Toutes les vidéos</strong> dans le panneau de navigation latéral pour afficher toutes les vidéos. <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/node15095-select-videos.png" /></figure> <aside class="bcls-aside bcls-aside--information">Remarque: Le chiffre qui suit le nom du dossier indique le nombre de vidéos qu'il contient.</aside>
         </li>
-        <li>Select the videos to add to a folder by clicking the checkbox next to the video thumbnail. Click <strong>More &gt; Move to Folder</strong>.</li>
-        <li>Select a folder and click <span class="button-blue"> Move</span>
-          <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/node15095-move-to-folder.png" /></figure>
+        <li>Sélectionnez les vidéos à ajouter à un dossier en cochant la case en regard de la miniature de la vidéo. Cliquez sur<strong> Plus &gt; Déplacer vers le dossier</strong>.</li>
+        <li>Sélectionnez un dossier et cliquez sur<span class="button-blue"> Déplacer</span> <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/node15095-move-to-folder.png" /></figure>
         </li>
       </ol>
     </div>
     <div class="BCL-subsection" id="propertiesadd">
-      <h3>Editing the video properties to assign a folder</h3>
-      <p>Videos can be added to a folder by editing the video properties and assigning a folder.</p>
+      <h3>Modification des propriétés de la vidéo pour attribuer un dossier</h3>
+      <p>Les vidéos peuvent être ajoutées à un dossier en modifiant les propriétés de la vidéo et en attribuant un dossier.</p>
       <ol class="bcls-tasklist-restart">
-        <li>Open the <i data-feather="video"></i> <strong>Media</strong> module.</li>
-        <li>Click the link for the video.</li>
-        <li>In the <strong>Categorization</strong> section, select a <strong>Folder</strong>. You can also create a new folder by clicking on <strong>+ Create folder</strong>.
-          <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/node15095-video-info-folder.png" /></figure>
+        <li>Ouvrez le<strong> module</strong> Médias.</li>
+        <li>Cliquez sur le lien de la vidéo.</li>
+        <li>Dans la<strong> section</strong> Catégorisation, sélectionnez un<strong> dossier</strong>. Vous pouvez également créer un nouveau dossier en cliquant sur<strong> + Créer un dossier</strong>. <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/node15095-video-info-folder.png" /></figure>
         </li>
       </ol>
-    </div>
-  </section>
-  <section class="bcls-section">
-    <h2 id="view">Viewing videos in a folder</h2>
-    <p>To view the videos in a folder, click on a folder name.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/node15095-videos-in-folder.png" /></figure>
-  </section>
-  <section class="bcls-section">
-    <h2 id="remove">Removing videos from folders</h2>
-    <p>You can <a href="#removedel">remove multiple videos from a folder</a> or remove a single video from a folder by <a href="#propertiesdel">editing the video properties</a>.</p>
+    </div>  </section><section class="bcls-section">
+    <h2 id="view">Visionnage de vidéos dans un dossier</h2>
+    <p>Pour afficher les vidéos d'un dossier, cliquez sur le nom d'un dossier.</p>   <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/node15095-videos-in-folder.png" /></figure></section><section class="bcls-section">
+    <h2 id="remove">Suppression de vidéos de dossiers</h2>
+    <p>Vous pouvez<a href="#removedel"> supprimer plusieurs vidéos d'un dossier</a> ou supprimer une seule vidéo d'un dossier en<a href="#propertiesdel"> modifiant les propriétés de la vidéo</a>.</p>
     <div class="BCL-subsection" id="removedel">
-      <h3>Removing multiple videos from a folder</h3>
-      <p>Multiple videos can be removed from a folder by following these steps.</p>
+      <h3>Suppression de plusieurs vidéos d'un dossier</h3>
+      <p>Vous pouvez supprimer plusieurs vidéos d'un dossier en suivant ces étapes.</p>
       <ol class="bcls-tasklist-restart">
-        <li>Open the <i data-feather="video"></i> <strong>Media</strong></li>
-        <li>Click the link for the folder.</li>
-        <li>Check the checkboxes next to the videos to remove and click <strong>Remove Videos &gt; Remove Videos from Folder</strong>.</li>
+        <li>Ouvrez les<strong> médias</strong></li>
+        <li>Cliquez sur le lien du dossier.</li>
+        <li>Cochez les cases en regard des vidéos à supprimer et cliquez sur<strong> Supprimer les vidéos &gt; Supprimer les vidéos du dossier</strong>.</li>
       </ol>
     </div>
     <div class="BCL-subsection" id="propertiesdel">
-      <h3>Editing the video properties</h3>
-      <p>Videos can be removed from a folder by editing the video properties and removing the folder in the Video Information panel.</p>
+      <h3>Modification des propriétés de la vidéo</h3>
+      <p>Les vidéos peuvent être supprimées d'un dossier en modifiant les propriétés de la vidéo et en supprimant le dossier dans le panneau Informations sur la vidéo.</p>
       <ol class="bcls-tasklist-restart">
-        <li>Open the <i data-feather="video"></i> <strong>Media</strong></li>
-        <li>Click the link for the folder.</li>
-        <li>In the<strong> Categorization </strong>section, <strong>s</strong>et the <strong>Folder</strong> to <strong>---</strong>.
-          <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/node15095-clear-folder.png" /></figure>
+        <li>Ouvrez les<strong> médias</strong></li>
+        <li>Cliquez sur le lien du dossier.</li>
+        <li>Dans la<strong> section</strong> Catégorisation, <strong></strong>définissez le<strong> dossier</strong> sur<strong> ---</strong>. <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/node15095-clear-folder.png" /></figure>
         </li>
       </ol>
-      <p>Note that this method can also be used to select another folder to move the video to.</p>
-    </div>
-  </section>
-  <section class="bcls-section">
-    <h2 id="delete">Deleting and renaming folders</h2>
-    <p>Folders can be renamed or deleted by following these steps:</p>
+      <p>Notez que cette méthode peut également être utilisée pour sélectionner un autre dossier dans lequel déplacer la vidéo.</p>
+    </div>  </section><section class="bcls-section">
+    <h2 id="delete">Suppression et changement de nom de dossiers</h2>
+    <p>Les dossiers peuvent être renommés ou supprimés en procédant comme suit:</p>
     <ol class="bcls-tasklist-restart">
-      <li>Click the folder to be renamed or deleted. </li>
-      <li>Click the down arrow next to the folder and click <strong>Rename</strong> or <strong>Delete</strong>.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/node15095-delete-folder.png" /></figure>
+      <li>Cliquez sur le dossier à renommer ou à supprimer. </li>
+      <li>Cliquez sur la flèche vers le bas en regard du dossier, puis cliquez sur<strong> Renommer</strong> ou<strong> Supprimer</strong>. <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/node15095-delete-folder.png" /></figure>
       </li>
-    </ol>
-  </section>
-</article>
+    </ol>   </section></article>

@@ -1,75 +1,48 @@
-<h1>{{ page.title }}</h1>
-<article class="bcls-article">
-  <summary>{{ page.description }}</summary>
-  <section class="bcls-section">
-    {% if site.product_short == "Video Cloud" %}
-    <div class="training-video-player-ipx" data-experience="5a73630f7afd7a00101bc1b5" data-video-ids="6052172921001">&nbsp;</div>
-    <script src="https://players.brightcove.net/20318290001/experience_5a73630f7afd7a00101bc1b5/live.js"></script>
-   {% endif %}
-    {% if site.product_short == "Video Cloud" %}
-    <p>Videos in your {{ site.product_short }} account have associated poster and thumbnail images. {% endif %} {% if site.product_short == "Beacon" or site.product_short == "CorpTV" %}
-Videos in your {{ site.product_short }} account have associated poster, thumbnail, portrait, landscape and ultrawide images. 
-{% endif %} These images allow viewers to pick which videos they want to see in a playlist or other listing of your content. Poster and thumbnail images can be seen in the following areas:</p>
+<h1>{{page.title}}</h1> <article class="bcls-article"> <summary>{{page.description}}</summary> <section class="bcls-section"> {% if site.product_short == Video Cloud-fr/ %}
+    <div class="training-video-player-ipx" data-experience="5a73630f7afd7a00101bc1b5" data-video-ids="6052172921001">&nbsp;</div> <script src="https://players.brightcove.net/20318290001/experience_5a73630f7afd7a00101bc1b5/live.js"></script> {% endif %} {% if site.product_short == Cloud vidéo-fr/ %}
+    <p>Les vidéos de votre compte {{site.product_short}} sont associées à une affiche et des images miniatures. {% endif %} {% if site.product_short == Beacon-fr/ ou site.product_short == CorpTV-fr/ %} Les vidéos de votre compte {{site.product_short}} sont associées à une affiche, une vignette, un portrait, un paysage et images ultra-larges. {% endif %} Ces images permettent aux spectateurs de choisir les vidéos qu'ils souhaitent voir dans une playlist ou une autre liste de votre contenu. Les affiches et les vignettes sont visibles dans les zones suivantes:</p>
     <ul>
-      <li>In the Media module, the thumbnail image is displayed next to the video; the poster image will appear in the preview player on the video properties page</li>
-      <li>The thumbnail image will appear when publishing a playlist</li>
-      <li>The poster image is displayed in the playback area of the video player after the player loads and the video metadata is available; the poster will display until the viewer presses the play button</li>
+      <li>Dans le module Médias, l'image miniature est affichée à côté de la vidéo&nbsp;; l'image de l'affiche apparaîtra dans le lecteur d'aperçu sur la page des propriétés de la vidéo</li>
+      <li>L'image miniature apparaît lors de la publication d'une liste de lecteur</li>
+      <li>L'image de l'affiche s'affiche dans la zone de lecteur du lecteur vidéo après le chargement du lecteur et les métadonnées vidéo sont disponibles&nbsp;; l'affiche s'affiche jusqu'à ce que le spectateur appuie sur le bouton de lecteur</li>
     </ul>
-    <p>For videos that are uploaded to {{ site.product_short }}, poster and thumbnail images are created automatically by taking a snapshot from the source video at the midway point. The size of the poster and thumbnail is based upon the dimensions specified in the ingest profile used when uploading the video. If you don't like the default images that were captured, you can upload other images or <a href="/media/capturing-poster-and-thumbnail-images.html">capture new images</a> to use as the poster and thumbnail.</p>
-    <aside class="bcls-aside bcls-aside--information">
-      Notes:
+    <p>Pour les vidéos téléchargées sur {{site.product_short}}, les affiches et les vignettes sont créées automatiquement en prenant un instantané de la vidéo source à mi-parcours. La taille de l'affiche et de la miniature est basée sur les dimensions spécifiées dans le profil d'acquisition utilisé lors du téléchargement de la vidéo. Si vous n'aimez pas les images par défaut qui ont été capturées, vous pouvez télécharger d'autres images ou<a href="/media/capturing-poster-and-thumbnail-images.html"> capturer de nouvelles images</a> à utiliser comme affiche et vignette.</p> <aside class="bcls-aside bcls-aside--information"> Remarques:
       <ul>
-        <li>If you are uploading images for a video you have recently uploaded, you must wait until processing of the video has completely finished. Otherwise, the image upload will fail.</li>
-        <li>Because processing the uploaded images is an asynchronous process, errors encountered will not be immediately apparent. You should refresh the page after 30 seconds to verify that the images were uploaded and processed successfully.</li>
-        <li>It is not possible to remove images using the Media module.</li>
-      </ul>
-    </aside>
-    <p>When uploading custom poster and thumbnail images, we recommend:</p>
+        <li>Si vous chargez des images pour une vidéo que vous avez récemment mise en ligne, vous devez attendre la fin du traitement de la vidéo. Dans le cas contraire, le chargement de l'image échouera.</li>
+        <li>Le traitement des images téléchargées étant un processus asynchrone, les erreurs rencontrées ne seront pas immédiatement apparentes. Vous devez actualiser la page au bout de 30 secondes pour vérifier que les images ont bien été téléchargées et traitées.</li>
+        <li>Il n'est pas possible de supprimer des images à l'aide du module Médias.</li>
+      </ul> </aside>
+    <p>Lorsque vous chargez des affiches personnalisées et des images miniatures, nous vous recommandons:</p>
     <ul>
-      <li><strong>Poster image</strong> - Recommended aspect ratio of 16:9 and a minimum width of 640px</li>
-      <li><strong>Thumbnail image</strong> - Recommended aspect ratio of 16:9 and a minimum width of 160px</li>
-{% if site.product_short == "Beacon" or site.product_short == "CorpTV" %}
-        <li><strong>Landscape image</strong> - Recommended aspect ratio of 16:9</li>
-        <li><strong>Portrait image</strong> - Recommended aspect ratio of 2:3</li>
-        <li><strong>Ultrawide image</strong> - Recommended aspect ratio of 21:9</li>
+      <li><strong>Image de l'affiche</strong> - Rapport hauteur/largeur recommandé de 16:9 et une largeur minimale de 640 px</li>
+      <li><strong>Image miniature</strong>: rapport hauteur/largeur recommandé de 16:9 et largeur minimale de 160 pixels</li>
+{% if site.product_short == Beacon-fr/ ou site.product_short == CorpTV-fr/ %}
+        <li><strong>Image paysage</strong> - Rapport hauteur/largeur recommandé de 16:9</li>
+        <li><strong>Portrait</strong>: rapport hauteur/largeur recommandé de 2:3</li>
+        <li><strong>Image ultra-large</strong> - Rapport hauteur/largeur recommandé de 21:9</li>
 {% endif %}
-            </ul>
-        <aside class="bcls-aside bcls-aside--information">Note: Uploaded images should use the sRGB color format.</aside>
-    <p>When you upload new poster and thumbnail images, the image dimensions will be based upon the image dimensions specified in the default ingest profile for the account. For information on increasing the quality of poster and thumbnail images, see <a href="/media/increasing-quality-poster-and-thumbnail-images.html">Increasing the Quality of Poster and Thumbnail Images</a>.</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="steps">Steps to upload new  images</h2>
-    <p>To upload a new images, follow these steps:</p>
+            </ul> <aside class="bcls-aside bcls-aside--information">Remarque: Les images téléchargées doivent utiliser le format couleur sRGB.</aside>
+    <p>Lorsque vous chargez de nouvelles images d'affiche et de vignettes, les dimensions de l'image sont basées sur les dimensions d'image spécifiées dans le profil d'acquisition par défaut du compte. Pour plus d'informations sur l'amélioration de la qualité des affiches et des vignettes, voir<a href="/media/increasing-quality-poster-and-thumbnail-images.html"> Amélioration de la qualité des affiches et des vignettes</a>.</p>  </section><section class="bcls-section">
+    <h2 id="steps">Étapes pour télécharger de nouvelles images</h2>
+    <p>Pour télécharger de nouvelles images, procédez comme suit:</p>
     <ol class="bcls-tasklist-restart">
-      <li>Open the <strong>Media</strong>  module.</li>
-{% if site.product_short == "Beacon" or site.product_short == "CorpTV" %}
-      <li>Click <strong>All videos</strong> in the panel navigation.</li>
+      <li>Ouvrez le<strong> module</strong> Médias.</li>
+{% if site.product_short == Beacon-fr/ ou site.product_short == CorpTV-fr/ %}
+      <li>Cliquez sur<strong> Toutes les vidéos</strong> dans le panneau de navigation.</li>
 {% endif %}
-      <li>Click the link for the video you want to edit.</li>
-    {% if site.product_short == "Video Cloud" %}
-      <li>Locate the <strong>Images</strong> section.</li>
-   {% endif %}
-{% if site.product_short == "Beacon" or site.product_short == "CorpTV" %}
-      <li>Click the <strong>Images</strong> tab.</li>
+      <li>Cliquez sur le lien correspondant à la vidéo que vous souhaitez modifier.</li>
+    {% if site.product_short == Cloud vidéo-fr/ %}
+      <li>Localisez la<strong> section</strong> Images.</li>
+   {% endif %} {% if site.product_short == Beacon-fr/ ou site.product_short == CorpTV-fr/ %}
+      <li>Cliquez sur l'<strong>onglet</strong> Images.</li>
 {% endif %}
-      <li>Hover over the Poster/Thumbnail image and click the upload button.
-    {% if site.product_short == "Video Cloud" %}
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/node15519-edit-images-vc.png" /></figure>
-   {% endif %}
-    {% if site.product_short == "Beacon" or site.product_short == "CorpTV" %}
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/node15519-edit-images-beacon.png" /></figure>
-{% endif %}
+      <li>Passez la souris sur l'affiche/la miniature et cliquez sur le bouton de téléchargement. {% if site.product_short == Video Cloud-fr/ %}<figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/node15519-edit-images-vc.png" /></figure> {% endif %} {% if site.product_short == Beacon-fr/ ou site.product_short == CorpTV-fr/ %}<figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/node15519-edit-images-beacon.png" /></figure> {% endif %}
       </li>
-      <li>Browse and select a new image. It may take a minute for the processing to complete and for the images to appear in the Media module.
-        <aside class="bcls-aside bcls-aside--information">Note: .png and .jpg images are supported.</aside>
+      <li>Parcourez et sélectionnez une nouvelle image. Cela peut prendre une minute pour terminer le traitement et pour que les images apparaissent dans le module Médias. <aside class="bcls-aside bcls-aside--information">Remarque: les images .png et .jpg sont prises en charge.</aside>
       </li>
-    </ol>
-  </section>
-  <section class="bcls-section">
+    </ol>  </section><section class="bcls-section">
     <h2 id="Limitations">Limitations</h2>
     <ul>
-      <li>The ingestion system does not allow concurrent jobs on the same video. Therefore, if you attempt to upload images while the video is being ingested or retranscoded, the image upload will fail.</li>
-      <li>If the video was ingested using a legacy profile,  the upload button will be enabled, but image upload will fail. The workaround is to <a href="/media/retranscoding-videos-using-media-module.html">retranscode</a> or <a href="/media/replacing-video-source-file.html">replace</a> the video using a Dynamic Delivery or Context Aware Encoding profile.</li>
-    </ul>
-  </section>
-</article>
+      <li>Le système d'ingestion n'autorise pas les tâches simultanées sur la même vidéo. Par conséquent, si vous tentez de télécharger des images alors que la vidéo est ingérée ou retranscodée, le téléchargement de l'image échouera.</li>
+      <li>Si la vidéo a été acquise à l'aide d'un profil hérité, le bouton de téléchargement sera activé, mais le téléchargement de l'image échouera. La solution consiste à<a href="/media/retranscoding-videos-using-media-module.html"> retranscoder</a> ou à<a href="/media/replacing-video-source-file.html"> remplacer</a> la vidéo à l'aide d'un profil Dynamic Delivery ou Context Aware Encoding.</li>
+    </ul>   </section></article>

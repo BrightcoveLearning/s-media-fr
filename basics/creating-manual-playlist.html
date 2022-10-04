@@ -1,45 +1,31 @@
 <article class="bcls-article">
-  <h1>{{ page.title }}</h1>
-  <summary>{{ page.description }}</summary>
-  <section class="bcls-section">
-    {% if site.product_short == "Video Cloud" %}
-    <div class="training-video-player-ipx" data-experience="5a73630f7afd7a00101bc1b5" data-video-ids="6040424098001">&nbsp;</div>
-    <script src="https://players.brightcove.net/20318290001/experience_5a73630f7afd7a00101bc1b5/live.js"></script>
-   {% endif %}
-    <h3>Prerequisites</h3>
+  <h1>{{page.title}}</h1> <summary>{{page.description}}</summary> <section class="bcls-section"> {% if site.product_short == Video Cloud-fr/ %}
+    <div class="training-video-player-ipx" data-experience="5a73630f7afd7a00101bc1b5" data-video-ids="6040424098001">&nbsp;</div> <script src="https://players.brightcove.net/20318290001/experience_5a73630f7afd7a00101bc1b5/live.js"></script> {% endif %}
+    <h3>Prérequis</h3>
     <ul>
-{% if site.product_short == "Video Cloud" %}
-      <li>You have <a href="/get-started/basics/uploading-videos.html">uploaded videos</a> to your {{ site.product_short }} account</li>
-   {% endif %}
-{% if site.product_short == "Beacon" or site.product_short == "CorpTV" %}
-      <li>You have <a href="/get-started/basics/media/uploading-videos.html">uploaded videos</a> to your {{ site.product_short }} account</li>
+{% if site.product_short == Cloud vidéo-fr/ %}
+      <li>Vous avez<a href="/get-started/basics/uploading-videos.html"> mis en ligne</a> des vidéos sur votre compte {{site.product_short}}</li>
+   {% endif %} {% if site.product_short == Beacon-fr/ ou site.product_short == CorpTV-fr/ %}
+      <li>Vous avez<a href="/get-started/basics/media/uploading-videos.html"> mis en ligne</a> des vidéos sur votre compte {{site.product_short}}</li>
    {% endif %}
     </ul>
-    <h3>Steps</h3>
+    <h3>Étapes</h3>
     <ol class="bcls-tasklist-restart">
-      <li>In the primary navigation, click <i data-feather="video"></i> <strong>Media</strong>.</li>
-      <li>In the side navigation panel, click the <strong>Create playlist</strong> link.</li>
-      <li>Enter a <strong>Playlist Name</strong>.</li>
-    {% if site.product_short == "Video Cloud" %}
-      <li>For the <strong>Playlist type</strong>, click on <strong>Manual playlist</strong>.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/basics/node18813-manual-playlist-vc.png" /></figure></li>
+      <li>Dans la navigation principale, cliquez sur<strong> Media</strong>.</li>
+      <li>Dans le panneau de navigation latéral, cliquez sur le<strong> lien</strong> Créer une liste de lecteur.</li>
+      <li>Saisissez un nom de<strong> liste de lecteur</strong>.</li>
+    {% if site.product_short == Cloud vidéo-fr/ %}
+      <li>Pour le type<strong> Playlist</strong>, cliquez sur Playlist<strong> manuelle</strong>. <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/basics/node18813-manual-playlist-vc.png" /></figure></li>
+   {% endif %} {% if site.product_short == Beacon-fr/ ou site.product_short == CorpTV-fr/ %}
+      <li>Pour le type de<strong> liste de lecteur</strong>, cliquez sur la liste de lecteur manuelle de<strong> Video Cloud</strong>. <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/basics/node18813-manual-playlist-beacon.png" /></figure></li>
    {% endif %}
-{% if site.product_short == "Beacon" or site.product_short == "CorpTV" %}
-      <li>For the <strong>Playlist type</strong>, click on <strong>Video Cloud manual playlist</strong>.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/basics/node18813-manual-playlist-beacon.png" /></figure></li>
-   {% endif %}
-      <li>Click <span class="button-blue">Create playlist</span>. The panel will close and re-open.</li>
-      <li>Check <strong>Show Playlist in Sidebar</strong> to have the playlist appear in the sidebar. </li>
-      <li>Click <strong>X</strong> to close the panel.</li>
-      <li>To add videos to the playlist, click <strong>All videos</strong> in the side navigation panel to display all the videos in the account.</li>
-      <li>Click the checkbox next to videos you want to add to the playlist.</li>
-      <li>Click <span class="button-blue-text-bordered">More ˇ</span> &gt; <strong>Add to Playlist</strong>.</li>
-      <li>Select a playlist and then click <span class="button-blue">Add</span>.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/basics/node18813-add-to-playlist.png" /></figure>
+      <li>Cliquez sur<span class="button-blue"> Créer une playlist</span>. Le panneau va se fermer puis rouvrir.</li>
+      <li>Cochez<strong> Afficher la liste de lecteur dans la barre latérale</strong> pour que la liste de lecteur apparaisse dans la barre </li>
+      <li>Cliquez sur<strong> X</strong> pour fermer le panneau.</li>
+      <li>Pour ajouter des vidéos à la liste de lecteur, cliquez sur<strong> Toutes les vidéos</strong> dans le panneau de navigation latéral afin d'afficher toutes les vidéos du compte.</li>
+      <li>Cochez la case en regard des vidéos que vous souhaitez ajouter à la liste de lecteur.</li>
+      <li>Cliquez sur<span class="button-blue-text-bordered"> Plus Ë‡</span> &gt;<strong> Ajouter à la liste de lecteur</strong>.</li>
+      <li>Sélectionnez une liste de lecteur, puis cliquez sur<span class="button-blue"> Ajouter</span>. <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/basics/node18813-add-to-playlist.png" /></figure>
       </li>
     </ol>
-    <p>To rearrange the order of the videos, select the playlist and then click on a row and drag it to a new position in the list.</p>
-    <aside class="bcls-aside bcls-aside--information">Note: For complete details on creating a manual playlist, see <a href="/media/creating-and-managing-playlists.html">Creating and Managing Playlists</a>.</aside>
-
-  </section>
-</article>
+    <p>Pour réorganiser l'ordre des vidéos, sélectionnez la liste de lecteur, puis cliquez sur une ligne et faites-la glisser vers un nouvel emplacement dans la liste.</p> <aside class="bcls-aside bcls-aside--information">Remarque: Pour plus de détails sur la création d'une liste de lecteur manuelle, voir<a href="/media/creating-and-managing-playlists.html"> Création et gestion de listes de lecteur</a>.</aside> </section> </article> 

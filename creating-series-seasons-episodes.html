@@ -1,402 +1,249 @@
-<h1>{{ page.title }}</h1>
-<article class="bcls-article">
-  <summary>{{ page.description }}</summary>
-  <section class="bcls-section">
-    <h2 id="introduction">Introduction</h2>
-    <p>A <strong>series</strong> is a collection of related videos shown in a particular order, that usually share a common theme. When creating a series, you must define the relationships between the
-      series, its seasons, and the associated episodes.</p>
-    <p>A <strong>season</strong> is a group of videos that cover a set period of time. Each series can have one or more seasons.</p>
-    <p>An <strong>episode</strong> is an individual video. You can think of this as a specific movie.</p>
-    <p> The following diagram shows the relationship between a series and its
-      seasons and episodes. </p>
-    <figure class="bcls-figure"> <img
-          class="bcls-image"
-          src="/assets/images/s-media-img/series-season-episode-relation.png"
-          alt=""
-        /> </figure>
-    <p>Once you have defined your series and seasons and associated videos with seasons, they can be used in a Brightcove {{ site.product_short }} app.</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="relationship">Reviewing series</h2>
-    <p>To view the list of series that have been created, click <strong>Media</strong> in the primary navigation and then click <strong>All series</strong>.</p>
-    {% if site.product_short == "Beacon" %}
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/series-home.png" /></figure>
-   {% endif %}
-    <p>The body of the page will display the following:</p>
+<h1>{{page.title}}</h1> <article class="bcls-article"> <summary>{{page.description}}</summary> <section class="bcls-section">
+    <h2 id="introduction">Présentation</h2>
+    <p>Une<strong> série</strong> est une collection de vidéos connexes présentées dans un ordre particulier, qui partagent généralement un thème commun. Lorsque vous créez une série, vous devez définir les relations entre la série, ses saisons et les épisodes associés.</p>
+    <p>Une<strong> saison</strong> est un ensemble de vidéos qui couvrent une période déterminée. Chaque série peut comporter une ou plusieurs saisons.</p>
+    <p>Un<strong> épisode</strong> est une vidéo individuelle. Vous pouvez voir ça comme un film en particulier.</p>
+    <p> Le diagramme suivant montre la relation entre une série et ses saisons et épisodes. </p>   <figure class="bcls-figure"><img           class="bcls-image"           src="/assets/images/s-media-img/series-season-episode-relation.png"           alt=""         /></figure>
+    <p>Une fois que vous avez défini vos séries et saisons et que vous avez associé les vidéos aux saisons, vous pouvez les utiliser dans une application Brightcove {{site.product_short}}.</p>  </section><section class="bcls-section">
+    <h2 id="relationship">Revoir la série</h2>
+    <p>Pour afficher la liste des séries qui ont été créées, cliquez sur<strong> Média</strong> dans la navigation principale, puis sur<strong> Toutes les séries</strong>.</p>
+    {% if site.product_short == Balise-fr/ %}<figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/series-home.png" /></figure> {% endif %}
+    <p>Le corps de la page affiche les éléments suivants:</p>
     <ul>
-      <li>Series  image (this is the landscape image)</li>
-      <li> Series name</li>
-      <li>Series ID - System assigned series ID (unique across all Brightcove {{ site.product_short }} accounts)</li>
-      <li>Status
+      <li>Image de la série (il s'agit de l'image paysage)</li>
+      <li> Nom de la série</li>
+      <li>ID de série: ID de série attribué par le système (unique sur tous les comptes Brightcove {{site.product_short}})</li>
+      <li>Statut
         <ul>
-          <li><img alt="" src="/assets/images/s-media-img/icon-green-eye.png" /> - Published - Series will be visible  in a Brightcove {{ site.product_short }} app</li>
-          <li><img alt="" src="/assets/images/s-media-img/icon-red-eye.png" /> - Unpublished - Series will not be visible  in a Brightcove {{ site.product_short }} app</li>
+          <li><img alt="" src="/assets/images/s-media-img/icon-green-eye.png" /> - Publié - La série sera visible dans une application Brightcove {{site.product_short}}</li>
+          <li><img alt="" src="/assets/images/s-media-img/icon-red-eye.png" /> - Non publiée - La série ne sera pas visible dans une application Brightcove {{site.product_short}}</li>
         </ul>
       </li>
-      <li>Created date and time</li>
-    </ul>
-  </section>
-  <section class="bcls-section">
-    <h2 id="creating_series">Creating a series</h2>
-    <p>To create a series, follow these steps:</p>
+      <li>Date et heure de création</li>
+    </ul>  </section><section class="bcls-section">
+    <h2 id="creating_series">Création d'une série</h2>
+    <p>Pour créer une série, procédez comme suit:</p>
     <ol class="bcls-tasklist-restart">
-      <li>In the primary navigation, click <strong>Media</strong>.</li>
-      <li>Click <strong>Create series</strong>.</li>
-      <li>Enter a <strong>Name</strong> for the series and click <strong>Save</strong>.
-        <figure class="bcls-figure"><img
-          class="bcls-image"
-          src="/assets/images/s-media-img/series-new-series.png"
-          alt=""
-        /> </figure>
+      <li>Dans la navigation principale, cliquez sur<strong> Media</strong>.</li>
+      <li>Cliquez sur<strong> Créer une série</strong>.</li>
+      <li>Saisissez un<strong> nom</strong> pour la série et cliquez sur<strong> Enregistrer</strong>. <figure class="bcls-figure"><img           class="bcls-image"           src="/assets/images/s-media-img/series-new-series.png"           alt=""         /> </figure>
       </li>
-      <li>The <strong>Overview</strong> page will display. If the account is enabled for <a href="#language">multi-lingual metadata</a>, a <strong>Language View</strong> dropdown will display.  The right side of the  page provides the ability to <a href="#creating_seasons">add seasons</a> and a <a href="#series_trailer">series trailer</a>.</li>
-      <li>Enter the series overview details. Note, as you tab out of a field or press enter, any changes will be saved. The following details can be entered:
+      <li>La<strong> page</strong> Aperçu s'affiche. Si le compte est activé pour les métadonnées<a href="#language"> multilingues</a>, une<strong> liste déroulante</strong> Language View s'affiche. Le côté droit de la page permet d'<a href="#creating_seasons">ajouter des saisons</a> et une bande-annonce de<a href="#series_trailer"> série</a>.</li>
+      <li>Saisissez les détails de la présentation de la série. Notez que lorsque vous quittez un champ de tabulation ou que vous appuyez sur Entrée, toutes les modifications sont enregistrées. Les informations suivantes peuvent être saisies:
         <ul>
-          <li><strong>Name</strong> - The identifier of the series; this is not a customer facing name</li>
-          <li><strong>Title</strong> - Viewer facing name for the series (displayed in {{ site.product_short }} app)</li>
-          <li><strong>Landscape, Portrait and Ultrawide </strong>Images - Click the <strong>Upload new image</strong> link to upload an image to use based upon the following specifications:
+          <li><strong></strong>Nom: identifiant de la série&nbsp;; il ne s'agit pas d'un nom destiné au client</li>
+          <li><strong>Titre</strong>: nom du spectateur de la série (affiché dans l'application {{site.product_short}})</li>
+          <li><strong></strong>Images en mode paysage, portrait et ultra-large: cliquez sur le<strong> lien</strong> Charger une nouvelle image pour télécharger une image à utiliser en fonction des spécifications suivantes:
             <ul>
-              <li><strong>Landscape</strong> - 16x9 aspect ratio, minimum 2000px wide</li>
-              <li><strong>Portrait</strong> - 2x3 aspect ratio, minimum 500px wide</li>
-              <li><strong>Ultrawide</strong> - 21x9 aspect ratio, minimum 2000px wide</li>
+              <li><strong>Paysage</strong> - rapport hauteur/largeur 16x9, largeur minimale de 2000 px</li>
+              <li><strong>Portrait</strong> - rapport hauteur/largeur 2x3, largeur minimale de 500 pixels</li>
+              <li><strong>Ultra-large</strong> - rapport hauteur/largeur 21 x 9, largeur minimale de 2 000 pixels</li>
             </ul>
           </li>
-          <li><strong>Synopsis</strong> - Series synopsis (displayed in {{ site.product_short }} app)</li>
-          <li><strong>Description</strong> - Series description (displayed in {{ site.product_short }} app)</li>
-          <li><strong>Production Year</strong> - The year the series was produced; this information will appear
-            in the the <strong>More Info</strong> screen </li>
-          <li><strong>Production Country</strong> - The country where the series was produced; this information will
-            appear in the the <strong>More Info</strong> screen </li>
+          <li><strong>Synopsis</strong> - Synopsis de la série (affiché dans l'application {{site.product_short}})</li>
+          <li><strong>Description</strong>: description de la série (affichée dans l'application {{site.product_short}})</li>
+          <li><strong>Année de production</strong> - L'année de production de la série&nbsp;; ces informations apparaîtront dans l'<strong>écran</strong> Plus d'informations </li>
+          <li><strong>Pays de production</strong> - Le pays où la série a été produite&nbsp;; ces informations apparaîtront dans l'<strong>écran</strong> Plus d'informations </li>
         </ul>
       </li>
-      <li>Enter the <strong>Cast</strong> details (this information will
-        appear in the the <strong>More Info</strong> screen):
+      <li>Entrez les<strong> détails de la</strong> distribution (ces informations apparaîtront dans l'<strong>écran</strong> Plus d'informations):
         <ul>
-          <li>Actors</li>
-          <li>Directors</li>
-          <li>Singers</li>
-          <li>Music Composers</li>
-          <li>Song Writers</li>
-          <li>Writers</li>
+          <li>Acteurs</li>
+          <li>Directeurs</li>
+          <li>Chanteurs</li>
+          <li>Compositeurs de musique</li>
+          <li>Auteurs de chansons</li>
+          <li>Les écrivains</li>
         </ul>
       </li>
-      <li>In the <strong>Categorization</strong> section, enter the <strong>Tags</strong> and <strong>Genres</strong>.
-        <figure class="bcls-figure"><img
-          class="bcls-image"
-          src="/assets/images/s-media-img/series-overview-details.png"
-          alt=""
-        /> </figure>
+      <li>Dans la<strong> section</strong> Catégorisation, saisissez les<strong> tags</strong> et les<strong> genres</strong>. <figure class="bcls-figure"><img           class="bcls-image"           src="/assets/images/s-media-img/series-overview-details.png"           alt=""         /> </figure>
       </li>
-      <li>Click the <strong>Availability</strong> tab to open the Availability details page.</li>
-      <li>Configure the availability settings for the series. For information, see <a href="/media/configuring-series-availability.html">Configuring Series Availability</a>.</li>
-    </ol>
-  </section>
-  <section class="bcls-section">
-    <h2 id="edit_series">Editing  a series</h2>
-    <p>To edit a series, follow these steps:</p>
+      <li>Cliquez sur l'<strong>onglet</strong> Disponibilité pour ouvrir la page Détails de disponibilité.</li>
+      <li>Configurez les paramètres de disponibilité de la série. Pour plus d'informations, consultez<a href="/media/configuring-series-availability.html"> Configuration de la disponibilité des séries</a>.</li>
+    </ol>  </section><section class="bcls-section">
+    <h2 id="edit_series">Montage d'une série</h2>
+    <p>Pour modifier une série, procédez comme suit:</p>
     <ol class="bcls-tasklist-restart">
-      <li>In the primary navigation, click <strong>Media</strong>.</li>
-      <li>Click <strong>All series</strong>.</li>
-      <li>Locate the series to edit. Click the series title to open the series details.</li>
-      <li>Make changes as needed. As you tab out of a field or press enter, any changes will be saved.</li>
-    </ol>
-  </section>
-  <section class="bcls-section">
-    <h2 id="delete_series">Deleting a series</h2>
-    <p>To delete a series, follow these steps:</p>
+      <li>Dans la navigation principale, cliquez sur<strong> Media</strong>.</li>
+      <li>Cliquez sur<strong> Toutes les séries</strong>.</li>
+      <li>Localisez la série à modifier. Cliquez sur le titre de la série pour ouvrir les détails de la série.</li>
+      <li>Apportez les modifications nécessaires. Au fur et à mesure que vous quittez un champ ou que vous appuyez sur Entrée, toutes les modifications sont enregistrées.</li>
+    </ol>  </section><section class="bcls-section">
+    <h2 id="delete_series">Suppression d'une série</h2>
+    <p>Pour supprimer une série, procédez comme suit:</p>
     <ol class="bcls-tasklist-restart">
-      <li>In the primary navigation, click <strong>Media</strong>.</li>
-      <li>Click <strong>All series</strong>.</li>
-      <li>Locate the series to delete and do one of the following:
+      <li>Dans la navigation principale, cliquez sur<strong> Media</strong>.</li>
+      <li>Cliquez sur<strong> Toutes les séries</strong>.</li>
+      <li>Localisez la série à supprimer et effectuez l'une des opérations suivantes:
         <ul>
-          <li>Check the checkbox next to the series name and then click the delete icon (<img
-          class="bcls-image"
-          src="/assets/images/s-media-img/icon-delete.png"
-          alt=""
-        />) <strong>OR</strong></li>
-          <li>Click the series Title to open the series details and then click <strong>Delete</strong></li>
+          <li>Cochez la case en regard du nom de la série, puis cliquez sur l'icône de suppression (<img           class="bcls-image"           src="/assets/images/s-media-img/icon-delete.png"           alt=""         />)<strong> OU</strong></li>
+          <li>Cliquez sur le titre de la série pour ouvrir les détails de la série, puis cliquez sur<strong> Supprimer</strong></li>
         </ul>
       </li>
     </ol>
-    <p>Series with any associated seasons cannot be deleted and will display an error message.</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="series_trailer">Adding a series trailer</h2>
-    <p>To add a series trailer, follow these steps:</p>
+    <p>Les séries associées à des saisons ne peuvent pas être supprimées et un message d'erreur s'affichera.</p>  </section><section class="bcls-section">
+    <h2 id="series_trailer">Ajout d'une bande-annonce de série</h2>
+    <p>Pour ajouter une bande-annonce de série, procédez comme suit:</p>
     <ol class="bcls-tasklist-restart">
-      <li>In the primary navigation, click <strong>Media</strong>.</li>
-      <li>Click <strong>All series</strong>.</li>
-      <li>Locate the series to add a trailer to. Click the series title to open the series details.</li>
-      <li>On the right side of the page click <strong>Add trailer</strong>.</li>
-      <li>The Search field at the top of the dialog can be used to search for a specific video. Click on  a video to use for the trailer.
-        <figure class="bcls-figure"><img
-          class="bcls-image"
-          src="/assets/images/s-media-img/series-trailer.png"
-          alt=""
-        /> </figure>
+      <li>Dans la navigation principale, cliquez sur<strong> Media</strong>.</li>
+      <li>Cliquez sur<strong> Toutes les séries</strong>.</li>
+      <li>Localisez la série à laquelle vous souhaitez ajouter une bande-annonce. Cliquez sur le titre de la série pour ouvrir les détails de la série.</li>
+      <li>Sur le côté droit de la page, cliquez sur<strong> Ajouter une bande-annonce</strong>.</li>
+      <li>Le champ Rechercher en haut de la boîte de dialogue peut être utilisé pour rechercher une vidéo spécifique. Cliquez sur une vidéo à utiliser pour la bande annonce. <figure class="bcls-figure"><img           class="bcls-image"           src="/assets/images/s-media-img/series-trailer.png"           alt=""         /> </figure>
       </li>
-      <li>Click <strong>Select Video</strong>.</li>
+      <li>Cliquez sur<strong> Sélectionner une vidéo</strong>.</li>
     </ol>
-    <p>The selected video will appear in the Series Trailer section.</p>
-    <p>
-      <figure class="bcls-figure"><img
-          class="bcls-image"
-          src="/assets/images/s-media-img/series-trailer-selected.png"
-          alt=""
-        /> </figure>
+    <p>La vidéo sélectionnée apparaîtra dans la section Bande-annonce de la série.</p>
+    <p>  <figure class="bcls-figure"><img           class="bcls-image"           src="/assets/images/s-media-img/series-trailer-selected.png"           alt=""         /></figure>
     </p>
-    <p>To select a different trailer, click <strong>Replace Trailer</strong>.</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="add_playlist">Adding  a series to a playlist</h2>
-    <p>An OTT playlist is a collection of media (videos, live events, series, seasons, etc.)  that are grouped together. When a series is added to a playlist, the playlist can then be added to a page to appear in a {{ site.product_short }} app. When the user selects a series, they will be able to navigate to the seasons and episodes within a season. To add a series to a playlist, follow these steps:</p>
+    <p>Pour sélectionner une autre bande-annonce, cliquez sur<strong> Remplacer la bande-annonce</strong>.</p>  </section><section class="bcls-section">
+    <h2 id="add_playlist">Ajout d'une série à une liste de lecteur</h2>
+    <p>Une playlist OTT est un ensemble de médias (vidéos, événements en direct, séries, saisons, etc.) regroupés. Lorsqu'une série est ajoutée à une liste de lecteur, celle-ci peut être ajoutée à une page pour apparaître dans une application {{site.product_short}}. Lorsque l'utilisateur sélectionne une série, il peut accéder aux saisons et aux épisodes d'une saison. Pour ajouter une série à une liste de lecteur, procédez comme suit:</p>
     <ol class="bcls-tasklist-restart">
-      <li>In the primary navigation, click <strong>Media</strong>.</li>
-      <li>Click <strong>All series</strong>.</li>
-      <li>Click on a series <strong>Name</strong> to open the series details.</li>
-      <li>Click <strong>Add to playlist</strong>.</li>
-      <li>On the Add to playlist dialog, click on a playlist to select it.</li>
-      <li>Click <strong>Add</strong>. </li>
-    </ol>
-  </section>
-  <section class="bcls-section">
-    <h2 id="publish_series">Publishing/Unpublishing a series</h2>
-    <p>Series must be published before they will be visible in a Brightcove {{ site.product_short }} app. Series that have been published will display a green eye (<img alt="" src="/assets/images/s-media-img/icon-green-eye.png" />) in the <strong>Status</strong> column. A red eye (<img alt="" src="/assets/images/s-media-img/icon-red-eye.png" />) indicates the series is unpublished. To publish a series, follow these steps:</p>
+      <li>Dans la navigation principale, cliquez sur<strong> Media</strong>.</li>
+      <li>Cliquez sur<strong> Toutes les séries</strong>.</li>
+      <li>Cliquez sur le<strong> nom d'une série</strong> pour ouvrir les détails de la série.</li>
+      <li>Cliquez sur<strong> Ajouter à la playlist</strong>.</li>
+      <li>Dans la boîte de dialogue Ajouter à la liste de lecteur, cliquez sur une liste de lecteur pour la sélectionner.</li>
+      <li>Cliquez sur<strong> Ajouter</strong>. </li>
+    </ol>  </section><section class="bcls-section">
+    <h2 id="publish_series">Publier/annuler la publication d'une série</h2>
+    <p>Les séries doivent être publiées avant d'être visibles dans une application Brightcove {{site.product_short}}. Les séries qui ont été publiées afficheront un œil vert (<img alt="" src="/assets/images/s-media-img/icon-green-eye.png" />) dans la<strong> colonne</strong> État. Un œil rouge (<img alt="" src="/assets/images/s-media-img/icon-red-eye.png" />) indique que la série n'est pas publiée. Pour publier une série, procédez comme suit:</p>
     <ol class="bcls-tasklist-restart">
-      <li>In the primary navigation, click <strong>Media</strong>.</li>
-      <li>Click <strong>All series</strong>.</li>
-      <li>Locate the series to publish and do one of the following:
+      <li>Dans la navigation principale, cliquez sur<strong> Media</strong>.</li>
+      <li>Cliquez sur<strong> Toutes les séries</strong>.</li>
+      <li>Localisez la série à publier et effectuez l'une des opérations suivantes:
         <ul>
-          <li>Check the checkbox next to the series name and then click <strong>Publish</strong> <strong>OR</strong></li>
-          <li>Click the series <strong>Name</strong> to open the series details and then click <strong>Publish</strong></li>
+          <li>Cochez la case en regard du nom de la série, puis cliquez sur<strong> Publier</strong> <strong> OU</strong></li>
+          <li>Cliquez sur le<strong> nom de la série</strong> pour ouvrir les détails de la série, puis cliquez sur<strong> Publier</strong></li>
         </ul>
       </li>
     </ol>
-    <p>To unpublish a series, select a series that has been published and click <strong>Unpublish</strong>.</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="creating_seasons">Creating seasons</h2>
-    <p>To create a season, follow these steps:</p>
+    <p>Pour annuler la publication d'une série, sélectionnez une série qui a été publiée et cliquez sur<strong> Dépublier</strong>.</p>  </section><section class="bcls-section">
+    <h2 id="creating_seasons">Créer des saisons</h2>
+    <p>Pour créer une saison, procédez comme suit:</p>
     <ol class="bcls-tasklist-restart">
-      <li>In the primary navigation, click <strong>Media</strong>.</li>
-      <li>Click <strong>All series</strong>.</li>
-      <li>Locate the series to which the season will be added. Click the series title to open the series details.</li>
-      <li>On the series Overview page, click <strong>Create season</strong>.
-        <figure class="bcls-figure"><img
-          class="bcls-image"
-          src="/assets/images/s-media-img/series-create-season.png"
-          alt=""
-        /> </figure>
+      <li>Dans la navigation principale, cliquez sur<strong> Media</strong>.</li>
+      <li>Cliquez sur<strong> Toutes les séries</strong>.</li>
+      <li>Repérez la série à laquelle la saison sera ajoutée. Cliquez sur le titre de la série pour ouvrir les détails de la série.</li>
+      <li>Sur la page Aperçu de la série, cliquez sur<strong> Créer une saison</strong>. <figure class="bcls-figure"><img           class="bcls-image"           src="/assets/images/s-media-img/series-create-season.png"           alt=""         /> </figure>
       </li>
-      <li>Enter a <strong>Name</strong> and <strong>Season Number</strong> and click <strong>Save</strong>.
-        <figure class="bcls-figure"><img
-          class="bcls-image"
-          src="/assets/images/s-media-img/series-new-season.png"
-          alt=""
-        /> </figure>
+      <li>Saisissez un<strong> nom</strong> et un numéro de<strong> saison,</strong> puis cliquez sur<strong> Enregistrer</strong>. <figure class="bcls-figure"><img           class="bcls-image"           src="/assets/images/s-media-img/series-new-season.png"           alt=""         /> </figure>
       </li>
-      <li>The  Overview page will display.  Note, as you tab out of a field or press enter, any changes will be saved. The following details can be entered:
+      <li>La page Aperçu s'affiche. Notez que lorsque vous quittez un champ de tabulation ou que vous appuyez sur Entrée, toutes les modifications sont enregistrées. Les informations suivantes peuvent être saisies:
         <ul>
-          <li><strong>Name</strong> - The identifier of the season; this is not a customer facing name</li>
-          <li><strong>Season Number</strong> - An integer number representing the season sequence
-            in the series</li>
-          <li><strong>Landscape, Portrait and Ultrawide </strong>Images - Click the <strong>Upload new image</strong> link to upload an image to use based upon the following specifications:
+          <li><strong>Nom</strong> - L'identifiant de la saison&nbsp;; il ne s'agit pas d'un nom destiné aux clients</li>
+          <li><strong>Season</strong> Number: nombre entier représentant la séquence de la saison dans la série</li>
+          <li><strong></strong>Images en mode paysage, portrait et ultra-large: cliquez sur le<strong> lien</strong> Charger une nouvelle image pour télécharger une image à utiliser en fonction des spécifications suivantes:
             <ul>
-              <li><strong>Landscape</strong> - 16x9 aspect ratio, minimum 2000px wide</li>
-              <li><strong>Portrait</strong> - 2x3 aspect ratio, minimum 500px wide</li>
-              <li><strong>Ultrawide</strong> - 21x9 aspect ratio, minimum 2000px wide</li>
+              <li><strong>Paysage</strong> - rapport hauteur/largeur 16x9, largeur minimale de 2000 px</li>
+              <li><strong>Portrait</strong> - rapport hauteur/largeur 2x3, largeur minimale de 500 pixels</li>
+              <li><strong>Ultra-large</strong> - rapport hauteur/largeur 21 x 9, largeur minimale de 2 000 pixels</li>
             </ul>
           </li>
-          <li><strong>Title</strong> - Viewer facing name for the season (displayed in {{ site.product_short }} app)
-            <aside class="bcls-aside bcls-aside--tip">Note: For the season <em>Title</em>, you can enter a name like <em>Season 1</em>, but if a series has topics for distinct seasons
-              that may be a better choice. For example, a series on the continents
-              where each season focuses on a continent, good names for the seasons
-              would be <em>Europe</em>, <em>Africa</em>, <em>Asia</em>, etc. </aside>
+          <li><strong>Titre</strong>: nom du spectateur pour la saison (affiché dans l'application {{site.product_short}})<aside class="bcls-aside bcls-aside--tip"> Remarque: Pour le<em> titre de la saison</em>, vous pouvez saisir un nom tel que<em> Saison 1</em>, mais si une série comporte des sujets pour des saisons distinctes, cela peut être un meilleur choix. Par exemple, une série sur les continents où chaque saison se concentre sur un continent, les bons noms des saisons seraient<em> l'Europe</em>, l'<em>Afrique</em>,<em> l'Asie</em>, etc. </aside>
           </li>
-          <li><strong>Synopsis</strong> - Season synopsis (displayed in {{ site.product_short }} app)</li>
-          <li><strong>Description</strong> - Season description (displayed in {{ site.product_short }} app)</li>
-          <li><strong>Production Year</strong> - The year the season was produced; this information will appear
-            in the the <strong>More Info</strong> screen </li>
-          <li><strong>Production Country</strong> - The country where the season was produced; this information will
-            appear in the the <strong>More Info</strong> screen </li>
-          <li>In the <strong>Categorization</strong> section, enter the <strong>Tags</strong> for the season.</li>
-          <figure class="bcls-figure"><img
-          class="bcls-image"
-          src="/assets/images/s-media-img/season-overview-details.png"
-          alt=""
-        /> </figure>
+          <li><strong>Synopsis</strong> - Synopsis de la saison (affiché dans l'application {{site.product_short}})</li>
+          <li><strong>Description</strong>: description de la saison (affichée dans l'application {{site.product_short}})</li>
+          <li><strong>Année de production</strong> - L'année de production de la saison&nbsp;; cette information apparaîtra dans l'<strong>écran</strong> Plus d'informations </li>
+          <li><strong>Pays de production</strong> - Le pays où la saison a été produite&nbsp;; ces informations apparaîtront dans l'<strong>écran</strong> Plus d'informations </li>
+          <li>Dans la<strong> section</strong> Catégorisation, saisissez les<strong> étiquettes</strong> de la saison.</li>  <figure class="bcls-figure"><img           class="bcls-image"           src="/assets/images/s-media-img/season-overview-details.png"           alt=""         /></figure>
         </ul>
       </li>
-      <li>Click the <strong>Availability</strong> tab to open the Availability details page.</li>
-      <li>Configure the availability settings for the season. For information, see <a href="/media/configuring-season-availability.html">Configuring Season Availability</a>.</li>
+      <li>Cliquez sur l'<strong>onglet</strong> Disponibilité pour ouvrir la page Détails de disponibilité.</li>
+      <li>Configurez les paramètres de disponibilité pour la saison. Pour plus d'informations, consultez<a href="/media/configuring-season-availability.html"> Configuration de la disponibilité saisonnière</a>.</li>
     </ol>
-    <p> To return to the series page, click the series breadcrumb at the top of the page.</p>
-    <p>
-      <figure class="bcls-figure"><img
-          class="bcls-image"
-          src="/assets/images/s-media-img/series-breadcrumb.png"
-          alt=""
-        /> </figure>
+    <p> Pour revenir à la page de la série, cliquez sur le fil d'Ariane de la série en haut de la page.</p>
+    <p>  <figure class="bcls-figure"><img           class="bcls-image"           src="/assets/images/s-media-img/series-breadcrumb.png"           alt=""         /></figure>
     </p>
-    <p>Seasons that have been added to a series will appear on right side of the season Overview page.</p>
-    <figure class="bcls-figure"><img
-          class="bcls-image"
-          src="/assets/images/s-media-img/series-seasons-list.png"
-          alt=""
-        /> </figure>
-  </section>
-  <section class="bcls-section">
-    <h2 id="edit_season">Editing and deleting a  season</h2>
-    <p>To edit or delete a season, follow these steps:</p>
+    <p>Les saisons qui ont été ajoutées à une série apparaîtront sur le côté droit de la page Aperçu de la saison.</p>    <figure class="bcls-figure"><img           class="bcls-image"           src="/assets/images/s-media-img/series-seasons-list.png"           alt=""         /></figure></section><section class="bcls-section">
+    <h2 id="edit_season">Modifier et supprimer une saison</h2>
+    <p>Pour modifier ou supprimer une saison, procédez comme suit:</p>
     <ol class="bcls-tasklist-restart">
-      <li>In the primary navigation, click <strong>Media</strong>.</li>
-      <li>Click <strong>All series</strong>.</li>
-      <li>Locate the series with the season to edit/delete. Click the series title to open the series details.</li>
-      <li>Click the season to edit in the <strong>Seasons</strong> section.
-        <figure class="bcls-figure"><img
-          class="bcls-image"
-          src="/assets/images/s-media-img/series-edit-season.png"
-          alt=""
-        /> </figure>
+      <li>Dans la navigation principale, cliquez sur<strong> Media</strong>.</li>
+      <li>Cliquez sur<strong> Toutes les séries</strong>.</li>
+      <li>Localisez la série avec la saison à modifier/supprimer. Cliquez sur le titre de la série pour ouvrir les détails de la série.</li>
+      <li>Cliquez sur la saison à modifier dans la<strong> section</strong> Saisons. <figure class="bcls-figure"><img           class="bcls-image"           src="/assets/images/s-media-img/series-edit-season.png"           alt=""         /> </figure>
       </li>
-      <li>Make changes as needed. As you tab out of a field or press enter, any changes will be saved.</li>
+      <li>Apportez les modifications nécessaires. Au fur et à mesure que vous quittez un champ ou que vous appuyez sur Entrée, toutes les modifications sont enregistrées.</li>
     </ol>
-    <p>To delete the season, click <strong>Delete</strong> at the top of the page.</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="season_trailer">Adding a season trailer</h2>
-    <p>To add a season trailer, follow these steps:</p>
+    <p>Pour supprimer la saison, cliquez sur<strong> Supprimer</strong> en haut de la page.</p>  </section><section class="bcls-section">
+    <h2 id="season_trailer">Ajout d'un trailer de saison</h2>
+    <p>Pour ajouter une bande-annonce de saison, procédez comme suit:</p>
     <ol class="bcls-tasklist-restart">
-      <li>In the primary navigation, click <strong>Media</strong>.</li>
-      <li>Click <strong>All series</strong>.</li>
-      <li>Locate the series and click the title to open the series details.</li>
-      <li>In the <strong>Seasons</strong> section, click the season title to open the series details.</li>
-      <li>On the right side of the page click <strong>Add trailer</strong>.</li>
-      <li>Click on  a video to use for the trailer. The Search field at the top of the dialog can be used to search for a specific video. </li>
-      <li>Click <strong>Select Video</strong>.</li>
+      <li>Dans la navigation principale, cliquez sur<strong> Media</strong>.</li>
+      <li>Cliquez sur<strong> Toutes les séries</strong>.</li>
+      <li>Localisez la série et cliquez sur le titre pour ouvrir les détails de la série.</li>
+      <li>Dans la<strong> section</strong> Saisons, cliquez sur le titre de la saison pour ouvrir les détails de la série.</li>
+      <li>Sur le côté droit de la page, cliquez sur<strong> Ajouter une bande-annonce</strong>.</li>
+      <li>Cliquez sur une vidéo à utiliser pour la bande annonce. Le champ Rechercher en haut de la boîte de dialogue peut être utilisé pour rechercher une vidéo spécifique. </li>
+      <li>Cliquez sur<strong> Sélectionner une vidéo</strong>.</li>
     </ol>
-    <p>The selected video will appear in the Series Trailer section.</p>
-    <p>
-      <figure class="bcls-figure"><img
-          class="bcls-image"
-          src="/assets/images/s-media-img/season-trailer-selected.png"
-          alt=""
-        /> </figure>
+    <p>La vidéo sélectionnée apparaîtra dans la section Bande-annonce de la série.</p>
+    <p>  <figure class="bcls-figure"><img           class="bcls-image"           src="/assets/images/s-media-img/season-trailer-selected.png"           alt=""         /></figure>
     </p>
-    <p>To select a different trailer, click <strong>Replace Trailer</strong>.</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="adding_episodes">Adding episodes to seasons</h2>
-    <p> Before adding episodes (videos) to seasons, the videos should be uploaded to your Brightcove {{ site.product_short }} account. All videos added to a season will be displayed on the right side of the season Overview page.</p>
-    <figure class="bcls-figure"><img
-          class="bcls-image"
-          src="/assets/images/s-media-img/series-episode-list.png"
-          alt=""
-        /></figure>
-    <p>There are two ways to add an episode to a season:</p>
+    <p>Pour sélectionner une autre bande-annonce, cliquez sur<strong> Remplacer la bande-annonce</strong>.</p>  </section><section class="bcls-section">
+    <h2 id="adding_episodes">Ajout d'épisodes aux saisons</h2>
+    <p> Avant d'ajouter des épisodes (vidéos) aux saisons, les vidéos doivent être téléchargées sur votre compte Brightcove {{site.product_short}}. Toutes les vidéos ajoutées à une saison seront affichées sur le côté droit de la page d'aperçu de la saison.</p> <figure class="bcls-figure"><img           class="bcls-image"           src="/assets/images/s-media-img/series-episode-list.png"           alt=""         /></figure>
+    <p>Il existe deux manières d'ajouter un épisode à une saison:</p>
     <ul>
-      <li><a href="#season-details">Edit the season details</a></li>
-      <li><a href="#video-details">Edit the video details</a></li>
+      <li><a href="#season-details">Modifier les détails de la saison</a></li>
+      <li><a href="#video-details">Modifier les détails de la vidéo</a></li>
     </ul>
-    <h3 id="season-details">Editing the season details</h3>
+    <h3 id="season-details">Modifier les détails de la saison</h3>
     <ol class="bcls-tasklist-restart">
-      <li>In the primary navigation, click <strong>Media</strong>.</li>
-      <li>Click <strong>All series</strong>.</li>
-      <li>Click on a series title to open the series details.</li>
-      <li>On the series Overview page, click on the season to add episodes to.</li>
-      <li>Click <strong>Add Episode</strong>.
-        <figure class="bcls-figure"><img
-          class="bcls-image"
-          src="/assets/images/s-media-img/series-add-episode.png"
-          alt=""
-        /> </figure>
+      <li>Dans la navigation principale, cliquez sur<strong> Media</strong>.</li>
+      <li>Cliquez sur<strong> Toutes les séries</strong>.</li>
+      <li>Cliquez sur le titre d'une série pour ouvrir les détails de la série.</li>
+      <li>Sur la page Aperçu de la série, cliquez sur la saison pour y ajouter des épisodes.</li>
+      <li>Cliquez sur<strong> Ajouter un épisode</strong>. <figure class="bcls-figure"><img           class="bcls-image"           src="/assets/images/s-media-img/series-add-episode.png"           alt=""         /> </figure>
       </li>
-      <li>Click on a video to select it add and click <strong>Select Video</strong>.</li>
+      <li>Cliquez sur une vidéo pour la sélectionner et cliquez sur<strong> Sélectionner une vidéo</strong>.</li>
     </ol>
-    <h3 id="video-details">Editing the video details</h3>
+    <h3 id="video-details">Modifier les détails de la vidéo</h3>
     <ol class="bcls-tasklist-restart">
-      <li>In the primary navigation, click <strong>Media</strong>.</li>
-      <li>Click <strong>All videos</strong>.</li>
-      <li>Click on a video title to open the video details.</li>
-      <li>In the <strong>Video Type Information</strong> section, set the <strong>Video Type</strong> to <strong>Episode</strong>.</li>
-      <li>Click <strong>Add to season</strong>.</li>
-      <li>Click on a series and then click <strong>Next</strong>. </li>
-      <li>Click on the season to add episodes to and click <strong>Add to Season</strong>.
-        <figure class="bcls-figure"><img
-          class="bcls-image"
-          src="/assets/images/s-media-img/series-add-to-season.png"
-          alt=""
-        /> </figure>
+      <li>Dans la navigation principale, cliquez sur<strong> Media</strong>.</li>
+      <li>Cliquez sur<strong> Toutes les vidéos</strong>.</li>
+      <li>Cliquez sur le titre d'une vidéo pour afficher les détails de la vidéo.</li>
+      <li>Dans la<strong> section Informations sur le type de</strong> vidéo, définissez le Type<strong> de</strong> vidéo sur<strong> Épisode</strong>.</li>
+      <li>Cliquez sur<strong> Ajouter à la saison</strong>.</li>
+      <li>Cliquez sur une série, puis sur<strong> Suivant</strong>. </li>
+      <li>Cliquez sur la saison à laquelle vous souhaitez ajouter des épisodes, puis sur<strong> Ajouter à la saison</strong>. <figure class="bcls-figure"><img           class="bcls-image"           src="/assets/images/s-media-img/series-add-to-season.png"           alt=""         /> </figure>
       </li>
-    </ol>
-  </section>
-  <section class="bcls-section">
-    <h2 id="removing_episodes">Removing episodes from seasons</h2>
-    <p>There are two ways to remove an episode from a season:</p>
+    </ol>  </section><section class="bcls-section">
+    <h2 id="removing_episodes">Suppression d'épisodes des saisons</h2>
+    <p>Il existe deux manières de supprimer un épisode d'une saison:</p>
     <ul>
-      <li><a href="#remove-season-details">Edit the season details</a></li>
-      <li><a href="#remove-video-details">Edit the video details</a></li>
+      <li><a href="#remove-season-details">Modifier les détails de la saison</a></li>
+      <li><a href="#remove-video-details">Modifier les détails de la vidéo</a></li>
     </ul>
-    <h3 id="remove-season-details">Editing the season details</h3>
+    <h3 id="remove-season-details">Modifier les détails de la saison</h3>
     <ol class="bcls-tasklist-restart">
-      <li>In the primary navigation, click <strong>Media</strong>.</li>
-      <li>Click <strong>All series</strong>.</li>
-      <li>Click on a series title to open the series details.</li>
-      <li>On the series Overview page, click on the season with the episode to delete.</li>
-      <li>Hover over the episode and click the remove icon (<img
-          class="bcls-image"
-          src="/assets/images/s-media-img/icon-remove.png"
-          alt=""
-        />).
-        <figure class="bcls-figure"><img
-          class="bcls-image"
-          src="/assets/images/s-media-img/series-remove-episode.png"
-          alt=""
-        /> </figure>
+      <li>Dans la navigation principale, cliquez sur<strong> Media</strong>.</li>
+      <li>Cliquez sur<strong> Toutes les séries</strong>.</li>
+      <li>Cliquez sur le titre d'une série pour ouvrir les détails de la série.</li>
+      <li>Sur la page Aperçu de la série, cliquez sur la saison avec l'épisode à supprimer.</li>
+      <li>Survolez l'épisode et cliquez sur l'icône Supprimer (<img           class="bcls-image"           src="/assets/images/s-media-img/icon-remove.png"           alt=""         />). <figure class="bcls-figure"><img           class="bcls-image"           src="/assets/images/s-media-img/series-remove-episode.png"           alt=""         /> </figure>
       </li>
     </ol>
-    <h3 id="remove-video-details">Editing the video details</h3>
+    <h3 id="remove-video-details">Modifier les détails de la vidéo</h3>
     <ol class="bcls-tasklist-restart">
-      <li>In the primary navigation, click <strong>Media</strong>.</li>
-      <li>Click <strong>All videos</strong>.</li>
-      <li>Click on a video title to open the video details.</li>
-      <li>In the <strong>Video Type Information</strong> section, hover over the season and click the remove (<img
-          class="bcls-image"
-          src="/assets/images/s-media-img/icon-remove.png"
-          alt=""
-        />) icon.
-        <figure class="bcls-figure"><img
-          class="bcls-image"
-          src="/assets/images/s-media-img/series-video-remove-from-season.png"
-          alt=""
-        /> </figure>
+      <li>Dans la navigation principale, cliquez sur<strong> Media</strong>.</li>
+      <li>Cliquez sur<strong> Toutes les vidéos</strong>.</li>
+      <li>Cliquez sur le titre d'une vidéo pour afficher les détails de la vidéo.</li>
+      <li>Dans la<strong> section Informations sur le type de</strong> vidéo, survolez la saison et cliquez sur l'icône Supprimer (<img           class="bcls-image"           src="/assets/images/s-media-img/icon-remove.png"           alt=""         />). <figure class="bcls-figure"><img           class="bcls-image"           src="/assets/images/s-media-img/series-video-remove-from-season.png"           alt=""         /> </figure>
       </li>
-    </ol>
-  </section>
-  <section class="bcls-section">
-    <h2 id="app_sort_order">Controlling season display order in apps</h2>
-    <p>The <strong>In-app sort order</strong> section can be used to control how seasons and episodes are displayed in {{ site.product_short }} apps. To add a season trailer, follow these steps:</p>
+    </ol>  </section><section class="bcls-section">
+    <h2 id="app_sort_order">Contrôle de l'ordre d'affichage de la saison dans</h2>
+    <p>La<strong> section Ordre de tri</strong> intégré à l'application peut être utilisée pour contrôler l'affichage des saisons et des épisodes dans les applications {{site.product_short}}. Pour ajouter une bande-annonce de saison, procédez comme suit:</p>
     <ol class="bcls-tasklist-restart">
-      <li>In the primary navigation, click <strong>Media</strong>.</li>
-      <li>Click <strong>All series</strong>.</li>
-      <li>Locate the series and click the title to open the series details.</li>
-      <li>On the right side of the page locate the <strong>In-app sort order</strong> section.</li>
-      <li>Select a sort order from the <strong>Sort seasons and episodes</strong> listbox.
-        <figure class="bcls-figure"><img
-          class="bcls-image"
-     src="/assets/images/s-media-img/series-sort-order.png"
-          alt=""/> </figure>
+      <li>Dans la navigation principale, cliquez sur<strong> Media</strong>.</li>
+      <li>Cliquez sur<strong> Toutes les séries</strong>.</li>
+      <li>Localisez la série et cliquez sur le titre pour ouvrir les détails de la série.</li>
+      <li>Sur le côté droit de la page, recherchez la<strong> section Ordre de tri</strong> intégré à l'application.</li>
+      <li>Sélectionnez un ordre de tri dans la<strong> zone de liste</strong> Trier les saisons et les épisodes. <figure class="bcls-figure"><img           class="bcls-image"      src="/assets/images/s-media-img/series-sort-order.png"           alt=""/> </figure>
       </li>
-    </ol>
-  </section>
-  <section class="bcls-section">
-    <h2 id="language">Working with Multi-Lingual Metadata</h2>
-    <p> Brightcove {{ site.product_short }} supports the ability to associate multi-lingual metadata with videos. Before this can be done, you can associate multi-lingual metadata with videos, you must configure a primary language and one or more additional languages as part of the <a href="/admin/configuring-language-settings.html">Language Settings</a>. Once additional languages have been configured, a <strong>Language View</strong> selector will appear on  series, season and episode detail pages allowing a language to be selected.</p>
-    <figure class="bcls-figure"><img
-          class="bcls-image"
-          src="/assets/images/s-media-img/series-language-selector.png"
-          alt=""
-        /> </figure>
-    <p>For more information, see <a href="/media/working-multi-lingual-metadata.html">Working with Multi-Lingual Metadata</a>.</p>
-  </section>
-</article>
+    </ol>  </section><section class="bcls-section">
+    <h2 id="language">Utilisation des métadonnées multilingues</h2>
+    <p> Brightcove {{site.product_short}} prend en charge la possibilité d'associer des métadonnées multilingues aux vidéos. Avant cela, vous pouvez associer des métadonnées multilingues à des vidéos, vous devez configurer une langue principale et une ou plusieurs langues supplémentaires dans le cadre des paramètres de<a href="/admin/configuring-language-settings.html"> langue</a>. Une fois que d'autres langues ont été configurées, un<strong> sélecteur d'affichage de la</strong> langue apparaît sur les pages détaillées des séries, des saisons et des épisodes, ce qui permet de sélectionner une langue.</p>  <figure class="bcls-figure"><img           class="bcls-image"           src="/assets/images/s-media-img/series-language-selector.png"           alt=""         /></figure>
+    <p>Pour plus d'informations, consultez la section<a href="/media/working-multi-lingual-metadata.html"> Utilisation des métadonnées multilingues</a>.</p>   </section></article>

@@ -1,89 +1,70 @@
 <article class="bcls-article">
-  <h1>{{ page.title }}</h1>
-  <summary>{{ page.description }}</summary>
-  <section class="bcls-section">
-    <p>When a video is uploaded to Video Cloud, poster and thumbnail images are created automatically by taking a snapshot from the source video at the midway point. The size of the poster and thumbnail is based upon the dimensions specified in the ingest profile used when uploading the video.</p>
-    <p>Poster and thumbnail images can be seen in the following areas:</p>
+  <h1>{{page.title}}</h1> <summary>{{page.description}}</summary> <section class="bcls-section">
+    <p>Lorsqu'une vidéo est téléchargée sur Video Cloud, les affiches et les vignettes sont créées automatiquement en prenant un instantané de la vidéo source à mi-chemin. La taille de l'affiche et de la miniature est basée sur les dimensions spécifiées dans le profil d'acquisition utilisé lors du téléchargement de la vidéo.</p>
+    <p>Les affiches et les vignettes sont visibles dans les zones suivantes:</p>
     <ul>
-      <li>In the Media module, the thumbnail image is displayed next to the video; the poster image will appear in the preview player on the video properties page</li>
-      <li>The thumbnail image will appear when publishing a playlist</li>
-      <li>The poster image is displayed in the playback area of the video player after the player loads; the poster will display until the viewer presses the play button</li>
-    </ul>
-    <aside class="bcls-aside bcls-aside--information">Note: If you don't like the default images that were captured, you can <a href="/media/uploading-poster-and-thumbnail-images.html">upload a new image</a> or <a href="/media/capturing-poster-and-thumbnail-images.html">capture a new image</a> to use as the poster and thumbnail.</aside>
-    <p>Depending on the size of your published player, the poster image may be upscaled to fit the player. Scaling images may make them appear blurry and distorted. Having poster images that are a larger size will eliminate the need for upscaling images.</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="sizes">Checking image sizes</h2>
-    <p>There are a couple of ways that you can check the size of a poster image:</p>
+      <li>Dans le module Médias, l'image miniature est affichée à côté de la vidéo&nbsp;; l'image de l'affiche apparaîtra dans le lecteur d'aperçu sur la page des propriétés de la vidéo</li>
+      <li>L'image miniature apparaît lors de la publication d'une liste de lecteur</li>
+      <li>L'image de l'affiche s'affiche dans la zone de lecteur du lecteur vidéo après le chargement du lecteur&nbsp;; l'affiche s'affiche jusqu'à ce que le spectateur appuie sur le bouton de lecteur</li>
+    </ul> <aside class="bcls-aside bcls-aside--information">Remarque: Si vous n'aimez pas les images par défaut qui ont été capturées, vous pouvez<a href="/media/uploading-poster-and-thumbnail-images.html"> télécharger une nouvelle image</a> ou<a href="/media/capturing-poster-and-thumbnail-images.html"> capturer une nouvelle image</a> pour l'utiliser comme affiche et miniature.</aside>
+    <p>En fonction de la taille de votre lecteur publié, l'image de l'affiche peut être agrandie pour s'adapter au lecteur. La mise à l'échelle des images peut les rendre floues et déformées. Le fait d'avoir des images d'affiches de plus grande taille éliminera le besoin de mettre à l'échelle les images.</p>  </section><section class="bcls-section">
+    <h2 id="sizes">Vérification des tailles d'image</h2>
+    <p>Vous pouvez vérifier la taille d'une affiche de plusieurs manières:</p>
     <ul>
-      <li><a href="#mm">Check the image sizes using the Media module</a></li>
-      <li><a href="#ingest">Check the image sizes in the ingest profile</a></li>
+      <li><a href="#mm">Vérifiez la taille des images à l'aide du module Médias</a></li>
+      <li><a href="#ingest">Vérifiez les tailles d'image dans le profil d'acquisition</a></li>
     </ul>
     <div id="mm" class="BCL-subsection">
-      <h3>Checking image sizes in the Media module</h3>
-      <p>To check the size of the poster and thumbnail images in the Media module, follow these steps:</p>
+      <h3>Vérification de la taille des images dans le module Médias</h3>
+      <p>Pour vérifier la taille de l'affiche et des vignettes dans le module Médias, procédez comme suit:</p>
       <ol class="bcls-tasklist-restart">
-        <li>Open the <strong>Media</strong>  module.</li>
-    {% if site.product_short == "Video Cloud" %}
-        <li>Click on a video to open the video properties.</li>
-        <li>In the <strong>Images</strong> section, hover over the poster/thumbnail image.</li>
-   {% endif %}
-{% if site.product_short == "Beacon" or site.product_short == "CorpTV" %}
-      <li>Click <strong>All videos</strong> in the panel navigation.</li>
-    <li>Click on a video to open the video details.</li>
-    <li>Click the <strong>Images</strong> tab.</li>
-    <li>Hover over the poster/thumbnail image.</li>
+        <li>Ouvrez le<strong> module</strong> Médias.</li>
+    {% if site.product_short == Cloud vidéo-fr/ %}
+        <li>Cliquez sur une vidéo pour ouvrir ses propriétés.</li>
+        <li>Dans la<strong> section</strong> Images, passez la souris sur l'affiche/la vignette.</li>
+   {% endif %} {% if site.product_short == Beacon-fr/ ou site.product_short == CorpTV-fr/ %}
+      <li>Cliquez sur<strong> Toutes les vidéos</strong> dans le panneau de navigation.</li>
+    <li>Cliquez sur une vidéo pour afficher les détails de la vidéo.</li>
+    <li>Cliquez sur l'<strong>onglet</strong> Images.</li>
+    <li>Passez la souris sur l'affiche/la vignette.</li>
 {% endif %}
-        <li>Click the view icon (<img alt="" src="/assets/images/s-media-img/view-icon.png" />) to open the image in a new browser tab.</li>
+        <li>Cliquez sur l'icône d'affichage (<img alt="" src="/assets/images/s-media-img/view-icon.png" />) pour ouvrir l'image dans un nouvel onglet du navigateur.</li>
       </ol>
-      <p>You may wish to use one of the many tools available that can give you the exact dimensions of the image. Remember, if any of your players are larger than the size of the poster, the image will be upscaled.</p>
+      <p>Vous pouvez utiliser l'un des nombreux outils disponibles qui peuvent vous donner les dimensions exactes de l'image. N'oubliez pas que si l'un de vos lecteur
+s est plus grand que la taille de l'affiche, l'image sera agrandie.</p>
     </div>
     <div id="ingest" class="BCL-subsection">
-      <h3>Checking ingest profile image sizes</h3>
-      <p>Video Cloud Studio does not display the ingest profile that was used when a video was uploaded. You can, however, check the image sizes for ingest profiles:</p>
+      <h3>Vérification de la taille des images de profil d'acquisition</h3>
+      <p>Video Cloud Studio n'affiche pas le profil d'acquisition utilisé lors du chargement d'une vidéo. Vous pouvez toutefois vérifier les tailles d'image pour les profils d'acquisition:</p>
       <ol class="bcls-tasklist-restart">
-        <li>In primary navigation, click  <strong>Admin</strong>. Note that you must be a Video Cloud Studio user with the Administrator role to access the Administration menu.</li>
-        <li>Click <strong>Ingest Profiles</strong>.</li>
-        <li>Click on a <strong>Profile Name</strong>. The Profile Editor will display the profile definition.
+        <li>Dans la navigation principale, cliquez sur<strong> Admin</strong>. Notez que vous devez être un utilisateur de Video Cloud Studio avec le rôle Administrateur pour accéder au menu Administration.</li>
+        <li>Cliquez sur<strong> Ingest Profiles</strong>.</li>
+        <li>Cliquez sur le nom d'un<strong> profil</strong>. L'éditeur de profil affiche la définition du profil.
         <!-- <li>The method to view the image sizes will vary based upon the <strong>Profile Version</strong> (i.e. Legacy, Dynamic Delivery or Context-Aware) that was clicked. -->
             <!-- <li>For <strong>Legacy</strong> profiles, scroll to the bottom of the Profile Editor window and search for <strong><code translate="No">"media_type": "image"</code></strong>. There should be two entries, one for the poster and one for the thumbnail.</li> -->
-					For <strong>Dynamic Delivery</strong> and <strong>Context-Aware</strong> profiles, image sizes are listed in the <strong>Images</strong> section of the profile definition. The following example is from a Dynamic Delivery Profile Version.
-          <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/node16671-profile-editor.png" /></figure>
+					Pour les<strong> profils</strong> Dynamic Delivery<strong> et</strong> Context-Aware, les tailles d'image sont répertoriées dans la<strong> section</strong> Images de la définition du profil. L'exemple suivant est tiré d'une version de profil de mise à disposition dynamique. <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/node16671-profile-editor.png" /></figure>
         </li>
-        <li>Check the poster and image sizes. Remember, if any of your players are larger than the size of the poster, the image will be upscaled.</li>
-      </ol>
-      <aside class="bcls-aside bcls-aside--information">Note: The image sizes for the standard ingest profiles are also documented in the document, 
-          <a href="/admin/standard-ingest-profiles-dynamic-delivery-and-context-aware-encoding.html">Standard Ingest Profiles for Dynamic Delivery and Context Aware Encoding</a>.
-      </aside>
-    </div>
-  </section>
-  <section class="bcls-section">
-    <h2 id="profile">Creating a custom ingest profile</h2>
-    <p>In order to change the image sizes, you should create a custom ingest profile and set the sizes to the appropriate values. For information on creating custom ingest profiles, see <a href="/admin/managing-ingest-profiles.html">Managing Ingest Profiles</a>.</p>
-    <aside class="bcls-aside bcls-aside--information">Note: Increasing image sizes will cause an increase in managed content and bandwidth usage but this should be negligible, unless the play rate on your videos is extremely low, in which case the images loaded for unplayed videos could consume more bandwidth than actual video playback.</aside>
-    <aside class="bcls-aside bcls-aside--information">Note: The ability to create and edit ingest profiles is available only to publishers with Enterprise and Professional accounts.</aside>
-    <p>Once a new ingest profile (or profiles) has been created, that profile should be used when uploading videos.</p>
-    <aside class="bcls-aside bcls-aside--information">Note: The standard set of ingest profiles can't be edited or deleted.</aside>
-  </section>
-  <section class="bcls-section">
-    <h2 id="resize">Automatic resizing</h2>
-    <p>When you add custom poster and/or thumbnail images via Studio or the Dynamic Ingest API, by default Video Cloud will resize these to match the image sizes defined in the default ingest profile for the account.</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="existing">What about my existing videos?</h2>
-    <p>What is the best way to fix the image sizes on existing videos? There are two options:</p>
+        <li>Vérifiez la taille de l'affiche et de l'image. N'oubliez pas que si l'un de vos lecteur
+s est plus grand que la taille de l'affiche, l'image sera agrandie.</li>
+      </ol> <aside class="bcls-aside bcls-aside--information">Remarque: Les tailles d'image pour les profils d'acquisition standard sont également documentées dans le document<a href="/admin/standard-ingest-profiles-dynamic-delivery-and-context-aware-encoding.html"> Standard Ingest Profiles for Dynamic Delivery and Context Aware Encoding</a>. </aside>
+    </div>  </section><section class="bcls-section">
+    <h2 id="profile">Création d'un profil d'acquisition personnalisé</h2>
+    <p>Pour modifier les tailles d'image, vous devez créer un profil d'acquisition personnalisé et définir les tailles sur les valeurs appropriées. Pour plus d'informations sur la création de profils d'acquisition personnalisés, consultez<a href="/admin/managing-ingest-profiles.html"> la section Gestion des profils d'ingestion</a>.</p> <aside class="bcls-aside bcls-aside--information">Remarque: L'augmentation de la taille des images entraînera une augmentation du contenu géré et de l'utilisation de la bande passante, mais cela devrait être négligeable, sauf si le taux de lecteur de vos vidéos est extrêmement faible, auquel cas les images chargées pour des vidéos non lues peuvent consommer plus de bande passante que la lecteur vidéo réelle.</aside> <aside class="bcls-aside bcls-aside--information">Remarque: La possibilité de créer et de modifier des profils d'acquisition n'est disponible que pour les éditeurs disposant de comptes Enterprise et Professional.</aside>
+    <p>Une fois qu'un nouveau profil d'acquisition (ou de nouveaux profils) a été créé, ce profil doit être utilisé lors du téléchargement de vidéos.</p> <aside class="bcls-aside bcls-aside--information">Remarque: L'ensemble standard de profils d'acquisition ne peut être ni modifié ni supprimé.</aside> </section> <section class="bcls-section">
+    <h2 id="resize">Redimensionnement automatique</h2>
+    <p>Lorsque vous ajoutez des affiches personnalisées et/ou des images miniatures via Studio ou l'API Dynamic Ingest, Video Cloud les redimensionne par défaut pour correspondre aux tailles d'image définies dans le profil d'acquisition par défaut du compte.</p>  </section><section class="bcls-section">
+    <h2 id="existing">Qu'en est-il de mes vidéos existantes&nbsp;?</h2>
+    <p>Quel est le meilleur moyen de corriger la taille des images sur les vidéos existantes&nbsp;? Il existe deux options:</p>
     <ul>
-      <li><a href="#retranscode">Retranscode existing videos</a></li>
-      <li><a href="#uploadnew">Upload a new poster image</a></li>
+      <li><a href="#retranscode">Retranscoder des vidéos existantes</a></li>
+      <li><a href="#uploadnew">Téléchargez une nouvelle image d'affiche</a></li>
     </ul>
     <div id="retranscode" class="BCL-subsection">
-      <h3>Retranscoding existing videos</h3>
-      <p>Retranscoding an existing video will generate new poster and thumbnail images. The video should be retranscoded using an ingest profile that has larger image sizes. For information on retranscoding existing videos, see <a href="/media/retranscoding-videos-using-media-module.html">Retranscoding Videos using the Media Module</a>.</p>
+      <h3>Retranscodage de vidéos existantes</h3>
+      <p>Le retranscodage d'une vidéo existante générera de nouvelles images d'affiche et de vignettes. La vidéo doit être retranscodée à l'aide d'un profil d'acquisition comportant des tailles d'image plus grandes. Pour plus d'informations sur la retranscodage de vidéos existantes, consultez<a href="/media/retranscoding-videos-using-media-module.html"> Retranscodage de vidéos à l'aide du module Media</a>.</p>
     </div>
     <div id="uploadnew" class="BCL-subsection">
-      <h3>Uploading a new poster image</h3>
-      <p>A new, properly sized poster image can be uploaded using the Media module. When a new poster image is uploaded, the image will be transcoded using the <strong>default</strong> ingest profile for the account. You should ensure that the default ingest profile has the video thumbnail image sized appropriately.</p>
-      <p>To view the default ingest profile, when viewing the list of ingest profiles, look for the marked with the <img alt="" src="/assets/images/s-media-img/node16671-default.png" /> indicator.</p>
-    </div>
-  </section>
-</article>
+      <h3>Téléchargement d'une nouvelle image d'affiche</h3>
+      <p>Une nouvelle image d'affiche correctement dimensionnée peut être téléchargée à l'aide du module Médias. Lorsqu'une nouvelle image d'affiche est téléchargée, elle est transcodée à l'aide du<strong> profil d'acquisition</strong> par défaut du compte. Vous devez vous assurer que l'image miniature de la vidéo est correctement dimensionnée dans le profil d'acquisition par défaut.</p>
+      <p>Pour afficher le profil d'ingestion par défaut, lorsque vous consultez la liste des profils d'ingestion, recherchez le profil marqué par l'<img alt="" src="/assets/images/s-media-img/node16671-default.png" />indicateur.</p>
+    </div>   </section></article>

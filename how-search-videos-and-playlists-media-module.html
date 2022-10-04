@@ -1,485 +1,453 @@
 <article class="bcls-article">
-  <h1>{{ page.title }}</h1>
-  <summary>{{ page.description }}</summary>
-  <section class="bcls-section">
-    <p>The Media module provides a <strong>Search...</strong> field that can be used to search videos in a {{ site.product_short }} account.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/node15529-search-videos.png" /></figure>
-    <p>The following types of searches can be performed:</p>
+  <h1>{{page.title}}</h1> <summary>{{page.description}}</summary> <section class="bcls-section">
+    <p>Le module Media fournit une fonction<strong> de recherche... </strong>qui peut être utilisé pour rechercher des vidéos dans un compte {{site.product_short}}.</p> <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/node15529-search-videos.png" /></figure>
+    <p>Les types de recherches suivants peuvent être effectués:</p>
     <ul>
-      <li><a href="#videosearch">Video search</a></li>
-      <li><a href="#playlistsearch">Playlist search</a></li>
-      <li><a href="#advsearch">Advanced search</a></li>
-      <li><a href="#savedsearch">Saved search</a></li>
-    </ul>
-  </section>
-  <section class="bcls-section">
-    <h2 id="videosearch">Video search</h2>
-    <h3>Terminology</h3>
-    <p>In this section, the term <strong>exact</strong> means that the search string is enclosed in quotation marks. For example:</p>
+      <li><a href="#videosearch">Recherche de vidéos</a></li>
+      <li><a href="#playlistsearch">Recherche dans une playlist</a></li>
+      <li><a href="#advsearch">Recherche avancée</a></li>
+      <li><a href="#savedsearch">Recherche enregistrée</a></li>
+    </ul>  </section><section class="bcls-section">
+    <h2 id="videosearch">Recherche de vidéos</h2>
+    <h3>Terminologie</h3>
+    <p>Dans cette section, le terme<strong> exact</strong> signifie que la chaîne de recherche est placée entre guillemets. Par exemple:</p>
     <table class="bcls-table">
       <thead class="bcls-table__head">
         <tr>
-          <th>Exact Search</th>
-          <th>Non-Exact Search</th>
+          <th>Recherche exacte</th>
+          <th>Recherche non exacte</th>
         </tr>
       </thead>
       <tbody class="bcls-table__body">
         <tr>
-          <td>"great blue"</td>
-          <td>great blue</td>
+          <td>Grand Bleu-fr/</td>
+          <td>Grand Bleu</td>
         </tr>
         <tr>
-          <td><code translate="No">name</code>:"great blue"</td>
-          <td><code translate="No">name</code>:great blue</td>
+          <td><code translate="No">name</code>: grand bleu-fr/</td>
+          <td><code translate="No">Nom: Great</code> Blue</td>
         </tr>
       </tbody>
     </table>
-    <p>Note that "exact" means that all terms inside the quotation marks must be matched, but they may not match exactly. For example, a search on <code translate="No">"running water"</code> could return a video that has the phrase <code translate="No">water runs downhill</code> in the title or description.</p>
-    <p>To search the videos in your account, enter a search term in the <strong>Search...</strong> field. By default, the search will be performed on videos.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/node15529-search-options.png" /></figure>
-    <p>To search for multiple video IDs, use the following syntax: <strong>id:xxx id:xxx id:xxx</strong>. For example, <code translate="No">id:5985323381001 id:5715142164001</code>.</p>
-    <p>It is also possible to search <a href="#playlistsearch">playlists</a> or enter <a href="#advsearch">advanced search terms</a>.</p>
-    <p>The following video fields will be searched:</p>
+    <p>Notez que exact-fr/ signifie que tous les termes entre guillemets doivent être mis en correspondance, mais qu'ils peuvent ne pas correspondre exactement. Par exemple, une recherche sur<code translate="No"> eau courante-fr/</code> peut renvoyer une vidéo dont le titre ou la description contient<code translate="No"> l'expression water runs downhill</code>-fr/.</p>
+    <p>Pour rechercher les vidéos de votre compte, saisissez un terme de recherche dans la zone<strong> Rechercher... </strong>terrain. Par défaut, la recherche sera effectuée sur les vidéos.</p> <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/node15529-search-options.png" /></figure>
+    <p>Pour rechercher plusieurs identifiants vidéo, utilisez la syntaxe suivante:<strong> id:xxx id:xxx id:xxx</strong>. Par exemple,<code translate="No"> id:5985323381001 id:5715142164001</code>.</p>
+    <p>Il est également possible de rechercher des<a href="#playlistsearch"> listes de lecteur</a> ou de saisir des termes de recherche<a href="#advsearch"> avancés</a>.</p>
+    <p>Les champs vidéo suivants seront recherchés:</p>
     <ul>
-      <li>Video id (<code translate="No">id</code>)</li>
-      <li>Name (<code translate="No">name</code>)</li>
-      <li>Short description (<code translate="No">description</code>)</li>
-      <li>Long description (<code translate="No">long_description)</code>)</li>
-      <li>Tags (<code translate="No">tags</code>)</li>
-      <li>Reference id (<code translate="No">reference_id</code>)</li>
-      <li>Custom fields (<code translate="No">custom_fields</code> or <code translate="No">{field_name}</code>)</li>
+      <li>ID vidéo (<code translate="No">id</code>)</li>
+      <li>Nom (<code translate="No">nom</code>)</li>
+      <li>Brève description (<code translate="No">description</code>)</li>
+      <li>Description longue (<code translate="No">long_description</code>)</li>
+      <li>Balises (<code translate="No">balises</code>)</li>
+      <li>ID de référence (<code translate="No">reference_id</code>)</li>
+      <li>Champs personnalisés (<code translate="No">custom_fields</code> ou<code translate="No"> {field_name}</code>)</li>
     </ul>
-    <p>Query support for video fields differ. Some fields support partial-word searches and <a href="#stemming">stemming searches</a>, and some do not.</p>
+    <p>Le support des requêtes pour les champs vidéo est différent. Certains champs prennent en charge les recherches par mots<a href="#stemming"> partiels et les recherches par radical</a>, d'autres non.</p>
     <table class="bcls-table">
       <thead class="bcls-table__head">
         <tr>
-          <th>Search field&nbsp;</th>
-          <th>Supports</th>
-          <th><strong>Does Not Support</strong></th>
-          <th>Examples</th>
+          <th>Champ de recherche&nbsp;</th>
+          <th>Supporte</th>
+          <th><strong>Ne prend pas en charge</strong></th>
+          <th>Exemples</th>
         </tr>
       </thead>
       <tbody class="bcls-table__body">
         <tr>
-          <td>Name and descriptions</td>
-          <td><strong>exact</strong> matches for one or more whole words; <a href="#stemming">stemming</a> support</td>
-          <td>no partial-word support</td>
+          <td>Nom et descriptions</td>
+          <td><strong></strong>correspondances exactes pour un ou plusieurs mots entiers&nbsp;; prise en<a href="#stemming"> charge de</a> la racine</td>
+          <td>aucune prise en charge de mots partiels</td>
           <td><ul>
-              <li><code translate="No">name:"great blue"</code> will match <code translate="No">"Great Blue Heron"</code></li>
-              <li><code translate="No">name:"great blu"</code> will <strong>not</strong> match <code translate="No">"Great Blue Heron"</code></li>
-              <li><code translate="No">name:great blu</code> will match <code translate="No">"Great Blue Heron"</code></li>
+              <li><code translate="No">name: &quot;great blue-fr/</code> correspond à<code translate="No"> Great Blue Heron-fr/</code></li>
+              <li><code translate="No">name: &quot;great blu-fr/</code> ne<strong> correspond</strong> pas à<code translate="No"> Great Blue Heron-fr/</code></li>
+              <li><code translate="No">nom:great blu</code> correspondra à<code translate="No"> Great Blue Heron-fr/</code></li>
             </ul></td>
         </tr>
         <tr>
-          <td>Video ID</td>
-          <td>exact matches only</td>
-          <td>no partial-word or <a href="#stemming">stemming</a> support</td>
-          <td><strong>5591838791001</strong> will match video with id 5591838791001 <strong>5591838791</strong> will <strong>not</strong> match that video</td>
+          <td>ID de la vidéo</td>
+          <td>correspondances exactes uniquement</td>
+          <td>pas de prise en<a href="#stemming"> charge des mots</a> partiels ou des racines</td>
+          <td><strong>5591838791001</strong> correspondra à la vidéo portant l'ID 5591838791001<strong> 5591838791</strong> ne <strong></strong>correspondra pas à cette vidéo</td>
         </tr>
         <tr>
-          <td>Tags</td>
-          <td>matches only for whole words</td>
-          <td>no partial-word or <a href="#stemming">stemming</a> support</td>
-          <td><code translate="No">tags:publ</code> will <strong>not</strong> match videos with tag <code translate="No">"public"</code></td>
+          <td>Balises</td>
+          <td>correspond uniquement aux mots entiers</td>
+          <td>pas de prise en<a href="#stemming"> charge des mots</a> partiels ou des racines</td>
+          <td><code translate="No">Mots clés:publ</code> ne <strong></strong>correspondra pas aux vidéos avec le tag<code translate="No"> public-fr/</code></td>
         </tr>
         <tr>
-          <td>Reference ID</td>
-          <td>partial string matches that start with the Ref ID (first 3 chars.) and whole string matches</td>
-          <td>no partial-strings that do not start with the Ref ID</td>
+          <td>ID de référence</td>
+          <td>des correspondances de chaînes partielles commençant par l'ID de référence (3 premiers caractères) et des correspondances de chaînes entières</td>
+          <td>pas de chaînes partielles qui ne commencent pas par l'ID de référence</td>
           <td><ul>
-              <li><code translate="No">reference_id:myv</code> matches video with reference id "myvid1"</li>
-              <li><code translate="No">reference_id:"myv"</code> does <strong>not</strong> match video with reference id <code translate="No">"myvid1"</code></li>
+              <li><code translate="No">reference_id:myv</code> correspond à la vidéo avec l'ID de référence myvid1&quot;</li>
+              <li><code translate="No">reference_id: myv-fr/</code> ne<strong> correspond</strong> pas à la vidéo avec l'ID de référence<code translate="No"> myvid1&quot;</code></li>
             </ul></td>
         </tr>
         <tr>
-          <td>Date fields</td>
+          <td>Champs de date</td>
           <td>&nbsp;</td>
-          <td>not searchable using the text box, searchable using advanced search</td>
+          <td>recherche impossible à l'aide de la zone de texte, recherchable à l'aide de la recherche avancée</td>
           <td>&nbsp;</td>
         </tr>
         <tr>
-          <td>Individual text custom fields</td>
-          <td>matches for one or more whole words and <a href="#stemming">stemming</a> support; for <strong>exact</strong> search strings, whole word matches only</td>
-          <td>no partial-word support</td>
+          <td>Champs personnalisés de texte individuels</td>
+          <td>correspond à un ou plusieurs mots entiers et prend en<a href="#stemming"> charge</a> la racine&nbsp;; pour les chaînes de<strong> recherche</strong> exactes, les correspondances de mots entiers uniquement</td>
+          <td>aucune prise en charge de mots partiels</td>
           <td><ul>
-              <li><code translate="No">custom_fields:place</code> will match video with a custom field value of <code translate="No">"places"</code></li>
-              <li><code translate="No">custom_fields:plac</code> will <strong>not</strong> match video with a custom field value of <code translate="No">"places"</code></li>
-              <li><code translate="No">custom_fields:"place"</code> will <strong>not</strong> match video with a custom field value of <code translate="No">"places"</code></li>
+              <li><code translate="No">custom_fields:place</code> fera correspondre la vidéo avec une valeur de champ personnalisée<code translate="No"> places-fr/</code></li>
+              <li><code translate="No">custom_fields:plac</code> ne<strong> mettra pas en</strong> correspondance la vidéo avec une valeur de champ personnalisée<code translate="No"> places-fr/</code></li>
+              <li><code translate="No">custom_fields: place-fr/</code> ne<strong> fera pas</strong> correspondre la vidéo avec une valeur de champ personnalisée<code translate="No"> places-fr/</code></li>
             </ul></td>
         </tr>
         <tr>
-          <td>Individual list custom fields</td>
-          <td>matches for one or more whole words and <a href="#stemming">stemming</a> support; <strong>exact</strong> search stings, whole word matches only</td>
-          <td>no partial-word support</td>
+          <td>Champs personnalisés de liste individuelle</td>
+          <td>correspondances pour un ou plusieurs mots entiers et prise en<a href="#stemming"> charge</a> de la racine&nbsp;; piqûres de<strong> recherche</strong> exactes, correspondances de mots entiers uniquement</td>
+          <td>aucune prise en charge de mots partiels</td>
           <td><ul>
-              <li><code translate="No">topic:place</code> will match video with a topic list-type custom field value of "places"</li>
-              <li><code translate="No">topic:plac</code> will <strong>not</strong> match video with a topic list-type custom field value of <code translate="No">"places"</code></li>
-              <li><code translate="No">topic:"place"</code> will <strong>not</strong> match video with a topic list-type custom field value of <code translate="No">"places"</code></li>
+              <li><code translate="No">topic:place</code> fera correspondre la vidéo avec une valeur de champ personnalisé de type liste de sujets places-fr/</li>
+              <li><code translate="No">topic:plac</code> ne<strong> mettra pas en</strong> correspondance la vidéo avec une valeur de champ personnalisé de type liste de sujets<code translate="No"> places-fr/</code></li>
+              <li><code translate="No">topic: place-fr/</code> ne<strong> mettra pas en</strong> correspondance la vidéo avec une valeur de champ personnalisé de type liste de sujets<code translate="No"> places-fr/</code></li>
             </ul></td>
         </tr>
       </tbody>
-    </table>
-
-    <section class="bcls-section">
-      <h2 id="Ignored_words">Ignored words</h2>
+    </table> <section class="bcls-section">
+      <h2 id="Ignored_words">Mots ignorés</h2>
   
-      <p>Certain words are ignored in search strings because they are so common that they are likely to return many results unrelated to what you are actually searching for. Below is a list of words that are ignored by search:</p>
+      <p>Certains mots sont ignorés dans les chaînes de recherche car ils sont si courants qu'ils sont susceptibles de renvoyer de nombreux résultats sans rapport avec ce que vous recherchez réellement. Vous trouverez ci-dessous une liste de mots ignorés par la recherche:</p>
   
-      <p>"a", "an", "and", "are", "as", "at", "be", "but", "by", "for", "if", "in", "into", "is", "it", "no", "not", "of", "on", "or", "such", "that", "the", "their", "then", "there", "these", "they", "this", "to", "was", "will", "with"</p>
+      <p>a-fr/, an-fr/, and-fr/, are-fr/, as-fr/, at-fr/, be-fr/, but-fr/, by-fr/, for-fr/, if-fr/, in-fr/, into-fr/, is-fr/, it-fr/, no-fr/, not-fr/, of-fr/, on-fr/, &amp; quot&nbsp;; ou-fr/, tel-fr/, tel-fr/, le-fr/, leur-fr/, alors-fr/, là-fr/, ceux-ci-fr/, ils-fr/, ceci-fr/, à-fr/, était-fr/, volonté-fr/, avec-fr/</p>
   
-      <p>In addition, non-alphanumeric characters such as hyphens, underscores, line-breaks, "$", "&", "*", etc. are treated as word delimiters. For example, a search string like <code translate="No">small-town</code> will be treated as <code translate="No">small town</code>.</p>
-    </section>
+      <p>En outre, les caractères non alphanumériques tels que les tirets, les traits de soulignement, les sauts de ligne, $-fr/, &amp;-fr/, *-fr/, etc. sont traités comme des délimiteurs de mots. Par exemple, une chaîne de recherche telle que<code translate="No"> small-town</code> sera traitée comme<code translate="No"> small town</code>.</p> </section>
 
     <div class="BCL-subsection">
-      <h3 id="stemming">What is stemming?</h3>
-      <p>Video fields that support stemming return words that have the stem of the search word in common. In addition, stemming supports entering whole words only, not partial words:</p>
+      <h3 id="stemming">Qu'est-ce que l'égrappage&nbsp;?</h3>
+      <p>Les champs vidéo qui prennent en charge la racine renvoient les mots qui ont la racine du mot recherché en commun. En outre, la racine prend en charge la saisie de mots entiers uniquement, et non de mots partiels:</p>
       <ul>
-        <li>Example 1: Searching on <code translate="No">running</code> will return results containing: <code translate="No">running</code>, <code translate="No">run</code>, <code translate="No">runs</code></li>
-        <li>Example 2: Searching on <code translate="No">vid</code> will not return results containing: <code translate="No">video</code></li>
+        <li>Exemple 1: La recherche en<code translate="No"> cours d'exécution</code> renverra des résultats contenant:<code translate="No"> running</code>,<code translate="No"> run</code>,<code translate="No"> runs</code></li>
+        <li>Exemple 2: La recherche sur<code translate="No"> vid ne</code> renverra pas les résultats contenant:<code translate="No"> video</code></li>
       </ul>
     </div>
     <div class="BCL-subsection">
-      <h3>General rules</h3>
+      <h3>Règles générales</h3>
       <ul>
-        <li>For an exact match, enclose strings in quotes</li>
-        <li>By default, {{ site.product }} assumes an OR logical operator between words</li>
-        <li>Search is case-insensitive</li>
+        <li>Pour une correspondance exacte, mettez les chaînes entre guillemets</li>
+        <li>Par défaut, {{site.product}} suppose un opérateur logique OR entre les mots</li>
+        <li>La recherche ne respecte pas la casse</li>
       </ul>
     </div>
     <div class="BCL-subsection">
-      <h3>Examples</h3>
+      <h3>Exemples</h3>
       <table class="bcls-table">
         <thead class="bcls-table__head">
           <tr>
-            <th width="236">Search Term</th>
-            <th width="388">Returns</th>
+            <th width="236">Terme de recherche</th>
+            <th width="388">Retours</th>
           </tr>
         </thead>
         <tbody class="bcls-table__body">
           <tr>
-            <td><code translate="No">financial planning</code></td>
-            <td>all videos that contain <code translate="No">financial</code> OR <code translate="No">planning</code></td>
+            <td><code translate="No">planification financière</code></td>
+            <td>toutes les vidéos qui contiennent des informations<code translate="No"> financières</code> OU<code translate="No"> de planification</code></td>
           </tr>
           <tr>
-            <td><code translate="No">"financial planning"</code></td>
-            <td>all videos that contain <code translate="No">financial</code> AND <code translate="No">planning</code>. Note that the quotation marks ensure that matching videos will have all the terms, but possible not the exact terms - for example, the search terms here might also return videos with <code translate="No">finance</code> and <code translate="No">plan</code> in the title or description</td>
+            <td><code translate="No">planification financière-fr/</code></td>
+            <td>toutes les vidéos qui contiennent des<code translate="No"> informations financières</code> ET<code translate="No"> de planification</code>. Notez que les guillemets garantissent que les vidéos correspondantes contiennent tous les termes, mais peut-être pas les termes exacts. Par exemple, les termes de recherche ici peuvent également renvoyer des vidéos avec<code translate="No"> finance</code> et<code translate="No"> plan</code> le titre ou la description</td>
           </tr>
           <tr>
-            <td>walk</td>
-            <td>all videos that contain <strong>walk</strong>, <strong>walks</strong>, or <strong>walking</strong></td>
+            <td>marche</td>
+            <td>toutes les vidéos qui contiennent<strong> walk </strong><strong>,</strong> walks ou<strong> walking</strong></td>
           </tr>
         </tbody>
       </table>
-    </div>
-  </section>
-  <section class="bcls-section">
-    <h2 id="playlistsearch">Playlist search</h2>
-    <p>To search the playlists in your account, enter a search term in the <strong>Search...</strong> field and then click on the <strong>playlists</strong> option.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/node15529-playlist-search.png" /></figure>
-    <p>A list of playlists will appear in the body of the page.</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="advsearch">Advanced search</h2>
-    <p>Advanced search allows you to search for values in specific fields using search qualifiers. For example, you can specify that only the video name or tag fields should be searched. You can also exclude videos with certain terms. For example, you can search for videos that contain <strong>sports</strong> but exclude the videos that include <strong>baseball</strong>. To open the Advanced Search dialog, click the <strong>More Search Options</strong> link.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Advanced Search" src="/assets/images/s-media-img/node15529-advanced-search.png" /></figure>
-    <p>The following criteria can be used to customize the search:</p>
+    </div>  </section><section class="bcls-section">
+    <h2 id="playlistsearch">Recherche dans une playlist</h2>
+    <p>Pour effectuer une recherche dans les listes de lecteur de votre compte, saisissez un terme de recherche dans le champ<strong> Rechercher... </strong>, puis cliquez sur l'<strong>option des</strong> listes de lecteur.</p> <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/node15529-playlist-search.png" /></figure>
+    <p>Une liste de listes de lecteur apparaît dans le corps de la page.</p>  </section><section class="bcls-section">
+    <h2 id="advsearch">Recherche avancée</h2>
+    <p>La recherche avancée vous permet de rechercher des valeurs dans des champs spécifiques à l'aide de qualificatifs de recherche. Par exemple, vous pouvez spécifier que seuls les champs de nom ou de balise de la vidéo doivent être recherchés. Vous pouvez également exclure des vidéos comportant certains termes. Par exemple, vous pouvez rechercher des vidéos qui contiennent du<strong> sport</strong>, mais exclure celles qui incluent le<strong> baseball</strong>. Pour ouvrir la boîte de dialogue Recherche avancée, cliquez sur le<strong> lien</strong> Autres options de recherche.</p> <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Recherche avancée" src="/assets/images/s-media-img/node15529-advanced-search.png" /></figure>
+    <p>Les critères suivants peuvent être utilisés pour personnaliser la recherche:</p>
     <ul>
-      <li><a href="#tags">Tags</a></li>
-      <li><a href="#daterange">Date Range</a></li>
-      <li><a href="#includetext">Text to Include</a></li>
-      <li><a href="#excludetext">Text to Exclude</a></li>
-      <li><a href="#playable">Playable</a></li>
+      <li><a href="#tags">Balises</a></li>
+      <li><a href="#daterange">Plage de dates</a></li>
+      <li><a href="#includetext">Texte à inclure</a></li>
+      <li><a href="#excludetext">Texte à exclure</a></li>
+      <li><a href="#playable">Jouable</a></li>
     </ul>
     <div id="tags" class="BCL-subsection">
-      <h3>Tags</h3>
-      <p>Advanced search can be used to return videos based upon video tag. There are three options when searching using tags:</p>
+      <h3>Balises</h3>
+      <p>La recherche avancée peut être utilisée pour renvoyer des vidéos en fonction de la balise vidéo. Il existe trois options pour effectuer une recherche à l'aide de balises:</p>
       <ul>
-        <li><strong>Any</strong> - Return videos with any of the tags (OR)</li>
-        <li><strong>All</strong> - Return videos will all of the tags (AND)</li>
-        <li><strong>None</strong> - Return videos that do not have any of these tags</li>
+        <li><strong>Any</strong> - Retourne les vidéos avec l'un des tags (OU)</li>
+        <li><strong>Tout</strong> - Les vidéos de retour seront toutes les balises (ET)</li>
+        <li><strong>Aucun</strong>: renvoie les vidéos qui ne possèdent aucune de ces balises</li>
       </ul>
-      <p>This example would return all videos that are tagged with either <code translate="No">birds</code> or <code translate="No">animals</code>.</p>
-      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/node15529-tag-example.png" /></figure>
-      <p>Additional tags criteria can be entered by using the delete/add buttons (<img alt="" src="/assets/images/s-media-img/node15529-delete-add.png" />).</p>
+      <p>Cet exemple renvoie toutes les vidéos marquées avec des<code translate="No"> oiseaux</code> ou des<code translate="No"> animaux</code>.</p> <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/node15529-tag-example.png" /></figure>
+      <p>Des critères de balises supplémentaires peuvent être saisis à l'aide des boutons supprimer/ajouter (<img alt="" src="/assets/images/s-media-img/node15529-delete-add.png" />).</p>
     </div>
     <div id="daterange" class="BCL-subsection">
-      <h3>Date Range</h3>
-      <p>Advanced search can be used to return videos based upon date range. The following dates can be searched:</p>
+      <h3>Plage de dates</h3>
+      <p>La recherche avancée peut être utilisée pour renvoyer des vidéos en fonction de la plage de dates. Les dates suivantes peuvent être recherchées:</p>
       <ul>
-        <li>Created At (<code translate="No">created_at</code>)</li>
-        <li>Updated At (<code translate="No">updated_at</code>)</li>
-        <li>Scheduled Starts At (<code translate="No">schedule.starts_at</code>)</li>
-        <li>Scheduled Ends At (<code translate="No">schedule.ends_at</code>)</li>
+        <li>Créé à (<code translate="No">created_at</code>)</li>
+        <li>Mis à jour à (<code translate="No">updated_at</code>)</li>
+        <li>Démarrages planifiés à (<code translate="No">schedule.starts_at</code>)</li>
+        <li>Fin planifiée à (<code translate="No">schedule.ends_at</code>)</li>
       </ul>
-      <p>This example would return all videos created between March 1, 2016 and March 31, 2016.</p>
-      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/node15529-date-range-example.png" /></figure>
-      <p>Additional date ranges can be entered by using the delete/add buttons (<img alt="" src="/assets/images/s-media-img/node15529-delete-add.png" />).</p>
+      <p>Cet exemple renvoie toutes les vidéos créées entre le 1er mars 2016 et le 31 mars 2016.</p> <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/node15529-date-range-example.png" /></figure>
+      <p>Des plages de dates supplémentaires peuvent être saisies à l'aide des boutons Supprimer/Ajouter (<img alt="" src="/assets/images/s-media-img/node15529-delete-add.png" />).</p>
     </div>
     <div id="includetext" class="BCL-subsection">
-      <h3>Text to Include</h3>
-      <p>Advanced search can be used to return videos based upon text in video metadata. The following fields can be searched:</p>
+      <h3>Texte à inclure</h3>
+      <p>La recherche avancée peut être utilisée pour renvoyer des vidéos basées sur le texte des métadonnées vidéo. Les champs suivants peuvent faire l'objet d'une recherche:</p>
       <ul>
-        <li>All</li>
-        <li>Name</li>
-        <li>Name and Description</li>
-        <li>Reference ID</li>
-        <li>Custom Fields</li>
-        <li>A specific custom field</li>
+        <li>Tout</li>
+        <li>Nom</li>
+        <li>Nom et description</li>
+        <li>ID de référence</li>
+        <li>Champs personnalisés</li>
+        <li>Un champ personnalisé spécifique</li>
       </ul>
-      <p>Assume the account has two custom fields, <strong>Year</strong> and <strong>Subject</strong>. This would return all videos with the <strong>Year</strong> custom field equal to <strong>2016</strong> and the <strong>Subject</strong> custom field equal to <strong>birds</strong>.</p>
-      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/node15529-text-example.png" /></figure>
-      <p>Additional criteria can be entered by using the delete/add buttons (<img alt="" src="/assets/images/s-media-img/node15529-delete-add.png" />).</p>
+      <p>Supposons que le compte comporte deux champs personnalisés,<strong> Year</strong> et<strong> Subject</strong>. Cela renverrait toutes les vidéos dont le champ<strong> personnalisé</strong> Year est égal à<strong> 2016</strong> et le champ<strong> personnalisé</strong> Subject est égal aux<strong> oiseaux. </strong>.</p> <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/node15529-text-example.png" /></figure>
+      <p>Des critères supplémentaires peuvent être saisis à l'aide des boutons supprimer/ajouter (<img alt="" src="/assets/images/s-media-img/node15529-delete-add.png" />).</p>
     </div>
     <div id="excludetext" class="BCL-subsection">
-      <h3>Text to Exclude</h3>
-      <p>Advanced search can be used to exclude videos based upon text in video metadata. The following fields can be searched:</p>
+      <h3>Texte à exclure</h3>
+      <p>La recherche avancée peut être utilisée pour exclure les vidéos en fonction du texte des métadonnées vidéo. Les champs suivants peuvent faire l'objet d'une recherche:</p>
       <ul>
-        <li>Name</li>
-        <li>Name and Description</li>
-        <li>Reference ID</li>
-        <li>Custom Fields</li>
-        <li>A specific custom field</li>
+        <li>Nom</li>
+        <li>Nom et description</li>
+        <li>ID de référence</li>
+        <li>Champs personnalisés</li>
+        <li>Un champ personnalisé spécifique</li>
       </ul>
-      <p>This example will not return videos that have <strong>private</strong> in the name or description fields.</p>
-      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/node15529-exclude-text-example.png" /></figure>
-      <p>Additional criteria can be entered by using the delete/add buttons (<img alt="" src="/assets/images/s-media-img/node15529-delete-add.png" />).</p>
+      <p>Cet exemple ne renvoie pas les vidéos dont le nom ou<strong> la description contiennent des informations</strong> privées.</p> <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/node15529-exclude-text-example.png" /></figure>
+      <p>Des critères supplémentaires peuvent être saisis à l'aide des boutons supprimer/ajouter (<img alt="" src="/assets/images/s-media-img/node15529-delete-add.png" />).</p>
     </div>
     <div id="playable" class="BCL-subsection">
-      <h3>Playable</h3>
-      <p>Advanced search can be used to return videos based upon their status:</p>
+      <h3>Jouable</h3>
+      <p>La recherche avancée peut être utilisée pour renvoyer des vidéos en fonction de leur statut:</p>
       <ul>
-        <li>All</li>
-        <li>Playable</li>
-        <li>Not Playable</li>
+        <li>Tout</li>
+        <li>Jouable</li>
+        <li>Non jouable</li>
       </ul>
     </div>
-    <p>After entering the search criteria, the advanced search syntax will appear in the search box.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/node15529-advanced-search-syntax.png" /></figure>
-    <p>See the <a href="#advsearchsyntax">Advanced search syntax</a> section for more information.</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="advsearchsyntax">Advanced search syntax</h2>
-    <p>When the Advanced Search dialog is used to search for videos, the advanced search syntax will appear in the search box after entering the search criteria. This section outlines the search syntax. The search syntax can also be entered into the search box without using the Advanced Search dialog. To open the Advanced Search dialog, click the <strong>More Search Options</strong> link.</p>
-    <p>To mark a search term as required (returned videos <strong>must</strong> match) or excluded (returned videos <strong>must not</strong> match), add a <strong>+</strong> or <strong>-</strong> sign immediately preceding the term.</p>
-    <p>The following search qualifiers and values are supported.</p>
+    <p>Après avoir saisi les critères de recherche, la syntaxe de recherche avancée apparaît dans la zone de recherche.</p> <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/node15529-advanced-search-syntax.png" /></figure>
+    <p>Consultez la<a href="#advsearchsyntax"> section Syntaxe de recherche</a> avancée pour plus d'informations.</p>  </section><section class="bcls-section">
+    <h2 id="advsearchsyntax">Syntaxe de recherche avancée</h2>
+    <p>Lorsque la boîte de dialogue Recherche avancée est utilisée pour rechercher des vidéos, la syntaxe de recherche avancée apparaît dans la zone de recherche après avoir saisi les critères de recherche. Cette section décrit la syntaxe de recherche. La syntaxe de recherche peut également être saisie dans la zone de recherche sans utiliser la boîte de dialogue Recherche avancée. Pour ouvrir la boîte de dialogue Recherche avancée, cliquez sur le<strong> lien</strong> Autres options de recherche.</p>
+    <p>Pour marquer un terme de recherche comme obligatoire (les vidéos renvoyées<strong> doivent</strong> correspondre) ou exclu (les vidéos renvoyées ne<strong> doivent pas</strong> correspondre), ajoutez un<strong> +</strong> ou <strong> -</strong> signe qui précède immédiatement le terme.</p>
+    <p>Les qualificatifs et valeurs de recherche suivants sont pris en charge.</p>
     <table class="bcls-table">
       <thead class="bcls-table__head">
         <tr>
-          <th width="299">Qualifier</th>
-          <th width="442">Valid Values</th>
+          <th width="299">Qualifications</th>
+          <th width="442">Valeurs valides</th>
         </tr>
       </thead>
       <tbody class="bcls-table__body">
         <tr>
-          <td><code translate="No">name</code></td>
-          <td>strings or quoted strings</td>
+          <td><code translate="No">nom</code></td>
+          <td>chaînes ou chaînes entre guillemets</td>
         </tr>
         <tr>
-          <td>text</td>
-          <td>strings or quoted strings (<code translate="No">name</code>)</td>
+          <td>texte</td>
+          <td>chaînes ou chaînes entre guillemets (<code translate="No">name</code>)</td>
         </tr>
         <tr>
-          <td><code translate="No">tags</code></td>
-          <td>strings or quoted strings</td>
+          <td><code translate="No">balises</code></td>
+          <td>chaînes ou chaînes entre guillemets</td>
         </tr>
         <tr>
           <td><code translate="No">reference_id</code></td>
-          <td>strings or quoted strings</td>
+          <td>chaînes ou chaînes entre guillemets</td>
         </tr>
         <tr>
-          <td><code translate="No">custom_fields</code> - searches all custom fields</td>
-          <td>strings or quoted strings</td>
+          <td><code translate="No">custom_fields</code> - recherche tous les champs personnalisés</td>
+          <td>chaînes ou chaînes entre guillemets</td>
         </tr>
         <tr>
-          <td>&lt;<code translate="No">custom_field_name</code>&gt; - searches specified custom field name</td>
-          <td>strings or quoted strings</td>
+          <td>&lt;<code translate="No">custom_field_name</code> &gt; - recherche le nom de champ personnalisé spécifié</td>
+          <td>chaînes ou chaînes entre guillemets</td>
         </tr>
         <tr>
-          <td><code translate="No">state</code><sup>[1]</sup></td>
-          <td><code translate="No">ACTIVE</code>, <code translate="No">INACTIVE</code>, <code translate="No">PENDING</code></td>
+          <td><code translate="No">état</code><sup> [1]</sup></td>
+          <td><code translate="No">ACTIF</code>,<code translate="No"> INACTIF</code>,<code translate="No"> EN ATTENTE</code></td>
         </tr>
         <tr>
           <td><code translate="No">updated_at</code></td>
-          <td>date range</td>
+          <td>plage de dates</td>
         </tr>
         <tr>
           <td><code translate="No">created_at</code></td>
-          <td>date range</td>
+          <td>plage de dates</td>
         </tr>
         <tr>
           <td><code translate="No">schedule.starts_at</code></td>
-          <td>date range</td>
+          <td>plage de dates</td>
         </tr>
         <tr>
           <td><code translate="No">schedule.ends_at</code></td>
-          <td>date range</td>
+          <td>plage de dates</td>
         </tr>
         <tr>
-          <td><code translate="No">published_at</code><sup>[2]</sup></td>
-          <td>date range</td>
+          <td><code translate="No">published_at</code><sup> [2]</sup></td>
+          <td>plage de dates</td>
         </tr>
         <tr>
-          <td><code translate="No">complete</code><sup>[3]</sup></td>
-          <td><code translate="No">true</code> or <code translate="No">false</code></td>
+          <td><code translate="No">complet</code><sup> [3]</sup></td>
+          <td><code translate="No">vrai</code> ou<code translate="No"> faux</code></td>
         </tr>
       </tbody>
     </table>
     <div class="BCL-subsection">
-      <h3>Notes</h3>
-      <p><sup>[1]</sup> A video would be in a PENDING state when it has been shared to an account but it has not been accepted.</p>
-      <p><sup>[2]</sup> The date the video was last activated.</p>
-      <p><sup>[3]</sup> A video has a complete state of true when the video has at least one playable rendition. It does not necessarily mean that all transcoding is complete.</p>
+      <h3>Remarques</h3>
+      <p><sup>[1]</sup> Une vidéo serait dans l'état PENDING lorsqu'elle a été partagée sur un compte mais qu'elle n'a pas été acceptée.</p>
+      <p><sup>[2]</sup> La date à laquelle la vidéo a été activée pour la dernière fois.</p>
+      <p><sup>[3]</sup> Une vidéo a un état complet de vrai lorsque la vidéo possède au moins un rendu lisible. Cela ne signifie pas nécessairement que tout le transcodage est terminé.</p>
     </div>
     <div class="BCL-subsection">
-      <h3>Working with date fields</h3>
-      <p>When working with date fields, the dates can be in UTC (2012-08-01T00:00:00Z) format or use a relative format:</p>
+      <h3>Utilisation des champs de date</h3>
+      <p>Lorsque vous utilisez des champs de date, les dates peuvent être au format UTC (2012-08-01T 00:00:00 Z) ou utiliser un format relatif:</p>
       <ul>
-        <li><code translate="No">-1day</code></li>
-        <li><code translate="No">-2days</code></li>
-        <li><code translate="No">+4hours</code></li>
-        <li><code translate="No">-60minutes</code></li>
+        <li><code translate="No">- 1 jour</code></li>
+        <li><code translate="No">- 2 jours</code></li>
+        <li><code translate="No">+ 4 heures</code></li>
+        <li><code translate="No">- 60 minutes</code></li>
         <li><code translate="No">-1d</code></li>
         <li><code translate="No">-2d</code></li>
-        <li><code translate="No">+4h</code></li>
-        <li><code translate="No">-60m</code></li>
+        <li><code translate="No">+4 h</code></li>
+        <li><code translate="No">-60 m</code></li>
       </ul>
-    </div>
-  </section>
-  <section class="bcls-section">
-    <h3>Examples</h3>
-    <p>When combining multiple search terms, separate them with a space so that  additional terms are not interpreted as part of the first one.</p>
+    </div>  </section><section class="bcls-section">
+    <h3>Exemples</h3>
+    <p>Lorsque vous combinez plusieurs termes de recherche, séparez-les par un espace afin que les termes supplémentaires ne soient pas interprétés comme faisant partie du premier.</p>
     <table class="bcls-table">
       <thead class="bcls-table__head">
         <tr>
-          <th width="385">Search Term</th>
-          <th width="239">Returns</th>
+          <th width="385">Terme de recherche</th>
+          <th width="239">Retours</th>
         </tr>
       </thead>
       <tbody class="bcls-table__body">
         <tr>
-          <td><code translate="No">+name:florida</code></td>
-          <td>all videos with <code translate="No">Florida</code> in the video name</td>
+          <td><code translate="No">+nom: floride</code></td>
+          <td>toutes les vidéos avec<code translate="No"> Florida</code> dans le nom de la vidéo</td>
         </tr>
         <tr>
-          <td><code translate="No">+text:meeting</code></td>
-          <td>all videos with the word <code translate="No">meeting</code> in the video name or short or long description</td>
+          <td><code translate="No">+texte:réunion</code></td>
+          <td>toutes les vidéos avec le mot<code translate="No"> meeting</code> dans le nom de la vidéo ou une description courte ou longue</td>
         </tr>
         <tr>
-          <td><code translate="No">+tags:birds</code></td>
-          <td>all videos that are tagged <code translate="No">birds</code></td>
+          <td><code translate="No">+tags: oiseaux</code></td>
+          <td>toutes les vidéos qui sont étiquetées<code translate="No"> birds</code></td>
         </tr>
         <tr>
-          <td><code translate="No">+tags:birds +state:inactive</code></td>
-          <td>all videos that are tagged <code translate="No">birds</code> and have a status of <code translate="No">inactive</code></td>
+          <td><code translate="No">+ tags: oiseaux +état: inactif</code></td>
+          <td>toutes les vidéos qui sont taguées<code translate="No"> birds</code> et qui ont le statut<code translate="No"> inactive</code></td>
         </tr>
         <tr>
-          <td><code translate="No">+tags:live,"now playing" +state:ACTIVE</code></td>
-          <td>all videos that are tagged <code translate="No">live</code> and <code translate="No">now playing</code> and have a status of <code translate="No">active</code></td>
+          <td><code translate="No">+ tags:live, now playing-fr/ +State:Active</code></td>
+          <td>toutes les vidéos qui sont taguées<code translate="No"> en direct</code> et<code translate="No"> en cours de lecteur</code> et qui ont le statut<code translate="No"> actif</code></td>
         </tr>
         <tr>
-          <td><code translate="No">+custom_fields:"2015"</code></td>
-          <td>all videos that have a value of <code translate="No">2015</code> in <strong>any</strong> custom field</td>
+          <td><code translate="No">+custom_fields: 2015-fr/</code></td>
+          <td>toutes les vidéos qui ont une valeur de<code translate="No"> 2015</code> dans<strong> n'importe quel champ</strong> personnalisé</td>
         </tr>
         <tr>
-          <td><code translate="No">+subject:birds</code></td>
-          <td>all videos that a value of <code translate="No">birds</code> in the <code translate="No">subject</code> custom field</td>
+          <td><code translate="No">+sujet: oiseaux</code></td>
+          <td>toutes les vidéos qui ont une valeur d'<code translate="No">oiseaux</code> dans le champ<code translate="No"> personnalisé du</code> sujet</td>
         </tr>
         <tr>
-          <td><code translate="No">+producer:"Bob Bailey"</code></td>
-          <td>all videos that a value of <code translate="No">Bob Bailey</code> in the <code translate="No">producer</code> custom field</td>
+          <td><code translate="No">+producteur: Bob Bailey-fr/</code></td>
+          <td>toutes les vidéos qui ont une valeur de<code translate="No"> Bob Bailey</code> dans le champ<code translate="No"> personnalisé du</code> producteur</td>
         </tr>
         <tr>
-          <td><code translate="No">+created_at:-3d</code></td>
-          <td>all videos created in the last 3 days</td>
+          <td><code translate="No">+created_at: -3d</code></td>
+          <td>toutes les vidéos créées au cours des 3 derniers jours</td>
         </tr>
         <tr>
-          <td><code translate="No">+updated_at:-1d</code></td>
-          <td>all videos updated in the past day</td>
+          <td><code translate="No">+updated_at: -1d</code></td>
+          <td>toutes les vidéos mises à jour le jour précédent</td>
         </tr>
         <tr>
-          <td><code translate="No">+updated_at:-2d +state:INACTIVE</code></td>
-          <td>all videos that have been updated in the last two days and are <code translate="No">inactive</code></td>
+          <td><code translate="No">+updated_at: -2d +État: inactif</code></td>
+          <td>toutes les vidéos qui ont été mises à jour au cours des deux derniers jours et qui sont<code translate="No"> inactives</code></td>
         </tr>
         <tr>
-          <td><code translate="No">+schedule.starts_at:2015-06-01..2015-06-07</code></td>
-          <td>all videos that are scheduled to start between June 1, 2015 and June 6, 2015</td>
+          <td><code translate="No">+schedule.starts_at:2015-06-01.. 2015-06-07</code></td>
+          <td>toutes les vidéos dont le lancement est prévu entre le 1er juin 2015 et le 6 juin 2015</td>
         </tr>
         <tr>
-          <td><code translate="No">+updated_at:2015-06-01T13:00:00Z..2015-06-01T15:00:00Z</code></td>
-          <td>all videos that were updated on June 1, 2015 between 1pm and 3pm</td>
+          <td><code translate="No">+updated_at: 2015-06-01T 13:00:00 Z.. 2015-06-01T 15:00:00 Z</code></td>
+          <td>toutes les vidéos qui ont été mises à jour le 1er juin 2015 entre 13h et 15h</td>
         </tr>
       </tbody>
-    </table>
-  </section>
-  <section class="bcls-section">
-    <h2 id="savedsearch">Saving searches</h2>
-    <p>Searches that you run frequently can be saved so they can be re-run quickly without having to re-enter the search syntax. After you have entered the search syntax that returns the videos you want to see, click <strong>Save Search</strong>. Enter a name for the saved search and then click <span class="button-blue">Save</span>.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/node15529-saved-search.png" /></figure>
-    <p>To re-run the saved search, click the <strong>Saved Searches</strong> link under the search box and click on the saved search to run.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/node15529-saved-search-run.png" /></figure>
-    <p>To delete any of the saved searches, click the delete icon (<img alt="" src="/assets/images/s-media-img/node15529-delete-icon.png" />) next to the search.</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="Ignored_words">Ignored words</h2>
-    <p>Certain words are ignored in search strings because they are so common that they are likely to return many results unrelated to what you are actually searching for. Below is a list of words that are ignored by search:</p>
+    </table>  </section><section class="bcls-section">
+    <h2 id="savedsearch">Enregistrement des recherches</h2>
+    <p>Les recherches que vous exécutez fréquemment peuvent être enregistrées afin de pouvoir être réexécutées rapidement sans avoir à saisir à nouveau la syntaxe de recherche. Après avoir saisi la syntaxe de recherche qui renvoie les vidéos que vous souhaitez voir, cliquez sur<strong> Enregistrer la recherche</strong>. Saisissez un nom pour la recherche enregistrée, puis cliquez sur<span class="button-blue"> Enregistrer</span>.</p> <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/node15529-saved-search.png" /></figure>
+    <p>Pour réexécuter la recherche enregistrée, cliquez sur le<strong> lien Recherches</strong> enregistrées sous la zone de recherche et cliquez sur la recherche enregistrée à exécuter.</p> <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/node15529-saved-search-run.png" /></figure>
+    <p>Pour supprimer l'une des recherches enregistrées, cliquez sur l'icône de suppression (<img alt="" src="/assets/images/s-media-img/node15529-delete-icon.png" />) en regard de la recherche.</p>  </section><section class="bcls-section">
+    <h2 id="Ignored_words">Mots ignorés</h2>
+    <p>Certains mots sont ignorés dans les chaînes de recherche car ils sont si courants qu'ils sont susceptibles de renvoyer de nombreux résultats sans rapport avec ce que vous recherchez réellement. Vous trouverez ci-dessous une liste de mots ignorés par la recherche:</p>
     <table class="bcls-table">
       <tbody class="bcls-table__body">
         <tr>
-          <td width="135">a</td>
-          <td width="135">an</td>
-          <td width="135">and</td>
+          <td width="135">un</td>
+          <td width="135">un</td>
+          <td width="135">et</td>
         </tr>
         <tr>
-          <td>are</td>
-          <td>as</td>
-          <td>at</td>
+          <td>sont</td>
+          <td>comme</td>
+          <td>à</td>
         </tr>
         <tr>
-          <td>be</td>
-          <td>but</td>
-          <td>by</td>
+          <td>être</td>
+          <td>mais</td>
+          <td>par</td>
         </tr>
         <tr>
-          <td>for</td>
-          <td>if</td>
-          <td>in</td>
+          <td>pour</td>
+          <td>si</td>
+          <td>dans</td>
         </tr>
         <tr>
-          <td>into</td>
-          <td>is</td>
-          <td>it</td>
+          <td>dans</td>
+          <td>est</td>
+          <td>il</td>
         </tr>
         <tr>
-          <td>no</td>
-          <td>not</td>
-          <td>of</td>
+          <td>non</td>
+          <td>pas</td>
+          <td>de</td>
         </tr>
         <tr>
-          <td>on</td>
-          <td>or</td>
-          <td>such</td>
+          <td>sur</td>
+          <td>ou</td>
+          <td>tel</td>
         </tr>
         <tr>
-          <td>that</td>
-          <td>the</td>
-          <td>their</td>
+          <td>cette</td>
+          <td>le</td>
+          <td>leur</td>
         </tr>
         <tr>
-          <td>then</td>
-          <td>there</td>
-          <td>these</td>
+          <td>alors</td>
+          <td>là</td>
+          <td>celles-ci</td>
         </tr>
         <tr>
-          <td>they</td>
-          <td>this</td>
-          <td>to</td>
+          <td>ils/elles</td>
+          <td>ce</td>
+          <td>pour</td>
         </tr>
         <tr>
-          <td>was</td>
-          <td>will</td>
-          <td>with</td>
+          <td>était</td>
+          <td>volonté</td>
+          <td>avec</td>
         </tr>
       </tbody>
-    </table>
-  </section>
-</article>
+    </table>   </section></article>

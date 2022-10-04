@@ -1,307 +1,267 @@
 <article class="bcls-article">
-  <h1>{{ page.title }}</h1>
-  <summary>{{ page.description }}</summary>
-  <section class="bcls-section">
-    <p>A playlist is a collection of related videos or other media assets (i.e. seasons, live events, etc) that are grouped together in a particular order for playback in a player. The Media module makes it easy to create playlists and add assets to a playlist. After playlists have been created, you can:</p>
+  <h1>{{page.title}}</h1> <summary>{{page.description}}</summary> <section class="bcls-section">
+    <p>Une liste de lecteur est une collection de vidéos connexes ou d'autres ressources multimédias (saisons, événements en direct, etc.) qui sont regroupées dans un ordre particulier pour être lues dans un lecteur. Le module Médias facilite la création de listes de lecteur et l'ajout de ressources à une liste de lecteur. Une fois les listes de lecteur créées, vous pouvez:</p>
     <ul>
-      <li>Add playlists to pages used in {{ site.product_short }} apps - <span class="BCL-objective">For information, see <a href="/layout/managing-playlists-on-pages.html">Managing Playlists on Pages</a></span></li>
-      <li>Publish a playlist to a player to display on a web page - <span class="BCL-objective">For information, see <a href="/publish/publishing-videos-and-playlists-media-module.html">Publishing Videos and Playlists with the Media Module</a></span></li>
+      <li>Ajouter des listes de lecteur aux pages utilisées dans les applications {{site.product_short}} -<span class="BCL-objective"> Pour plus d'informations, voir<a href="/layout/managing-playlists-on-pages.html"> Gestion des listes de lecteur sur les pages</a></span></li>
+      <li>Publier une liste de lecteur sur un lecteur pour l'afficher sur une page Web -<span class="BCL-objective"> Pour plus d'informations, voir<a href="/publish/publishing-videos-and-playlists-media-module.html"> Publication de vidéos et de listes de lecteur avec le module Médias</a></span></li>
     </ul>
-    <p><span class="BCL-objective">For general information about playlists, including best practices and tips for using them effectively, see <a href="/media/introduction-playlists.html">Introduction to Playlists</a>.</span></p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="types">Types of playlists</h2>
-    <p>There are two types of playlists:</p>
+    <p><span class="BCL-objective">Pour obtenir des informations générales sur les listes de lecteur, y compris les bonnes pratiques et des conseils pour les utiliser efficacement, consultez<a href="/media/introduction-playlists.html"> Introduction aux listes de lecteur</a>.</span></p>  </section><section class="bcls-section">
+    <h2 id="types">Types de listes de lecteur</h2>
+    <p>Il existe deux types de listes de lecteur:</p>
     <ul>
-      <li><strong>Manual</strong> - With a manual playlist, you assign specific videos or media assets to the playlist and re-order them manually</li>
-      <li><strong>Smart</strong> - With a smart playlist, the videos or media assets in the playlist are constructed automatically, based on  tags or other metadata associated with the asset. Smart playlists are dynamic and automatically update based upon the assets in your media library and the rules that define the playlist.</li>
+      <li><strong>Manuel</strong> - Avec une liste de lecteur manuelle, vous attribuez des vidéos ou des ressources multimédias spécifiques à la liste de lecteur et vous les réorganisez manuellement</li>
+      <li><strong>Intelligent</strong> - Avec une liste de lecteur intelligente, les vidéos ou les ressources multimédias de la liste de lecteur sont créées automatiquement, en fonction des balises ou d'autres métadonnées associées à la ressource. Les listes de lecteur intelligentes sont dynamiques et automatiquement mises à jour en fonction des ressources de votre médiathèque et des règles qui définissent la liste de lecteur.</li>
     </ul>
-    <p>There are Video Cloud and OTT variations of both playlist types.</p>
+    <p>Il existe des variantes Video Cloud et OTT des deux types de listes de lecteur.</p>
     <ul>
-      <li> <strong>Video Cloud playlists</strong> - Can <strong>only</strong> contain videos</li>
-      <li> <strong>OTT playlists</strong> - Can contain videos and other entities (i.e. live events, series, seasons, etc.). </li>
+      <li> <strong>Listes de lecteur Video Cloud</strong>:<strong> ne peuvent</strong> contenir que des vidéos</li>
+      <li> <strong>Playlists OTT</strong> - Peut contenir des vidéos et d'autres entités (événements en direct, séries, saisons, etc.). </li>
     </ul>
-    <p>Brightcove recommends that playlists that contain only videos be created as Video Cloud playlists even though OTT playlists can contain only videos. There is no limit to the number of playlists that can be created. The assets that are initially loaded into a playlist in the player is determined by the type of playlist:</p>
+    <p>Brightcove recommande que les listes de lecteur contenant uniquement des vidéos soient créées en tant que listes de lecteur Video Cloud, même si les listes de lecteur OTT ne peuvent contenir que des vidéos. Il n'y a pas de limite au nombre de listes de lecteur pouvant être créées. Les ressources initialement chargées dans une liste de lecteur du lecteur sont déterminées par le type de liste de lecteur:</p>
     <ul>
-      <li><strong>Manual </strong> - Assets are loaded into the playlist based upon the order of the items in the  playlist</li>
-      <li><strong>Smart </strong> - Assets are loaded into the playlist based upon the <strong>Play Order</strong> playlist setting </li>
-    </ul>
-  </section>
-  <section class="bcls-section">
-    <h2 id="view">Viewing all  playlists</h2>
-    <p>To view all the playlists in the account, in the side navigation panel, click <strong>All Video Cloud playlists</strong> or <strong>OTT playlists</strong>. <strong>All Video Cloud playlists</strong> will display all the Video Cloud playlists that have been created. <strong>All OTT playlists</strong> will display all the OTT playlists <strong>AND</strong> the Video Cloud playlists that have been ingested to {{ site.product_short }} (<strong>Beacon ingest</strong> column with a <img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/icon-green-check.png" />). </p>
-    <p>For Video Cloud playlists, the page will display:</p>
+      <li><strong>Manuel</strong> - Les ressources sont chargées dans la liste de lecteur en fonction de l'ordre des éléments de la liste de lecteur</li>
+      <li><strong>Intelligent</strong> - Les ressources sont chargées dans la liste de lecteur en fonction du paramètre de liste de <strong></strong>lecteur Ordre de lecteur </li>
+    </ul>  </section><section class="bcls-section">
+    <h2 id="view">Afficher toutes les listes de lecteur</h2>
+    <p>Pour afficher toutes les listes de lecteur du compte, dans le panneau de navigation latéral, cliquez sur<strong> Toutes les listes de lecteur Video Cloud</strong> ou sur les listes de lecteur<strong> OTT</strong>. <strong>Toutes les listes de lecteur Video Cloud</strong> affichent toutes les listes de lecteur Video Cloud qui ont été créées. <strong>Toutes les listes de lecteur OTT</strong> afficheront toutes les listes de lecteur OTT<strong> ET</strong> les listes de lecteur Video Cloud qui ont été ingérées dans {{site.product_short}} (<strong>colonne d'ingestion de</strong> balises avec un <img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/icon-green-check.png" />). </p>
+    <p>Pour les listes de lecteur Video Cloud, la page affiche:</p>
     <ul>
-      <li><strong>Playlist name</strong> - Name of the playlist</li>
-      <li><strong>Reference ID</strong> - Reference ID for the playlist</li>
-      <li><strong>Parameters</strong> - Parameters used to create the playlist (smart playlists only)</li>
-      <li><strong>Updated date</strong> - Date the playlist was last updated</li>
-      <li><strong>Video Count</strong> - Number of videos in the playlist</li>
+      <li><strong>Playlist name</strong>: nom de la liste de lecteur</li>
+      <li><strong>Reference ID</strong>: ID de référence de la liste de lecteur</li>
+      <li><strong>Paramètres</strong>: paramètres utilisés pour créer la liste de lecteur (listes de lecteur intelligentes uniquement)</li>
+      <li><strong>Updated date</strong>: date de la dernière mise à jour de la playlist</li>
+      <li><strong>Video Count</strong>: nombre de vidéos dans la liste de lecteur</li>
     </ul>
-    <p>For OTT playlists, the page will display:</p>
+    <p>Pour les listes de lecteur OTT, la page affichera:</p>
     <ul>
-      <li><strong>Playlist name</strong> - Name of the playlist</li>
-      <li><strong>Status</strong> - Published (<img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/icon-green-eye.png" />) or unpublished (<img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/icon-red-eye.png" />)</li>
-      <li><strong>Media count</strong> - Number of assets in the playlist</li>
-      <li><strong>Media Type</strong> - Types of media in the playlist</li>
-      <li><strong>Parameters</strong> - Parameters used to create the playlist (smart playlists only)</li>
-      <li><strong>Updated date</strong> - Date the playlist was last updated</li>
-    </ul>
-  </section>
-  <section class="bcls-section">
-    <h2 id="create">Creating a playlist</h2>
-    <p>To create a playlist, open the Media module and follow these steps:</p>
+      <li><strong>Playlist name</strong>: nom de la liste de lecteur</li>
+      <li><strong>Statut</strong> - Publié (<img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/icon-green-eye.png" />) ou non publié (<img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/icon-red-eye.png" />)</li>
+      <li><strong>Media count</strong>: nombre de ressources dans la liste de lecteur</li>
+      <li><strong>Media Type</strong>: types de médias dans la liste de lecteur</li>
+      <li><strong>Paramètres</strong>: paramètres utilisés pour créer la liste de lecteur (listes de lecteur intelligentes uniquement)</li>
+      <li><strong>Updated date</strong>: date de la dernière mise à jour de la playlist</li>
+    </ul>  </section><section class="bcls-section">
+    <h2 id="create">Création d'une playlist</h2>
+    <p>Pour créer une liste de lecteur, ouvrez le module Médias et procédez comme suit:</p>
     <ol class="bcls-tasklist-restart">
-      <li>In the side navigation panel, click <strong>Create playlist</strong>. The <strong>Create a playlist</strong> dialog will open.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/playlist-create-panel.png" /></figure>
+      <li>Dans le panneau de navigation latéral, cliquez sur<strong> Créer une liste de lecteur</strong>. La boîte de<strong> dialogue</strong> Créer une liste de lecteur s'ouvre. <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/playlist-create-panel.png" /></figure>
       </li>
-      <li>Enter a <strong>Playlist name</strong>.</li>
-      <li>Click on a <strong>Playlist type</strong>.</li>
-      <li>Click <strong>Create playlist</strong>. The panel will close and reopen.</li>
-      <li>Click the <strong>Overview</strong> tab and configure the <strong>Overview</strong> settings as needed.
+      <li>Saisissez un nom de<strong> liste de lecteur</strong>.</li>
+      <li>Cliquez sur un type de<strong> liste de lecteur</strong>.</li>
+      <li>Cliquez sur<strong> Créer une playlist</strong>. Le panneau va se fermer puis rouvrir.</li>
+      <li>Cliquez sur l'<strong>onglet</strong> Vue d'ensemble et configurez les<strong> paramètres de</strong> présentation selon vos besoins.
         <ul>
-          <li><strong>Language View</strong> ({{ site.product_short }} only) - Select a language to enter Overview settings in a localized language</li>
-          <li><strong>Name</strong> - Playlist name</li>
-          <li><strong>Title</strong> (OTT playlists only) - Playlist title displayed in {{ site.product_short }} apps</li>
-          <li><strong>Reference ID</strong> (Video Cloud playlists only) - A unique ID assigned by a publisher to a playlist</li>
-          <li><strong>Description</strong> - Playlist description</li>
-          <li><strong>Show Playlist in Sidebar</strong> (Video Cloud playlists only) - If checked, the playlist will appear in the sidebar
-            <aside class="bcls-aside bcls-aside--information">Note: A maximum of 100 playlists can appear in the sidebar.</aside>
+          <li><strong>Affichage de la langue</strong> ({{site.product_short}} uniquement) - Sélectionnez une langue pour entrer les paramètres d'aperçu dans une langue localisée</li>
+          <li><strong>Nom: nom</strong> de la playlist</li>
+          <li><strong>Titre</strong> (listes de lecteur OTT uniquement): titre de la playlist affiché dans les applications {{site.product_short}}</li>
+          <li><strong>ID de référence</strong> (listes de lecteur Video Cloud uniquement): identifiant unique attribué par un éditeur à une playlist</li>
+          <li><strong>
+description: description</strong> de la playlist</li>
+          <li><strong>Afficher la liste de lecteur dans la barre latérale</strong> (listes de lecteur Video Cloud uniquement) - Si cette case est cochée, la liste de lecteur apparaîtra dans la barre latérale<aside class="bcls-aside bcls-aside--information"> Remarque: Un maximum de 100 listes de lecteur peuvent apparaître dans la barre latérale.</aside>
           </li>
         </ul>
       </li>
-      <li>The playlist panel will contain other settings that can be configured based upon the type of playlist:
+      <li>Le panneau de la liste de lecteur contiendra d'autres paramètres qui peuvent être configurés en fonction du type de liste de lecteur:
         <ul>
-          <li>Smart (available for <a href="#vc-smart-props">Video Cloud</a> and <a href="#beacon-smart-props">OTT </a> playlists)</li>
-          <li><a href="#availability">Availability</a> (OTT playlists only)</li>
+          <li>Smart (disponible pour les<a href="#vc-smart-props"> listes de lecteur</a> Video Cloud<a href="#beacon-smart-props"> et</a> OTT)</li>
+          <li><a href="#availability">Disponibilité</a> (listes de lecteur OTT uniquement)</li>
         </ul>
       </li>
-    </ol>
-  </section>
-  <section class="bcls-section">
-    <h2 id="beacon-smart-props">Configuring OTT smart playlist settings</h2>
-    <p>If you are creating a OTT smart playlist, click the <strong>Smart</strong> tab to configure the smart playlist settings. The <strong>Parameters</strong> section is used to define which assets will appear in the playlist. The following parameters are supported.</p>
+    </ol>  </section><section class="bcls-section">
+    <h2 id="beacon-smart-props">Configuration des paramètres de playlist intelligente OTT</h2>
+    <p>Si vous créez une liste de lecteur intelligente OTT, cliquez sur l'<strong>onglet</strong> Smart pour configurer les paramètres de la liste de lecteur intelligente. La<strong> section</strong> Paramètres permet de définir les ressources qui apparaîtront dans la liste de lecteur. Les paramètres suivants sont pris en charge.</p>
     <ul>
-      <li><strong>Actors, Directors, Writers, Singers, Music composers, Song Writers</strong> - The value of one of these fields is used to define the videos in the playlist</li>
-      <li><strong>Tags</strong> - Tags are used to define the videos that will appear in the playlist. Enter one or more tags (separated by commas). </li>
-      <li><strong>Genres</strong> - Genres are used to define the videos that will appear in the playlist. Enter one or more genres (separated by commas). </li>
-      <li><strong>Content type</strong> - Select the asset types to include in the playlist</li>
-      <li><strong>Title</strong> - The video title is used to define the videos that will appear in the playlist. Enter a title to search for.
+      <li><strong>Acteurs, réalisateurs, écrivains, chanteurs, compositeurs de musique, auteurs de chansons</strong> - La valeur de l'un de ces champs est utilisée pour définir les vidéos de la playlist</li>
+      <li><strong>Tags</strong> - Les tags sont utilisés pour définir les vidéos qui apparaîtront dans la liste de lecteur. Saisissez une ou plusieurs balises (séparées par des virgules). </li>
+      <li><strong>Genres</strong> - Les genres sont utilisés pour définir les vidéos qui apparaîtront dans la liste de lecteur. Saisissez un ou plusieurs genres (séparés par des virgules). </li>
+      <li><strong>Type de contenu</strong> - Sélectionnez les types de ressources à inclure dans la liste de lecteur</li>
+      <li><strong>Titre</strong> - Le titre de la vidéo est utilisé pour définir les vidéos qui apparaîtront dans la liste de lecteur. Saisissez un titre à rechercher.
         <ul>
-          <li><strong>Text to include </strong>- Include videos with the entered title </li>
-          <li><strong>Text to exclude </strong>- Exclude videos with the entered title</li>
+          <li><strong>Texte à inclure</strong> - Inclure les vidéos avec le titre saisi </li>
+          <li><strong>Texte à exclure</strong> - Exclure les vidéos avec le titre saisi</li>
         </ul>
       </li>
     </ul>
-    <p>All of the parameters (except Content type and  title) support these options:</p>
+    <p>Tous les paramètres (sauf le type de contenu et le titre) prennent en charge les options suivantes:</p>
     <ul>
-      <li><strong>Match all</strong> - Require that all the assets have all the values that are listed</li>
-      <li><strong>Exclude</strong> - Exclude assets with the entered values</li>
+      <li><strong>Faire correspondre tout</strong> - Exiger que toutes les ressources aient toutes les valeurs répertoriées</li>
+      <li><strong>Exclure</strong> - Exclure les actifs avec les valeurs saisies</li>
     </ul>
-    <h3>Using multiple parameters</h3>
-    <p>Multiple parameters can be entered by clicking <strong>Add a parameter</strong> and then entering an additional parameter. By default, multiple parameters will be evaluated using an <strong>AND</strong> operation. To change how multiple parameters are evaluated, click the selector icon (<img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/playlist-icon-parameters.png" />) next to the <strong>Parameters</strong> heading.</p>
-    <p>
-      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/playlist-combine-parameters.png" /></figure>
+    <h3>Utilisation de plusieurs paramètres</h3>
+    <p>Vous pouvez entrer plusieurs paramètres en cliquant sur<strong> Ajouter un paramètre,</strong> puis en saisissant un paramètre supplémentaire. Par défaut, plusieurs paramètres seront évalués à l'aide d'une<strong> opération</strong> AND. Pour modifier la façon dont plusieurs paramètres sont évalués, cliquez sur l'icône de sélection (<img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/playlist-icon-parameters.png" />) en regard de l'<strong>en-tête</strong> Paramètres.</p>
+    <p> <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/playlist-combine-parameters.png" /></figure>
     </p>
-    <p>In the following example, all videos that have a <strong>Director</strong> of <strong>Megan Long</strong> and are tagged <strong>birds</strong> will be added to the playlist.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/playlist-beacon-smart-example.png" /></figure>
-    <p>Click <strong>Apply</strong> to save the changes. </p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="beacon-manual-add">Adding assets to a OTT manual playlist</h2>
-    <p>To add videos to a OTT manual playlist, follow these steps:</p>
+    <p>Dans l'exemple suivant, toutes les vidéos qui ont un<strong> réalisateur</strong> de<strong> Megan Long</strong> et qui sont étiquetées<strong> birds</strong> seront ajoutées à la playlist.</p> <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/playlist-beacon-smart-example.png" /></figure>
+    <p>Cliquez sur<strong> Appliquer</strong> pour enregistrer les modifications. </p>  </section><section class="bcls-section">
+    <h2 id="beacon-manual-add">Ajout de ressources à une liste de lecteur manuelle OTT</h2>
+    <p>Pour ajouter des vidéos à une liste de lecteur manuelle OTT, procédez comme suit:</p>
     <ol class="bcls-tasklist-restart">
-      <li>In the side navigation panel, click <strong>OTT playlists</strong>.</li>
-      <li>Click on a playlist name to open the playlist details.</li>
-      <li>Click <strong>Add content</strong>.</li>
-      <li>Click on assets to select them. Click on the tabs at the top of the dialog to filter by content type. The search field can be used to search for assets.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/playlist-beacon-manual-add-content.png" /></figure>
+      <li>Dans le panneau de navigation latéral, cliquez sur Listes de lecteur<strong> OTT</strong>.</li>
+      <li>Cliquez sur le nom d'une playlist pour ouvrir les détails de la liste de lecteur.</li>
+      <li>Cliquez sur<strong> Ajouter du contenu</strong>.</li>
+      <li>Cliquez sur les ressources pour les sélectionner. Cliquez sur les onglets en haut de la boîte de dialogue pour filtrer par type de contenu. Le champ de recherche peut être utilisé pour rechercher des actifs. <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/playlist-beacon-manual-add-content.png" /></figure>
       </li>
-      <li>Click<strong> Add</strong>. Videos added to a manual playlist will be added to the end of the playlist.</li>
-    </ol>
-  </section>
-  <section class="bcls-section">
-    <h2 id="availability">Configuring OTT playlist availability</h2>
-    <p>Playlist availability details can be used to restrict access to OTT playlists based upon date, locations and devices. To view and edit the availability details for a OTT playlist, follow these steps:</p>
+      <li>Cliquez sur<strong> Ajouter</strong>. Les vidéos ajoutées à une liste de lecteur manuelle seront ajoutées à la fin de la liste de lecteur.</li>
+    </ol>  </section><section class="bcls-section">
+    <h2 id="availability">Configuration de la disponibilité des playlists</h2>
+    <p>Les détails de disponibilité des listes de lecteur peuvent être utilisés pour restreindre l'accès aux listes de lecteur OTT en fonction de la date, des lieux et des appareils Pour afficher et modifier les détails de disponibilité d'une liste de lecteur OTT, procédez comme suit:</p>
     <ol class="bcls-tasklist-restart">
-      <li>Click <strong>OTT playlists</strong> in the panel navigation.</li>
-      <li>Click on a playlist name to open the playlist details page.</li>
-      <li>Click <strong>Edit Settings</strong>.</li>
-      <li>Click the <strong>Availability</strong> tab.</li>
+      <li>Cliquez sur Listes de lecteur<strong> OTT</strong> dans la navigation du panneau.</li>
+      <li>Cliquez sur le nom d'une playlist pour ouvrir la page des détails de la liste de lecteur.</li>
+      <li>Cliquez sur<strong> Modifier les paramètres</strong>.</li>
+      <li>Cliquez sur l'<strong>onglet</strong> Disponibilité.</li>
     </ol>
-    <p>
-      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/playlist-beacon-availability.png" /></figure>
+    <p> <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/playlist-beacon-availability.png" /></figure>
     </p>
-    <p>The availability settings are controlled using rule sets. All playlists must have at least one rule set. Rule sets are created to control access to a video based upon:</p>
+    <p>Les paramètres de disponibilité sont contrôlés à l'aide d'ensembles de règles. Toutes les listes de lecteur doivent avoir au moins un ensemble de règles. Des ensembles de règles sont créés pour contrôler l'accès à une vidéo en fonction des éléments suivants:</p>
     <ul>
-      <li>Start/end dates</li>
-      <li>Locations</li>
-      <li>Devices</li>
+      <li>Dates de début/fin</li>
+      <li>Emplacements</li>
+      <li>Appareils</li>
     </ul>
-    For information on creating and managing rule sets, see <a href="creating-managing-rule-sets.html">Creating and Managing Rule Sets</a>. </section>
-  <section class="bcls-section">
-    <h2 id="vc-smart-props">Configuring Video Cloud smart playlist settings</h2>
-    <p>If you are creating a Smart playlist, click the <strong>Smart</strong> tab to configure the following settings.</p>
+    Pour plus d'informations sur la création et la gestion d'ensembles de règles, consultez<a href="creating-managing-rule-sets.html"> Création et gestion d'ensembles de règles</a>. </section> <section class="bcls-section">
+    <h2 id="vc-smart-props">Configuration des paramètres de la playlist intelligente Video Cloud</h2>
+    <p>Si vous créez une liste de lecteur intelligente, cliquez sur l'<strong>onglet</strong> Smart pour configurer les paramètres suivants.</p>
     <ul>
-      <li><strong>Play Order</strong> - Controls the order in which videos in the playlist are played. The following options are available.
+      <li><strong>Ordre de lecteur</strong>: contrôle l'ordre dans lequel les vidéos de la liste de lecteur sont lues. Les options suivantes sont disponibles.
         <table class="bcls-table">
           <thead class="bcls-table__head">
             <tr>
-              <th width="35%">Play Order</th>
+              <th width="35%">Ordre de jeu</th>
               <th width="65%">Description</th>
             </tr>
           </thead>
           <tbody class="bcls-table__body">
             <tr>
-              <td>Activated Date (Oldest First)</td>
-              <td>Based on the date the video was activated, oldest videos first</td>
+              <td>Date d'activation (la plus ancienne en premier)</td>
+              <td>En fonction de la date d'activation de la vidéo, les vidéos les plus anciennes en premier</td>
             </tr>
             <tr>
-              <td>Activated Date (Newest First)</td>
-              <td>Based on the date the video was activated, newest videos first</td>
+              <td>Date d'activation (le plus récent en premier)</td>
+              <td>En fonction de la date d'activation de la vidéo, les vidéos les plus récentes en premier</td>
             </tr>
             <tr>
-              <td>Video Name (A - Z)</td>
-              <td>Alphabetical by video name</td>
+              <td>Nom de la vidéo (A - Z)</td>
+              <td>Alphabétique par nom de vidéo</td>
             </tr>
             <tr>
-              <td>Total Plays</td>
-              <td>Based on the total video plays</td>
+              <td>Nombre total de pièces</td>
+              <td>Basé sur le nombre total de vidéos lues</td>
             </tr>
             <tr>
-              <td>Trailing Week Plays</td>
-              <td>Based on the trailing week total video plays. Note that the trailing week plays data maintained in the video metadata may be up to 2 days old so the videos you get may not match what you see if you look at video views over the past 7 days in the Analytics module.</td>
+              <td>Pièces de théâtre de la dernière semaine</td>
+              <td>Basé sur le nombre total de vidéos lues la semaine précédente. Notez que les données de lecteur de la semaine précédente conservées dans les métadonnées de la vidéo peuvent dater de 2 jours au maximum. Par conséquent, les vidéos que vous obtenez peuvent ne pas correspondre à celles que vous voyez si vous regardez les vues des vidéos des 7 derniers jours dans le module Analytics.</td>
             </tr>
             <tr>
-              <td>Start Date (Oldest First)</td>
-              <td>Based on the date the video was scheduled to start, oldest videos first. If a video does not have a start date specified, then it will not appear in a playlist ordered by start date. Note: Video scheduling is available only to Video Cloud Enterprise accounts.</td>
+              <td>Date de début (la plus ancienne en premier)</td>
+              <td>En fonction de la date de début prévue de la vidéo, les vidéos les plus anciennes en premier. Si aucune date de début n'est spécifiée pour une vidéo, elle n'apparaîtra pas dans une liste de lecteur classée par date de début. Remarque: La programmation vidéo n'est disponible que pour les comptes Video Cloud Enterprise.</td>
             </tr>
             <tr>
-              <td>Start Date (Newest First)</td>
-              <td>Based on the date the video was scheduled to start, newest videos first. If a video does not have a start date specified, then it will not appear in a playlist ordered by start date. Note: Video scheduling is available only to Video Cloud Enterprise accounts.</td>
+              <td>Date de début (le plus récent en premier)</td>
+              <td>En fonction de la date de début prévue de la vidéo, les vidéos les plus récentes en premier. Si aucune date de début n'est spécifiée pour une vidéo, elle n'apparaîtra pas dans une liste de lecteur classée par date de début. Remarque: La programmation vidéo n'est disponible que pour les comptes Video Cloud Enterprise.</td>
             </tr>
           </tbody>
         </table>
       </li>
-      <li><strong>Limit Number of Videos</strong> - Enter the maximum number of videos that should be in the playlist (default is 100, maximum is 1,000)</li>
+      <li><strong>Limiter le nombre de vidéos</strong> - Entrez le nombre maximum de vidéos qui doivent figurer dans la liste de lecteur (100 par défaut, 1 000 maximum)</li>
     </ul>
-    <h3>Smart playlist parameters</h3>
-    <p>The <strong>Parameters</strong> section is used to define which videos will appear in the playlist. The following parameters are supported.</p>
+    <h3>Paramètres de la playlist intelligente</h3>
+    <p>La<strong> section</strong> Paramètres permet de définir les vidéos qui apparaîtront dans la liste de lecteur. Les paramètres suivants sont pris en charge.</p>
     <ul>
-      <li><strong>Tags</strong> - Video tags are used to define the videos that will appear in the playlist. Enter one or more tags (separated by commas). The <strong>Tags</strong> dropdown provides these options:
+      <li><strong>Tags</strong> - Les balises vidéo sont utilisées pour définir les vidéos qui apparaîtront dans la liste de lecteur. Saisissez une ou plusieurs balises (séparées par des virgules). La<strong> liste déroulante</strong> Tags fournit les options suivantes:
         <ul>
-          <li><strong>Match any</strong> - Include videos that have one or more of the tags listed</li>
-          <li><strong>Match all</strong> - Require that all the videos in the playlist have all the tags that are listed</li>
+          <li><strong>Faire correspondre n'importe quel</strong> élément: inclut les vidéos qui ont un ou plusieurs des tags répertoriés</li>
+          <li><strong>Faire correspondre tout</strong> - Exiger que toutes les vidéos de la liste de lecteur aient toutes les balises répertoriées</li>
         </ul>
       </li>
-      <li><strong>Name</strong> - The video name is used to define the videos that will appear in the playlist. Enter a video name to search for.</li>
-      <li><strong>Description</strong> - The video's short and long description are used to define the videos that will appear in the playlist. Enter a description to search for.</li>
-      <li><strong>Custom fields </strong> - The video's custom fields are used to define the videos that will appear in the playlist.
-        Select a custom field from the dropdown list and then select/enter a custom field value.
+      <li><strong>Nom</strong> - Le nom de la vidéo est utilisé pour définir les vidéos qui apparaîtront dans la liste de lecteur. Saisissez le nom de la vidéo à rechercher.</li>
+      <li><strong>Description</strong> - La description courte et longue de la vidéo est utilisée pour définir les vidéos qui apparaîtront dans la liste de lecteur. Saisissez une description à rechercher.</li>
+      <li><strong>Champs personnalisés</strong> - Les champs personnalisés de la vidéo sont utilisés pour définir les vidéos qui apparaîtront dans la liste de lecteur. Sélectionnez un champ personnalisé dans la liste déroulante, puis sélectionnez/entrez une valeur de champ personnalisé.
         <ul>
-          <li><strong>Match any</strong> - Include videos that have any of the custom field values listed</li>
-          <li><strong>Exclude </strong>- Exclude videos with the selected custom field values  listed</li>
+          <li><strong>Faire correspondre n'importe quelle</strong> valeur: incluez les vidéos dont l'une des valeurs de champ personnalisées est répertoriée</li>
+          <li><strong>Exclure</strong> - Exclure les vidéos dont les valeurs de champ personnalisées sélectionnées sont répertoriées</li>
         </ul>
       </li>
       
-      <li><strong>Updated date</strong> - Date the video was updated</li>
-      <li><strong>Created date</strong> - Date the video was created</li>
-      <li><strong>Last activated date</strong> - Date the video was last activated</li>
+      <li><strong>Updated date</strong>: date de mise à jour de la vidéo</li>
+      <li><strong>Date de création</strong>: date de création de la vidéo</li>
+      <li><strong>Last activated date</strong>: date à laquelle la vidéo a été activée pour la dernière fois</li>
     </ul>
-    <p>The <strong>Name</strong>, <strong>Description</strong> and <strong>Custom field</strong> (<strong>Text</strong> type) options support these options:</p>
+    <p>Les options<strong> Nom</strong>,<strong> Description</strong> et Champ<strong> personnalisé</strong> (<strong>type de</strong> texte) prennent en charge les options suivantes:</p>
     <ul>
-      <li><strong>Text to include </strong>- Include videos that have the text in the name, short or long description or custom field</li>
-      <li><strong>Text to exclude </strong>- Exclude videos that have the text in the name,  short or long description fields or custom field</li>
+      <li><strong>Texte à inclure</strong> - Incluez les vidéos dont le texte figure dans le nom, une description courte ou longue ou un champ personnalisé</li>
+      <li><strong>Texte à exclure</strong>: exclut les vidéos dont le texte figure dans le nom, les champs de description courte ou longue ou le champ personnalisé</li>
       <li></li>
-    </ul>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/playlist-vc-smart.png" /></figure>
-    <h3>Using multiple parameters</h3>
-    <p>Multiple parameters can be entered by clicking <strong>Add a parameter</strong> and then entering an additional parameter. By default, multiple parameters will be evaluated using an <strong>OR</strong> operation. To change how multiple parameters are evaluated, click the selector icon (<img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/playlist-icon-parameters.png" />) next to the <strong>Parameters</strong> heading.</p>
-    <p>
-      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/playlist-combine-parameters.png" /></figure>
+    </ul> <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/playlist-vc-smart.png" /></figure>
+    <h3>Utilisation de plusieurs paramètres</h3>
+    <p>Vous pouvez entrer plusieurs paramètres en cliquant sur<strong> Ajouter un paramètre,</strong> puis en saisissant un paramètre supplémentaire. Par défaut, plusieurs paramètres seront évalués à l'aide d'une<strong> opération</strong> OR. Pour modifier la façon dont plusieurs paramètres sont évalués, cliquez sur l'icône de sélection (<img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/playlist-icon-parameters.png" />) en regard de l'<strong>en-tête</strong> Paramètres.</p>
+    <p> <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/playlist-combine-parameters.png" /></figure>
     </p>
-    <p>In the following example, all videos that are tagged <strong>birds</strong> or <strong>animals</strong> or have a <strong>Subject</strong> custom field value of <strong>Animals</strong> will be added to the playlist.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/playlist-vc-parameter-example.png" /></figure>
-    <p>Click <strong>Apply</strong> to save the changes. </p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="addmanual">Adding videos to a Video Cloud manual playlist</h2>
-    <p>To add videos to a manual playlist, follow these steps:</p>
+    <p>Dans l'exemple suivant, toutes les vidéos qui sont étiquetées<strong> oiseaux</strong> ou<strong> animaux</strong> ou dont la valeur de champ<strong> personnalisé</strong> Sujet est<strong> Animals </strong>sera ajouté à la liste de lecteur.</p> <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/playlist-vc-parameter-example.png" /></figure>
+    <p>Cliquez sur<strong> Appliquer</strong> pour enregistrer les modifications. </p>  </section><section class="bcls-section">
+    <h2 id="addmanual">Ajout de vidéos à une liste de lecteur manuelle de Video Cloud</h2>
+    <p>Pour ajouter des vidéos à une liste de lecteur manuelle, procédez comme suit:</p>
     <ol class="bcls-tasklist-restart">
-      <li>In the side navigation panel, click <strong>All videos</strong>.</li>
-      <li>Check the boxes next to the videos that should be added to the playlist.</li>
-      <li>Click <strong>More &gt; Add to Playlist</strong> at the top of the page.</li>
-      <li>Select the playlist to add the videos to.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/playlist-add-videos-vc-manual-playlist.png" /></figure>
+      <li>Dans le panneau de navigation latéral, cliquez sur<strong> Toutes les vidéos</strong>.</li>
+      <li>Cochez les cases en regard des vidéos qui doivent être ajoutées à la liste de lecteur.</li>
+      <li>Cliquez sur<strong> Plus &gt; Ajouter</strong> à la liste de lecteur en haut de la page.</li>
+      <li>Sélectionnez la liste de lecteur à laquelle ajouter les vidéos. <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/playlist-add-videos-vc-manual-playlist.png" /></figure>
       </li>
-      <li>Click<strong> Add</strong>. Videos added to a manual playlist will be added to the top of the playlist.</li>
-    </ol>
-  </section>
-  <section class="bcls-section">
-    <h2 id="order">Changing the order of videos in a playlist</h2>
-    <p>To change the order of the videos in a playlist, follow the steps based upon the type of playlist you are working with.</p>
+      <li>Cliquez sur<strong> Ajouter</strong>. Les vidéos ajoutées à une liste de lecteur manuelle seront ajoutées en haut de la liste de lecteur.</li>
+    </ol>  </section><section class="bcls-section">
+    <h2 id="order">Changer l'ordre des vidéos dans une liste de lecteur</h2>
+    <p>Pour modifier l'ordre des vidéos d'une liste de lecteur, suivez les étapes en fonction du type de liste de lecteur que vous utilisez.</p>
     <div class="BCL-subsection">
-      <h3>Changing the order of videos in a manual playlist</h3>
-      <p>To change the order of the videos in a {{ site.product_short }} manual playlist or a Video Cloud manual playlist, follow these steps.</p>
+      <h3>Modification de l'ordre des vidéos dans une liste de lecteur manuelle</h3>
+      <p>Pour modifier l'ordre des vidéos d'une liste de lecteur manuelle {{site.product_short}} ou d'une liste de lecteur manuelle de Video Cloud, procédez comme suit.</p>
       <ol class="bcls-tasklist-restart">
-        <li>Open the playlist using one of these methods:
+        <li>Ouvrez la liste de lecteur en utilisant l'une des méthodes suivantes:
           <ul>
-            <li>Click on the playlist name in the side navigation panel</li>
-            <li>Click <strong>All Video Cloud playlists</strong> or <strong>OTT playlists</strong> in the side navigation panel, locate the playlist and click on the playlist name.</li>
+            <li>Cliquez sur le nom de la playlist dans le panneau de navigation latéral</li>
+            <li>Cliquez sur<strong> Toutes les listes de lecteur Video Cloud</strong> ou<strong> OTT</strong> dans le panneau de navigation latéral, localisez la liste de lecteur et cliquez sur le nom de la liste de lecteur.</li>
           </ul>
         </li>
-        <li>Confirm a list of videos in the playlist appears.</li>
-        <li>Click on a video asset and drag it to its new location in the list.</li>
-      </ol>
-      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/playlist-beacon-manual-change-order.png" /></figure>
-      <aside class="bcls-aside bcls-aside--information">Note: You can also change the video order by editing the <strong>Play Order</strong> field.</aside>
+        <li>Vérifiez que la liste des vidéos de la liste de lecteur s'affiche.</li>
+        <li>Cliquez sur un élément vidéo et faites-le glisser vers son nouvel emplacement dans la liste.</li>
+      </ol> <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/playlist-beacon-manual-change-order.png" /></figure> <aside class="bcls-aside bcls-aside--information">Remarque: Vous pouvez également modifier l'ordre des vidéos en modifiant le<strong> champ Ordre de</strong> lecteur.</aside>
     </div>
     <div class="BCL-subsection">
-      <h3>Changing the order of videos in a smart playlist</h3>
-      <aside class="bcls-aside bcls-aside--information">Note: Currently, with {{ site.product_short }} smart playlists, assets can only be sorted by created date.</aside>
+      <h3>Changer l'ordre des vidéos dans une liste de lecteur intelligente</h3> <aside class="bcls-aside bcls-aside--information">Remarque: Actuellement, avec les listes de lecteur intelligentes {{site.product_short}}, les ressources ne peuvent être triées que par date de création.</aside>
       <ol class="bcls-tasklist-restart">
-        <li>If the playlist is displayed in the side navigation panel, click on the playlist and then click the down arrow next to the playlist and click<strong> Edit Settings</strong>.</li>
-        <li>If the playlist is not displayed in the sidebar, click <strong>All Video Cloud playlists</strong> in the side navigation panel, locate the playlist, click on the playlist name  and then click <strong>Edit Settings</strong>.</li>
-        <li>Select a new <strong>Play Order</strong> for the playlist.</li>
-        <li>Click <strong>Save</strong>.</li>
+        <li>Si la liste de lecteur est affichée dans le panneau de navigation latéral, cliquez sur la liste de lecteur, puis cliquez sur la flèche vers le bas en regard de la liste de lecteur et cliquez sur<strong> Modifier les paramètres</strong>.</li>
+        <li>Si la liste de lecteur n'est pas affichée dans la barre latérale, cliquez sur<strong> Toutes les listes de lecteur Video Cloud</strong> dans le panneau de navigation latéral, localisez la liste de lecteur, cliquez sur le nom de la liste de lecteur, puis cliquez sur<strong> Modifier les paramètres</strong>.</li>
+        <li>Sélectionnez un nouvel ordre de<strong> lecteur</strong> pour la liste de lecteur.</li>
+        <li>Cliquez sur<strong> Enregistrer</strong>.</li>
       </ol>
-      <p>Smart playlists are created dynamically when the player is loaded from the available video information so the order should always reflect current state. However, the player always gets its info via the Playback API which uses data cached for up to 20 min. Playlists may take that long to refresh and may be behind what the <span translate="No">CMS API</span> would show.</p>
-    </div>
-  </section>
-  <section class="bcls-section">
-    <h2 id="edit">Editing playlist settings</h2>
-    <p>To edit the settings for a manual or smart playlist, follow these steps:</p>
+      <p>Les listes de lecteur intelligentes sont créées dynamiquement lorsque le lecteur est chargé à partir des informations vidéo disponibles afin que l'ordre reflète toujours l'état actuel. Cependant, le lecteur obtient toujours ses informations via l'API Playback qui utilise les données mises en cache pendant 20 minutes maximum. Les listes de lecteur peuvent prendre autant de temps à être actualisées et peuvent être en retard par rapport à ce que l'API<span translate="No"> CMS</span> afficherait.</p>
+    </div>  </section><section class="bcls-section">
+    <h2 id="edit">Modification des paramètres des listes</h2>
+    <p>Pour modifier les paramètres d'une liste de lecteur manuelle ou intelligente, procédez comme suit:</p>
     <ol class="bcls-tasklist-restart">
-      <li>If the playlist is displayed in the side navigation panel, click on the playlist and then click the down arrow next to the playlist and click<strong> Edit Settings</strong>.</li>
-      <li>If the playlist is not displayed in the sidebar, click <strong>All Video Cloud playlists</strong> or <strong>OTT playlists</strong> in the side navigation panel, locate the playlist and click the on the playlist name  and then click <strong>Edit Settings</strong>.</li>
-      <li>Edit the playlist settings and then click <strong>Apply</strong>.</li>
+      <li>Si la liste de lecteur est affichée dans le panneau de navigation latéral, cliquez sur la liste de lecteur, puis cliquez sur la flèche vers le bas en regard de la liste de lecteur et cliquez sur<strong> Modifier les paramètres</strong>.</li>
+      <li>Si la liste de lecteur n'est pas affichée dans la barre latérale, cliquez sur<strong> Toutes les listes de lecteur Video Cloud</strong> ou sur les listes de lecteur<strong> OTT</strong> dans le panneau de navigation latéral, localisez la liste de lecteur et cliquez sur le nom de la liste de lecteur, puis cliquez sur <strong>Modifier les paramètres</strong>.</li>
+      <li>Modifiez les paramètres de la playlist, puis cliquez sur<strong> Appliquer</strong>.</li>
+    </ol>  </section><section class="bcls-section">
+    <h2 id="delete">Suppression d'une playlist</h2>
+    <p>Pour supprimer une liste de lecteur, procédez comme suit:</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Cliquez sur<strong> Toutes les listes de lecteur Video Cloud</strong> ou sur les listes de lecteur<strong> OTT</strong> dans le panneau de navigation latéral.</li>
+      <li>Cochez la case en regard de la liste de lecteur à supprimer.</li>
+      <li>Cliquez sur le bouton Supprimer (<img alt="" src="/assets/images/s-media-img/icon-delete.png" />).</li>
+      <li>Cliquez sur<strong> Supprimer</strong> pour confirmer la suppression.</li>
     </ol>
-  </section>
-  <section class="bcls-section">
-    <h2 id="delete">Deleting a playlist</h2>
-    <p>To delete a playlist, follow these steps:</p>
+    <p>Si la liste de lecteur est affichée dans le panneau de navigation latéral, vous pouvez cliquer sur la liste de lecteur, puis cliquer sur la flèche vers le bas en regard de la liste de lecteur et cliquer sur<strong> Supprimer</strong>.</p>  </section><section class="bcls-section">
+    <h2 id="remove">Suppression de vidéos d'une liste de lecteur manuelle</h2>
+    <p>Pour supprimer une vidéo d'une liste de lecteur manuelle, procédez comme suit:</p>
     <ol class="bcls-tasklist-restart">
-      <li>Click <strong>All Video Cloud playlists</strong> or <strong> OTT playlists</strong> in the side navigation panel.</li>
-      <li>Click the checkbox next to the playlist to delete.</li>
-      <li>Click the delete button (<img alt="" src="/assets/images/s-media-img/icon-delete.png" />).</li>
-      <li>Click <strong>Delete </strong> to confirm the deletion.</li>
-    </ol>
-    <p>If the playlist is displayed in the side navigation panel, you can click on the playlist and then click the down arrow next to the playlist and click<strong> Delete</strong>.</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="remove">Removing videos from a manual playlist</h2>
-    <p>To remove a video from a manual playlist, follow these steps:</p>
-    <ol class="bcls-tasklist-restart">
-      <li>Open the manual playlist using one of these methods:
+      <li>Ouvrez la liste de lecteur manuelle en utilisant l'une des méthodes suivantes:
         <ul>
-          <li>Click on the playlist name in the side navigation panel</li>
-          <li>Click <strong>All Video Cloud playlists</strong> or <strong>OTT playlists</strong> in the side navigation panel, locate the playlist and click on the playlist name.</li>
+          <li>Cliquez sur le nom de la playlist dans le panneau de navigation latéral</li>
+          <li>Cliquez sur<strong> Toutes les listes de lecteur Video Cloud</strong> ou<strong> OTT</strong> dans le panneau de navigation latéral, localisez la liste de lecteur et cliquez sur le nom de la liste de lecteur.</li>
         </ul>
       </li>
-      <li>Confirm that the list of videos in the playlist  appears.</li>
-      <li>Click the checkbox next to the asset(s) to remove.</li>
-      <li>Click <strong>Remove Videos &gt; Remove from playlist</strong>.</li>
+      <li>Vérifiez que la liste des vidéos de la liste de lecteur s'affiche.</li>
+      <li>Cochez la case en regard de la ou des ressources à supprimer.</li>
+      <li>Cliquez sur<strong> Supprimer les vidéos &gt; Supprimer de la liste de lecteur</strong>.</li>
     </ol>
-    <p>You can also remove a video from a manual playlist by editing the video properties. In the <strong>Categorization</strong> section, delete the playlist  from the <strong>Manual Playlists</strong> section.</p>
-  </section>
-</article>
+    <p>Vous pouvez également supprimer une vidéo d'une liste de lecteur manuelle en modifiant les propriétés de la vidéo. Dans la<strong> section</strong> Catégorisation, supprimez la liste de lecteur de la<strong> section Listes de lecteur</strong> manuelles.</p>   </section></article>

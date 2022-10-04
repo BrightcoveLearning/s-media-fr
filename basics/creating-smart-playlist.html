@@ -1,49 +1,36 @@
 <article class="bcls-article">
-<h1>{{ page.title }}</h1>
-<summary>{{ page.description }}</summary>
-<section class="bcls-section">
-{% if site.product_short == "Video Cloud" %}
-<div class="training-video-player-ipx" data-experience="5a73630f7afd7a00101bc1b5" data-video-ids="6038250741001">&nbsp;</div>
-<script src="https://players.brightcove.net/20318290001/experience_5a73630f7afd7a00101bc1b5/live.js"></script>
-{% endif %}
-<h3>Prerequisites</h3>
+<h1>{{page.title}}</h1> <summary>{{page.description}}</summary> <section class="bcls-section"> {% if site.product_short == Video Cloud-fr/ %}
+<div class="training-video-player-ipx" data-experience="5a73630f7afd7a00101bc1b5" data-video-ids="6038250741001">&nbsp;</div> <script src="https://players.brightcove.net/20318290001/experience_5a73630f7afd7a00101bc1b5/live.js"></script> {% endif %}
+<h3>Prérequis</h3>
 <ul>
-{% if site.product_short == "Video Cloud" %}
-  <li>You have <a href="/get-started/basics/uploading-videos.html">uploaded videos</a> to your {{ site.product_short }} account</li>
-  <li>You have <a href="/get-started/basics/editing-basic-video-properties.html">added some tags</a> to your videos</li>
-   {% endif %}
-{% if site.product_short == "Beacon" or site.product_short == "CorpTV" %}
-  <li>You have <a href="/get-started/basics/media/uploading-videos.html">uploaded videos</a> to your {{ site.product_short }} account</li>
-  <li>You have <a href="/get-started/basics/media/editing-basic-video-details.html">added some tags</a> to your videos</li>
+{% if site.product_short == Cloud vidéo-fr/ %}
+  <li>Vous avez<a href="/get-started/basics/uploading-videos.html"> mis en ligne</a> des vidéos sur votre compte {{site.product_short}}</li>
+  <li>Vous avez<a href="/get-started/basics/editing-basic-video-properties.html"> ajouté des tags</a> à vos vidéos</li>
+   {% endif %} {% if site.product_short == Beacon-fr/ ou site.product_short == CorpTV-fr/ %}
+  <li>Vous avez<a href="/get-started/basics/media/uploading-videos.html"> mis en ligne</a> des vidéos sur votre compte {{site.product_short}}</li>
+  <li>Vous avez<a href="/get-started/basics/media/editing-basic-video-details.html"> ajouté des tags</a> à vos vidéos</li>
    {% endif %}
 </ul>
-<h3>Steps</h3>
+<h3>Étapes</h3>
 <ol class="bcls-tasklist-restart">
-  <li>In the primary navigation, click <i data-feather="video"></i> <strong>Media</strong>.</li>
-  <li>In the side navigation panel, click the <strong>Create playlist</strong> link.</li>
-  <li>Enter a  <strong>Playlist name</strong>.</li>
-    {% if site.product_short == "Video Cloud" %}
-  <li>In the <strong>Playlist type</strong> section, click on <strong>Smart playlist</strong>.
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/basics/node18815-create-smart-playlist-vc.png" /></figure>
+  <li>Dans la navigation principale, cliquez sur<strong> Media</strong>.</li>
+  <li>Dans le panneau de navigation latéral, cliquez sur le<strong> lien</strong> Créer une liste de lecteur.</li>
+  <li>Saisissez un nom de<strong> liste de lecteur</strong>.</li>
+    {% if site.product_short == Cloud vidéo-fr/ %}
+  <li>Dans la<strong> section Type de</strong> liste de lecteur, cliquez sur Liste de lecteur<strong> intelligente</strong>. <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/basics/node18815-create-smart-playlist-vc.png" /></figure>
+  </li>
+   {% endif %} {% if site.product_short == Beacon-fr/ ou site.product_short == CorpTV-fr/ %}
+  <li>Dans la<strong> section Type de</strong> liste de lecteur, cliquez sur la liste de lecteur intelligente<strong> Video Cloud</strong>. <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/basics/node18815-create-smart-playlist-beacon.png" /></figure>
   </li>
    {% endif %}
-{% if site.product_short == "Beacon" or site.product_short == "CorpTV" %}
-  <li>In the <strong>Playlist type</strong> section, click on <strong>Video Cloud smart playlist</strong>.
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/basics/node18815-create-smart-playlist-beacon.png" /></figure>
+  <li>Cliquez sur<span class="button-blue"> Créer une playlist</span>.</li>
+  <li>Sélectionnez un<strong> paramètre</strong> de<strong> balises</strong>.</li>
+  <li>Définissez l'opérateur sur Faire<strong> correspondre n'importe quel</strong>.</li>
+  <li> Entrez la ou les balises appropriées et appuyez sur Entrée. <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/basics/node18815-smart-playlist.png" /></figure>
   </li>
-   {% endif %}
-  <li>Click <span class="button-blue">Create playlist</span>.</li>
-  <li>Select a <strong>Parameter</strong> of <strong>Tags</strong>.</li>
-  <li>Set the operator to <strong>Match any</strong>.</li>
-  <li> Enter the appropriate tag(s) and press enter.
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/basics/node18815-smart-playlist.png" /></figure>
-  </li>
-  <li>Click <span class="button-blue">Apply</span>.</li>
-  <li>Click the <strong>Overview</strong> tab.</li>
-  <li>Check <strong>Show Playlist in Sidebar</strong> to have the playlist appear in the sidebar.</li>
-  <li>Close the panel by clicking the <strong>X</strong>.</li>
-  <li>Click the<strong> </strong>playlist name just created in the side navigation panel and confirm the correct videos have been added to the playlist.</li>
-</ol>
-<aside class="bcls-aside bcls-aside--information">Note: For complete details on creating a smart playlist, see <a href="/media/creating-and-managing-playlists.html">Creating and Managing Playlists</a>.</aside>
-</section>
-</article>
+  <li>Cliquez sur<span class="button-blue"> Appliquer</span>.</li>
+  <li>Cliquez sur l'<strong>onglet</strong> Vue d'ensemble.</li>
+  <li>Cochez<strong> Afficher la liste de lecteur dans la barre latérale</strong> pour que la liste de lecteur apparaisse dans la barre</li>
+  <li>Fermez le panneau en cliquant sur le<strong> X</strong>.</li>
+  <li>Cliquez sur le nom de la<strong> </strong> playlist que vous venez de créer dans le panneau de navigation latéral et vérifiez que les bonnes vidéos ont été ajoutées à la liste de lecteur.</li>
+</ol> <aside class="bcls-aside bcls-aside--information">Remarque: Pour plus de détails sur la création d'une liste de lecteur intelligente, consultez<a href="/media/creating-and-managing-playlists.html"> Création et gestion de listes de lecteur</a>.</aside> </section> </article>

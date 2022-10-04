@@ -1,44 +1,23 @@
 <article class="bcls-article">
-  <h1>{{ page.title }}</h1>
-  <summary>{{ page.description }}</summary>
-  <section class="bcls-section">
-    <aside class="bcls-aside bcls-aside--information">Note: This feature is available to all customers, but it is not enabled by default. Contact your account manager if you would like to have it turned on for your account(s).</aside>
-    <p>To view and edit the properties for a video, open the Media module and click the video title link. The video properties page will open.</p>
-<aside class="bcls-aside bcls-aside--information">Note: Multi-lingual metadata cannot be added to videos that were transcoded using a Legacy ingest profile.</aside>
-    <aside class="bcls-aside bcls-aside--information">Note: Before you can associate multi-lingual metadata with videos, you must configure a primary language and one or more additional languages as part of the <a href="/admin/configuring-language-settings.html">Language Settings</a>.</aside>
-    <figure class="bcls-figure"></figure>
-    <p>When the video properties page opens, the video metadata will be displayed using the primary language. The language selector will display above the Video Information section and will display the primary language. Click the button to select another  language. In this example, English was configured as the primary language and French and Spanish were added as additional languages.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/language-selector.png" /></figure>
-    <aside class="bcls-aside bcls-aside--information">Please note that <strong>Studio</strong> can support 25 language variants of video metadata.</aside>
-  </section>
-  <section class="bcls-section">
-    <h2 id="required">Adding multi-lingual metadata</h2>
-    <p>To add multi-lingual metadata to a video, select the language to add metadata for using the language selector.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/select-spanish-language.png" /></figure>
-    <p>The video properties will update and display the correct language version of the page.</p>
-    {% if site.product_short == "Video Cloud" %}    
-    <figure class="bcls-figure"> <img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/view-spanish-properties-vc.png" /></figure>
-   {% endif %}
-{% if site.product_short == "Beacon" or site.product_short == "CorpTV" %}
-    <figure class="bcls-figure"> <img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/view-spanish-properties-beacon.png" /></figure>
-{% endif %}
-    <p>To edit the video properties, click <span class="button-blue-text-bordered">Edit</span>  in the section or double-click in the section. Enter the localized value(s) and then click <span class="button-blue"> Save </span> .</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/spanish-video-info.png" /></figure>
-    <p>The following video property sections support multi-lingual metadata:</p>
+  <h1>{{page.title}}</h1> <summary>{{page.description}}</summary> <section class="bcls-section"> <aside class="bcls-aside bcls-aside--information"> Remarque
+description: Cette fonctionnalité est disponible pour tous les clients, mais elle n'est pas activée par défaut. Contactez votre responsable de compte si vous souhaitez qu'il soit activé pour votre/vos compte (s).</aside>
+    <p>Pour afficher et modifier les propriétés d'une vidéo, ouvrez le module Médias et cliquez sur le lien du titre de la vidéo. La page des propriétés de la vidéo s'ouvre.</p> <aside class="bcls-aside bcls-aside--information">Remarque: Les métadonnées multilingues ne peuvent pas être ajoutées aux vidéos transcodées à l'aide d'un profil d'acquisition Legacy.</aside> <aside class="bcls-aside bcls-aside--information">Remarque: Avant de pouvoir associer des métadonnées multilingues à des vidéos, vous devez configurer une langue principale et une ou plusieurs langues supplémentaires dans le cadre des paramètres<a href="/admin/configuring-language-settings.html"> linguistiques</a>.</aside> <figure class="bcls-figure"></figure>
+    <p>Lorsque la page des propriétés de la vidéo s'ouvre, les métadonnées de la vidéo s'affichent dans la langue principale. Le sélecteur de langue s'affichera au-dessus de la section Informations sur la vidéo et affichera la langue principale. Cliquez sur le bouton pour sélectionner une autre langue. Dans cet exemple, l'anglais a été configuré comme langue principale et le français et l'espagnol ont été ajoutés en tant que langues supplémentaires.</p> <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/language-selector.png" /></figure> <aside class="bcls-aside bcls-aside--information">Veuillez noter que<strong> Studio</strong> peut prendre en charge 25 variantes linguistiques des métadonnées vidéo.</aside> </section> <section class="bcls-section">
+    <h2 id="required">Ajout de métadonnées multilingues</h2>
+    <p>Pour ajouter des métadonnées multilingues à une vidéo, sélectionnez la langue dans laquelle ajouter des métadonnées à l'aide du sélecteur de langue.</p> <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/select-spanish-language.png" /></figure>
+    <p>Les propriétés de la vidéo seront mises à jour et afficheront la version linguistique correcte de la page.</p>
+    {% if site.product_short == Video Cloud-fr/ %}<figure class="bcls-figure"> <img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/view-spanish-properties-vc.png" /></figure> {% endif %} {% if site.product_short == Beacon-fr/ ou site.product_short == CorpTV-fr/ %}<figure class="bcls-figure"> <img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/view-spanish-properties-beacon.png" /></figure> {% endif %}
+    <p>Pour modifier les propriétés de la vidéo, cliquez sur<span class="button-blue-text-bordered"> Modifier</span> dans la section ou double-cliquez dans la section. Entrez la ou les valeurs localisées, puis cliquez sur<span class="button-blue"> Enregistrer</span>.</p> <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/spanish-video-info.png" /></figure>
+    <p>Les sections de propriétés vidéo suivantes prennent en charge les métadonnées multilingues:</p>
     <ul>
-      <li>Video Information</li>
-{% if site.product_short == "Beacon" or site.product_short == "CorpTV" %}
-      <li>Categorization</li>
+      <li>Informations sur la vidéo</li>
+{% if site.product_short == Beacon-fr/ ou site.product_short == CorpTV-fr/ %}
+      <li>Catégorisation</li>
 {% endif %}
-      <li>Audio Tracks</li>
+      <li>Pistes audio</li>
       <li>Images</li>
-      <li>Custom Fields</li>
-      <li>Text Tracks </li>
-    </ul>
-  </section>
-  <section class="bcls-section">
-    <h2 id="videoinfo">Required fields</h2>
-    <p>In order to save changes, all required fields for the primary language must have values. If required fields are missing for any of the additional languages, a message will be displayed but changes can be saved.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/spanish-fields-required.png" /></figure>
-  </section>
-</article>
+      <li>Champs personnalisés</li>
+      <li>Pistes de texte </li>
+    </ul>  </section><section class="bcls-section">
+    <h2 id="videoinfo">Champs obligatoires</h2>
+    <p>Pour enregistrer les modifications, tous les champs obligatoires de la langue principale doivent contenir des valeurs. S'il manque des champs obligatoires pour l'une des langues supplémentaires, un message s'affiche mais les modifications peuvent être enregistrées.</p>    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/spanish-fields-required.png" /></figure></section></article>

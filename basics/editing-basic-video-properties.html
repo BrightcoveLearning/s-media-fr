@@ -1,33 +1,21 @@
 <article class="bcls-article">
-  <h1>{{ page.title }}</h1>
-  <summary>{{ page.description }}</summary>
-  <section class="bcls-section">
-    <div class="training-video-player-ipx" data-experience="5a73630f7afd7a00101bc1b5" data-video-ids="6037662519001">&nbsp;</div>
-    <script src="https://players.brightcove.net/20318290001/experience_5a73630f7afd7a00101bc1b5/live.js"></script>
-    <h3>Prerequisites</h3>
+  <h1>{{page.title}}</h1> <summary>{{page.description}}</summary> <section class="bcls-section">
+    <div class="training-video-player-ipx" data-experience="5a73630f7afd7a00101bc1b5" data-video-ids="6037662519001">&nbsp;</div> <script src="https://players.brightcove.net/20318290001/experience_5a73630f7afd7a00101bc1b5/live.js"></script>
+    <h3>Prérequis</h3>
     <ul>
-{% if site.product_short == "Video Cloud" %}
-      <li>You have <a href="/get-started/basics/uploading-videos.html">uploaded videos</a> to your {{ site.product_short }} account</li>
-   {% endif %}
-{% if site.product_short == "Beacon" or site.product_short == "CorpTV" %}
-      <li>You have <a href="/get-started/basics/media/uploading-videos.html">uploaded videos</a> to your {{ site.product_short }} account</li>
+{% if site.product_short == Cloud vidéo-fr/ %}
+      <li>Vous avez<a href="/get-started/basics/uploading-videos.html"> mis en ligne</a> des vidéos sur votre compte {{site.product_short}}</li>
+   {% endif %} {% if site.product_short == Beacon-fr/ ou site.product_short == CorpTV-fr/ %}
+      <li>Vous avez<a href="/get-started/basics/media/uploading-videos.html"> mis en ligne</a> des vidéos sur votre compte {{site.product_short}}</li>
    {% endif %}
     </ul>
-    <h3>Steps</h3>
+    <h3>Étapes</h3>
     <ol class="bcls-tasklist-restart">
-       <li>In the primary navigation, click <i data-feather="video"></i> <strong>Media</strong>.
+       <li>Dans la navigation principale, cliquez sur<strong> Media</strong>.
       </li>
-      <li>Click on a video title to open the video properties page.
-    {% if site.product_short == "Video Cloud" %}
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/basics/node18803-video-props-vc.png" /></figure>
-   {% endif %}
+      <li>Cliquez sur le titre d'une vidéo pour ouvrir la page des propriétés de la vidéo. {% if site.product_short == Video Cloud-fr/ %}<figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/basics/node18803-video-props-vc.png" /></figure> {% endif %}
       </li>
-      <li>The video properties are organized into sections. To edit video properties, click <span class="button-blue-text-bordered"><i data-feather="edit-3"></i> Edit</span> or double-click in a section.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/basics/node18803-edit-video-props.png" /></figure>
+      <li>Les propriétés de la vidéo sont organisées en sections. Pour modifier les propriétés de la vidéo, cliquez sur<span class="button-blue-text-bordered"> Modifier</span> ou double-cliquez dans une section. <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/basics/node18803-edit-video-props.png" /></figure>
       </li>
-      <li>Click <span class="button-blue">Save</span> to save the changes.</li>
-    </ol>
-<aside class="bcls-aside bcls-aside--information">Note: For complete details on editing video properties, see <a href="/media/editing-video-properties-using-media-module.html">Editing Video Properties using the Media Module</a>.</aside>
-
-  </section>
-</article>
+      <li>Cliquez sur<span class="button-blue"> Enregistrer</span> pour enregistrer les modifications.</li>
+    </ol> <aside class="bcls-aside bcls-aside--information">Remarque: Pour plus de détails sur la modification des propriétés vidéo, consultez la section<a href="/media/editing-video-properties-using-media-module.html"> Modification des propriétés vidéo à l'aide du module Media</a>.</aside> </section> </article> 

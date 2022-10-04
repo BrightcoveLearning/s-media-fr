@@ -1,132 +1,110 @@
 <article class="bcls-article">
-  <h1>{{ page.title }}</h1>
-  <summary>{{ page.description }}</summary>
-  <section class="bcls-section">
-    <p>Videos can be configured with multiple audio tracks. Multiple audio tracks can be used to:</p>
+  <h1>{{page.title}}</h1> <summary>{{page.description}}</summary> <section class="bcls-section">
+    <p>Les vidéos peuvent être configurées avec plusieurs pistes audio. Plusieurs pistes audio peuvent être utilisées pour:</p>
     <ul>
-      <li>Play back the same video in different languages </li>
-      <li>Provide audio with descriptions for the visually challenged</li>
-      <li>Provide stereo vs. multi-channel (surround sound) audio</li>
+      <li>Lisez la même vidéo dans différentes languesâ € ‚</li>
+      <li>Fournir de l'audio avec des descriptions pour les malvoyants</li>
+      <li>Fournit un son stéréo ou multicanal (son surround)</li>
     </ul>
-    <p>Multiple audio tracks are supported for HLS V4+ and DASH - with and without DRM protection. Videos with multiple audio tracks will display a headphone icon (<img alt="" src="/assets/images/s-media-img/node18591-headphone-icon.png" />) in the controlbar. When the icon is clicked, the viewer can select between audio tracks.</p>
-    <aside class="bcls-aside bcls-aside--information">Notes:
+    <p>Plusieurs pistes audio sont prises en charge pour HLS V4+ et DASH, avec et sans protection DRM. Les vidéos comportant plusieurs pistes audio affichent une icône de casque (<img alt="" src="/assets/images/s-media-img/node18591-headphone-icon.png" />) dans la barre de commande. Lorsque vous cliquez sur l'icône, le spectateur peut sélectionner entre les pistes audio.</p> <aside class="bcls-aside bcls-aside--information">Remarques:
       <ul>
-        <li>Multiple audio tracks can only be used with videos set up for <a href="/general/overview-dynamic-delivery.html">Dynamic Delivery</a>. In addition, your account must be enabled for multiple audio tracks. Contact your account manager for details.</li>
-        <li>If audio tracks are added to a title after the video was originally ingested; the default ingest profile for the publisher's account is selected when processing the audio track. We recommend processing audio tracks with the same ingest profile as the original video title to ensure the same audio bitrate/renditions are used. For more details in setting the default ingest profile, please refer to <a href="/admin/managing-ingest-profiles.html#default">Managing Ingest Profiles</a>.</li>
-        <li>When a video is uploaded using a Dynamic Delivery ingest profile, the source audio for the video will be transcoded according to the ingest profile and will appear in the <strong>Audio Tracks</strong> section for the video in the Media module. By default, the audio <strong>Language</strong> is set to <strong>English</strong> with a <strong>Variant</strong> type of <strong>main</strong>. The defaults can be changed by Brightcove Support. Additional audio tracks can then be added.</li>
-        <li>When you add additional audio tracks to a video, they must all have the same bitrate/rendition profile to ensure successful playback in HLS (DASH playback will still work).</li>
-        <li>When you add an audio track to a video, and then add a duplicate before the first one has finished uploading, one of the tracks may be corrupted, silently, <strong>causing playback of the video to fail</strong>. Be sure to wait until each track has fully uploaded before uploading another one.</li>
-        <li>Brightcove has seen cases where Safari will not always loading the audio track marked as default. Due to Safari loading content natively, the language settings of the device will take priority when determining the audio track to load.</li>
-        <li>Cloud Playout doesn't support <strong>Multiple Audio Track</strong>.</li>
-      </ul>
-    </aside>
-    <p>Below is an example of a video that has been configured with multiple audio tracks.</p>
+        <li>Les pistes audio multiples ne peuvent être utilisées qu'avec des vidéos configurées pour la diffusion<a href="/general/overview-dynamic-delivery.html"> dynamique</a>. En outre, votre compte doit être activé pour plusieurs pistes audio. Contactez votre responsable de compte pour plus de détails.</li>
+        <li>Si des pistes audio sont ajoutées à un titre après l'acquisition initiale de la vidéo, le profil d'acquisition par défaut pour le compte de l'éditeur est sélectionné lors du traitement de la piste audio. Nous recommandons de traiter les pistes audio avec le même profil d'acquisition que le titre vidéo d'origine afin de garantir l'utilisation du même débit audio/rendu. Pour plus de détails sur la définition du profil d'ingestion par défaut, reportez-vous à<a href="/admin/managing-ingest-profiles.html#default"> la section Gestion des profils d'ingestion</a>.</li>
+        <li>Lorsqu'une vidéo est téléchargée à l'aide d'un profil d'acquisition Dynamic Delivery, l'audio source de la vidéo est transcodé en fonction du profil d'acquisition et apparaît dans la<strong> section Pistes</strong> audio de la vidéo dans le module Médias. Par défaut, la<strong> langue audio</strong> est définie sur<strong> Anglais</strong> avec le<strong> type</strong> Variant<strong> principal</strong>. Les valeurs par défaut peuvent être modifiées par le support de Brightcove. Des pistes audio supplémentaires peuvent ensuite être ajoutées.</li>
+        <li>Lorsque vous ajoutez des pistes audio supplémentaires à une vidéo, elles doivent toutes avoir le même débit bit/profil de rendu pour garantir une lecteur réussie en HLS (la lecteur DASH fonctionnera toujours).</li>
+        <li>Lorsque vous ajoutez une piste audio à une vidéo, puis que vous ajoutez une copie avant que la première ne soit terminée, l'une des pistes peut être corrompue en mode silencieux,<strong> ce qui entraîne l'échec de la lecteur de la vidéo</strong>. Veillez à attendre que chaque titre soit entièrement téléchargé avant d'en télécharger un autre.</li>
+        <li>Brightcove a connu des cas où Safari ne chargeait pas toujours la piste audio marquée par défaut. En raison du chargement natif du contenu par Safari, les paramètres de langue de l'appareil seront prioritaires lors de la détermination de la piste audio à charger.</li>
+        <li>Cloud Playout ne prend pas en charge<strong> plusieurs pistes audio</strong>.</li>
+      </ul> </aside>
+    <p>Vous trouverez ci-dessous un exemple de vidéo configurée avec plusieurs pistes audio.</p>
     <p>
       <!-- <iframe src="//players.brightcove.net/1752604059001/default_default/index.html?videoId=6033855353001" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" allow="encrypted-media" width="640" height="360"></iframe> -->
       <div style="position: relative; display: block; max-width: 640px;"><div style="padding-top: 56.25%;"><iframe src="https://players.brightcove.net/57838016001/default_default/index.html?videoId=5413700943001" allowfullscreen="" allow="encrypted-media" style="position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px; width: 100%; height: 100%;"></iframe></div></div>
-    </p>
-    <aside class="bcls-aside bcls-aside--information">Note: Multiple audio tracks can also be added to videos using the APIs. For information, see <a href="https://apis.support.brightcove.com/dynamic-ingest/ingest-guides/implementing-multiple-audio-tracks-using-apis.html">Implementing Multiple Audio Tracks Using the APIs</a>.</aside>
-  </section>
-  <section class="bcls-section">
-    <h2 id="audiotrack">Configuring the audio track properties</h2>
-    <p>Audio track files can be uploaded and hosted by Brightcove or reside at an internet accessible URL. To view and edit the audio track properties for a video, follow these steps:</p>
+    </p> <aside class="bcls-aside bcls-aside--information">Remarque: Plusieurs pistes audio peuvent également être ajoutées aux vidéos à l'aide des API. Pour plus d'informations, consultez<a href="https://apis.support.brightcove.com/dynamic-ingest/ingest-guides/implementing-multiple-audio-tracks-using-apis.html"> Implémentation de plusieurs pistes audio à l'aide des API</a>.</aside> </section> <section class="bcls-section">
+    <h2 id="audiotrack">Configuration des propriétés de la piste audio</h2>
+    <p>Les fichiers de pistes audio peuvent être téléchargés et hébergés par Brightcove ou résider sur une URL accessible sur Internet. Pour afficher et modifier les propriétés de la piste audio d'une vidéo, procédez comme suit:</p>
     <ol class="bcls-tasklist-restart">
-      <li>Open the <strong>Media</strong> module.</li>
-      <li>Click the video title link and locate the <strong>Audio Tracks</strong> section. The audio track for the source video will appear.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/node18591-audio-tracks-section.png" /></figure>
+      <li>Ouvrez le<strong> module</strong> Médias.</li>
+      <li>Cliquez sur le lien du titre de la vidéo et localisez la<strong> section Pistes</strong> audio. La piste audio de la vidéo source apparaît. <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/node18591-audio-tracks-section.png" /></figure>
       </li>
-      <li>Click <span class="button-blue-text-bordered"> <i data-feather="edit-3"></i> Edit</span> or double-click in the section.</li>
-      <li>Click <span class="button-blue"> Add Audio Track</span> </li>
-      <li>Select if the audio track file will be uploaded from the local file system or from an external URL.
+      <li>Cliquez sur<span class="button-blue-text-bordered"> Modifier</span> ou double-cliquez dans la section.</li>
+      <li>Cliquez sur<span class="button-blue"> Ajouter une piste audio</span> </li>
+      <li>Sélectionnez si le fichier de piste audio doit être chargé à partir du système de fichiers local ou d'une URL externe.
         <ul>
-          <li><strong>File Upload</strong> - Click <strong>Browse</strong> and select the audio track file from the local file system. The file will be uploaded to {{ site.product_short }}.</li>
-          <li><strong>URL Upload</strong> - Enter the public URL where the audio track file resides and then click <strong>Upload</strong>. The file will be uploaded to {{ site.product_short }}.
-            <aside class="bcls-aside bcls-aside--information">Note: Audio track file names with parentheses, question marks, quotation marks, spaces and other special characters will silently fail when uploading. Brightcove recommends using file names without special characters.</aside>
+          <li><strong>Téléchargement de fichiers</strong>: cliquez sur<strong> Parcourir</strong> et sélectionnez le fichier de piste audio dans le système de fichiers local. Le fichier sera chargé sur {{site.product_short}}.</li>
+          <li><strong>Téléchargement d'URL</strong>: saisissez l'URL publique dans laquelle se trouve le fichier de piste audio, puis cliquez sur<strong> Télécharger</strong>. Le fichier sera chargé sur {{site.product_short}}. <aside class="bcls-aside bcls-aside--information">Remarque: Les noms de fichiers de pistes audio avec des parenthèses, des points d'interrogation, des guillemets, des espaces et d'autres caractères spéciaux échoueront silencieusement lors du téléchargement. Brightcove recommande d'utiliser des noms de fichiers sans caractères spéciaux.</aside>
           </li>
-        </ul>
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/node18591-audio-track-properties.png" /></figure>
+        </ul> <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/node18591-audio-track-properties.png" /></figure>
       </li>
-      <li>The <strong>Language</strong> field should contain the <a href="http://www.w3schools.com/tags/ref_language_codes.asp">language code</a> that specifies the language of the track text data.</li>
-      <li>Select the <strong>Variant</strong> of text track. The <strong>Variant</strong> describes the kind of audio track. Options include:
+      <li>Le<strong> champ</strong> Langue doit contenir le code de<a href="http://www.w3schools.com/tags/ref_language_codes.asp"> langue</a> qui spécifie la langue des données de texte de la piste.</li>
+      <li>Sélectionnez la<strong> variante</strong> de la piste de texte. La<strong> variante</strong> décrit le type de piste audio. Les options incluent:
         <ul>
-          <li><strong translate="No">main</strong> - The main track, usually the one muxed into the video file</li>
-          <li><strong translate="No">alternate</strong> - An alternate audio track</li>
-          <li><strong translate="No">commentary</strong> - An audio track that provides commentary on the video track</li>
-          <li><strong translate="No">dub</strong> - A track containing a dubbed version of spoken words in a different language</li>
-          <li><strong translate="No">descriptive</strong> - The track is descriptive of the video content in some way</li>
-        </ul>
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/node18591-spanish-audio.png" /></figure>
+          <li><strong translate="No">main</strong> - La piste principale, généralement celle mixée dans le fichier vidéo</li>
+          <li><strong translate="No">alternate</strong> - Une piste audio alternative</li>
+          <li><strong translate="No">commentaire</strong> - Une piste audio qui fournit des commentaires sur la piste vidéo</li>
+          <li><strong translate="No">dub</strong> - Une piste contenant une version doublée de mots prononcés dans une autre langue</li>
+          <li><strong translate="No">descriptive</strong> - La piste décrit le contenu vidéo d'une manière ou d'une autre</li>
+        </ul> <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/node18591-spanish-audio.png" /></figure>
       </li>
-      <li>Click<span class="button-blue"> Add Audio Track</span> to save the audio track information.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/node18591-spanish-audio-added.png" /></figure>
+      <li>Cliquez sur<span class="button-blue"> Ajouter une piste audio</span> pour enregistrer les informations de la piste audio. <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/node18591-spanish-audio-added.png" /></figure>
       </li>
-      <li>Click <span class="button-blue"> Add Audio Track</span> to add another audio track or <span class="button-blue"> Save</span> to save the audio tracks. The newly added audio tracks will appear in the list when processing is finished.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/node18591-tracks-added.png" /></figure>
-        <aside class="bcls-aside bcls-aside--information">Note: Changes made to the audio track properties may take up to 15 minutes to appear in published players.</aside>
+      <li>Cliquez sur<span class="button-blue"> Ajouter une piste audio</span> pour ajouter une autre piste audio ou sur<span class="button-blue"> Enregistrer</span> pour enregistrer les pistes audio. Les pistes audio nouvellement ajoutées apparaîtront dans la liste lorsque le traitement sera terminé. <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/node18591-tracks-added.png" /></figure> <aside class="bcls-aside bcls-aside--information">Remarque: Les modifications apportées aux propriétés de la piste audio peuvent prendre jusqu'à 15 minutes avant d'apparaître dans les lecteurs publiés.</aside>
       </li>
     </ol>
-    <p>To delete an audio track, click the delete icon (<img alt="" src="/assets/images/s-media-img/node18591-delete-icon.png" />) next to the audio track. Note that there may be a delay before the UI is updated and the audio track no longer appears.</p>
-    <p>When a video with multiple audio tracks is published, a headphone button (<img alt="" src="/assets/images/s-media-img/node18591-headphone-icon.png" />) will appear on the player chrome. Click the<strong> </strong>button to select an audio track.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/node18591-headphone-icon-in-player.png" /></figure>
-  </section>
-  <section class="bcls-section">
-    <h2 id="defaulttrack">Setting a default audio track</h2>
-    <p>When a video is uploaded, the source audio will be set as the main (default) track. To set an audio track to be the default track, follow these steps:</p>
+    <p>Pour supprimer une piste audio, cliquez sur l'icône de suppression (<img alt="" src="/assets/images/s-media-img/node18591-delete-icon.png" />) en regard de la piste audio. Notez qu'il peut y avoir un délai avant que l'interface utilisateur ne soit mise à jour et que la piste audio ne s'affiche plus.</p>
+    <p>Lorsqu'une vidéo comportant plusieurs pistes audio est publiée, un bouton casque (<img alt="" src="/assets/images/s-media-img/node18591-headphone-icon.png" />) apparaît sur le chrome du lecteur. Cliquez sur le<strong> </strong> bouton pour sélectionner une piste audio.</p>   <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/node18591-headphone-icon-in-player.png" /></figure></section><section class="bcls-section">
+    <h2 id="defaulttrack">Définition d'une piste audio par défaut</h2>
+    <p>Lorsqu'une vidéo est téléchargée, l'audio source est défini comme piste principale (par défaut). Pour définir une piste audio comme piste par défaut, procédez comme suit:</p>
     <ol class="bcls-tasklist-restart">
-      <li>Click <span class="button-blue-text-bordered"> <i data-feather="edit-3"></i> Edit</span> or double-click in the <strong>Audio Tracks</strong> section.</li>
-      <li>Click on the track that is currently the default audio track.</li>
-      <li>Uncheck the <strong>Default</strong> option.</li>
-      <li>Click on the track that will be set as the default audio track.</li>
-      <li>Check the <strong>Default</strong> option.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/node18591-set-default-track.png" /></figure>
+      <li>Cliquez sur<span class="button-blue-text-bordered"> Modifier</span> ou double-cliquez dans la<strong> section Pistes</strong> audio.</li>
+      <li>Cliquez sur la piste qui est actuellement la piste audio par défaut.</li>
+      <li>Décochez l'<strong>option</strong> Par défaut.</li>
+      <li>Cliquez sur la piste qui sera définie comme piste audio par défaut.</li>
+      <li>Cochez l'<strong>option</strong> Par défaut. <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/node18591-set-default-track.png" /></figure>
       </li>
-      <li>Click <span class="button-blue"> Update Audio Track</span>.</li>
-    </ol>
-  </section>
-  <section class="bcls-section">
+      <li>Cliquez sur<span class="button-blue"> Update Audio Track</span>.</li>
+    </ol>  </section><section class="bcls-section">
     <h2 id="limitations">Limitations</h2>
-    <p>The following limitations apply when using multiple audio tracks</p>
+    <p>Les restrictions suivantes s'appliquent lors de l'utilisation de plusieurs pistes audio:</p>
     <dl>
-      <dt>Audio masters not stored</dt>
-      <dd>If you retranscode the video from the video master, the additional audio tracks will be lost, and must be re-added</dd>
-      <dt>Audio-only files must be used</dt>
-      <dd>Audio tracks must be audio-only files without video tracks</dd>
-      <dt>HLSv3, HLS with audio and video in the same segment</dt>
+      <dt>Les maîtres audio ne sont pas stockés</dt>
+      <dd>Si vous retranscodez la vidéo à partir du master vidéo, les pistes audio supplémentaires seront perdues et devront être ajoutées à nouveau</dd>
+      <dt>Les fichiers audio uniquement doivent être utilisés</dt>
+      <dd>Les pistes audio doivent être des fichiers audio uniquement sans pistes vidéo</dd>
+      <dt>HLSv3, HLS avec audio et vidéo dans le même segment</dt>
       <dd>
         <ul>
-          <li>The playback API will not return HLSv3 manifests</li>
-          <li>All HLS manifests will include de-muxed video/audio</li>
+          <li>L'API de lecteur ne renverra pas les manifestes HLSv3</li>
+          <li>Tous les manifestes HLS incluront une vidéo/audio démultiplexée</li>
         </ul>
       </dd>
-      <dt>Smooth Streaming</dt>
-      <dd>Smooth Streaming URLs will not be available.</dd>
-      <dt>Social Distribution</dt>
-      <dd>It is not possible to select which audio track will be used for distribution. The track included in the video source (the muxed in audio) will be used, always.</dd>
-      <dt>Ordering of audio tracks beyond the one "default" track</dt>
+      <dt>Streaming fluide</dt>
+      <dd>Les URL Smooth Streaming ne seront pas disponibles.</dd>
+      <dt>Répartition sociale</dt>
+      <dd>Il n'est pas possible de sélectionner la piste audio qui sera utilisée pour la distribution. La piste incluse dans la source vidéo (l'audio multiplexé) sera toujours utilisée.</dd>
+      <dt>Ordre des pistes audio au-delà de la piste par défaut-fr/</dt>
       <dd>
         <ul>
-          <li>You can pick a default audio track with <span translate="No">CMS API</span> per title by setting the <code translate="No">is_default</code> field to <code translate="No">true</code></li>
-          <li>There is also an account default, which can be set by Support</li>
-          <li>This will only affect the "default" track in HLS manifests</li>
-          <li>No other ordering is possible</li>
+          <li>Vous pouvez choisir une piste audio par défaut avec l'API<span translate="No"> CMS</span> par titre en définissant le<code translate="No"> champ</code> is_default sur<code translate="No"> true</code></li>
+          <li>Il existe également un compte par défaut, qui peut être défini par le support</li>
+          <li>Cela n'affectera que la piste par défaut-fr/ dans les manifestes HLS</li>
+          <li>Aucune autre commande n'est possible</li>
         </ul>
       </dd>
-      <dt>Ingesting more than one audio track from a single source</dt>
-      <dd>We support <strong>one audio track from the source supplied in ".master"</strong>, and one for each source under ".audio_tracks.masters".</dd>
-      <dt>DRM protection on videos that include only audio</dt>
-      <dd>As soon as a video track is added, DRM protection will be enabled.</dd>
-      <dt>End-user friendly labels</dt>
-      <dd>We do not support custom labels for audio tracks. If you require that, you will need to make the change on the client side via the Player API.</dd>
-      <dt>In some instances, switching tracks may cause the Brightcove Player to become unstable</dt>
+      <dt>Ingestion de plus d'une piste audio provenant d'une seule source</dt>
+      <dd>Nous prenons en charge<strong> une piste audio de la source fournie dans .master-fr/</strong>, et une pour chaque source sous .audio_tracks.masters-fr/.</dd>
+      <dt>Protection DRM sur les vidéos contenant uniquement de l'audio</dt>
+      <dd>Dès qu'une piste vidéo est ajoutée, la protection DRM est activée.</dd>
+      <dt>Étiquettes conviviales pour l'utilisateur final</dt>
+      <dd>Nous ne prenons pas en charge les étiquettes personnalisées pour les pistes audio. Si vous le souhaitez, vous devrez effectuer la modification côté client via l'API du lecteur.</dd>
+      <dt>Dans certains cas, le changement de piste peut entraîner une instabilité du lecteur Brightcove</dt>
       <dd>
         <ul>
-          <li>Track switching before all audio segments have been downloaded</li>
-          <li>When the video is played back using the Silverlight plugin (in versions of IE less than 10, or any version of IE in versions of Window less than 8) - multiple audio tracks are <strong>not</strong> supported in Silverlight.</li>
-          <li>If the audio and video are different durations, the player will may stop whenever the shorter one runs out.</li>
+          <li>Changement de piste avant le téléchargement de tous les segments audio</li>
+          <li>Lorsque la vidéo est lue à l'aide du plug-in Silverlight (dans les versions d'IE inférieures à 10, ou toute version d'IE dans les versions de Windows inférieures à 8), plusieurs pistes audio<strong> ne sont pas</strong> prises en charge dans Silverlight.</li>
+          <li>Si les durées audio et vidéo sont différentes, le lecteur peut s'arrêter chaque fois que la plus courte est épuisée.</li>
         </ul>
       </dd>
-      <dt>Video "duration"</dt>
-      <dd>The video <code translate="No">duration</code> reported by the catalog/Playback API may be incorrect if the audio tracks have different durations.</dd>
-    </dl>
-  </section>
-</article>
+      <dt>Durée-fr/ de la vidéo</dt>
+      <dd>La<code translate="No"> durée de la vidéo</code> signalée par l'API Catalog/Playback peut être incorrecte si les pistes audio ont des durées différentes.</dd>
+    </dl>   </section></article>

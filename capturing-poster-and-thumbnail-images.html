@@ -1,52 +1,38 @@
 <article class="bcls-article">
-  <h1>{{ page.title }}</h1>
-  <summary>{{ page.description }}</summary>
-  <section class="bcls-section">
-    {% if site.product_short == "Video Cloud" %}
-    <div class="training-video-player-ipx" data-experience="5a73630f7afd7a00101bc1b5" data-video-ids="6052184384001">&nbsp;</div>
-    <script src="https://players.brightcove.net/20318290001/experience_5a73630f7afd7a00101bc1b5/live.js"></script>
-   {% endif %}
-    <p>Videos in your {{ site.product_short }} account have associated poster and thumbnail images. These images allow viewers to pick which videos they want to see in a playlist or other listing of your content. Poster and thumbnail images can be seen in the following areas:</p>
+  <h1>{{page.title}}</h1> <summary>{{page.description}}</summary> <section class="bcls-section"> {% if site.product_short == Video Cloud-fr/ %}
+    <div class="training-video-player-ipx" data-experience="5a73630f7afd7a00101bc1b5" data-video-ids="6052184384001">&nbsp;</div> <script src="https://players.brightcove.net/20318290001/experience_5a73630f7afd7a00101bc1b5/live.js"></script> {% endif %}
+    <p>Les vidéos de votre compte {{site.product_short}} sont associées à des affiches et des images miniatures. Ces images permettent aux spectateurs de choisir les vidéos qu'ils souhaitent voir dans une playlist ou une autre liste de votre contenu. Les affiches et les vignettes sont visibles dans les zones suivantes:</p>
     <ul>
-      <li>In the Media module, the thumbnail image is displayed next to the video; the poster image will appear in the preview player on the video properties page</li>
-      <li>The thumbnail image will appear when publishing a playlist</li>
-      <li>The poster image is displayed in the playback area of the video player before or after video playback</li>
+      <li>Dans le module Médias, l'image miniature est affichée à côté de la vidéo&nbsp;; l'image de l'affiche apparaîtra dans le lecteur d'aperçu sur la page des propriétés de la vidéo</li>
+      <li>L'image miniature apparaît lors de la publication d'une liste de lecteur</li>
+      <li>L'image de l'affiche s'affiche dans la zone de lecteur du lecteur vidéo avant ou après la lecteur de la vidéo</li>
     </ul>
-    <p>For videos that are uploaded to {{ site.product_short }}, poster and thumbnail images are created automatically by taking a snapshot at the midway point. {{ site.product_short }} will try to capture the image from the highest quality, playable MP4 rendition. If there are no MP4 renditions, it will next try HLS renditions and then DASH renditions.</p>
-    <aside class="bcls-aside bcls-aside--information">Note:  If a video is ingested using a custom ingest profile that <strong>does not</strong> include any HLS renditions (only MP4 renditions), the poster and thumbnail <strong>will not</strong> be captured during the transcoding process. Images can still be captured using the process described in this topic.</aside>
-    <p>Client-side image capture takes a frame of the largest rendition the browser can play and sends it to the {{ site.product_short }} ingestion process with the poster and thumbnail dimensions specified in the default ingest profile. If those profile dimensions are larger than the frame we were able to capture, the image is not resized or scaled. If they are smaller, the image is scaled down. For information on increasing the quality of poster and thumbnail images, see <a href="/media/increasing-quality-poster-and-thumbnail-images.html">Increasing the Quality of Poster and Thumbnail Images</a>.</p>
-    <p>It is also possible to <a href="/media/uploading-poster-and-thumbnail-images.html">upload other images</a> to use as the poster and thumbnail.</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="requirements">Requirements</h2>
-    <p>The image capture functionality currently has the following requirements:</p>
+    <p>Pour les vidéos téléchargées sur {{site.product_short}}, les affiches et les vignettes sont créées automatiquement en prenant un instantané à mi-parcours. {{site.product_short}} essaiera de capturer l'image à partir d'un rendu MP4 lisible de la plus haute qualité. S'il n'y a pas de rendus MP4, il essaiera ensuite les rendus HLS, puis les rendus DASH.</p> <aside class="bcls-aside bcls-aside--information">Remarque: Si une vidéo est ingérée à l'aide d'un profil d'acquisition personnalisé qui<strong> n'</strong>inclut aucun rendu HLS (uniquement des rendus MP4), l'affiche et la miniature ne <strong></strong>seront pas capturées pendant le processus de transcodage. Les images peuvent toujours être capturées en utilisant le processus décrit dans cette rubrique.</aside>
+    <p>La capture d'image côté client prend une image du plus grand rendu que le navigateur peut lire et l'envoie au processus d'ingestion {{site.product_short}} avec les dimensions de l'affiche et de la miniature spécifiées dans le profil d'acquisition par défaut. Si ces dimensions de profil sont supérieures au cadre que nous avons pu capturer, l'image n'est ni redimensionnée ni mise à l'échelle. S'ils sont plus petits, l'image est réduite. Pour plus d'informations sur l'amélioration de la qualité des affiches et des vignettes, voir<a href="/media/increasing-quality-poster-and-thumbnail-images.html"> Amélioration de la qualité des affiches et des vignettes</a>.</p>
+    <p>Il est également possible de<a href="/media/uploading-poster-and-thumbnail-images.html"> télécharger d'autres images</a> pour les utiliser comme affiche et vignette.</p>  </section><section class="bcls-section">
+    <h2 id="requirements">Exigences</h2>
+    <p>La fonctionnalité de capture d'image répond actuellement aux exigences suivantes:</p>
     <ul>
-      <li>Chrome, Safari (version 10 and newer), Firefox and Edge browsers are supported</li>
-      <li>The video rendition must be served with CORS headers (which should be enabled on most of Brightcove's house CDNs by default); if you are using a BYO CDN, you should <a href="https://general.support.brightcove.com/developer/concepts-cors.html">enable CORS headers</a> on your server for image capture to work</li>
-      <li>Image capture should work on mobile devices when using the latest versions of Chrome and Firefox</li>
-      <li>Image capture is not supported for videos that have been secured using DRM</li>
-      <li>Image capture is not supported for restricted trial accounts; you can contact Brightcove to remove this restriction</li>
+      <li>Les navigateurs Chrome, Safari (version 10 et ultérieure), Firefox et Edge sont pris en charge</li>
+      <li>Le rendu vidéo doit être diffusé avec des en-têtes CORS (qui doivent être activés par défaut sur la plupart des CDN domestiques de Brightcove)&nbsp;; si vous utilisez un CDN BYO, vous devez<a href="https://general.support.brightcove.com/developer/concepts-cors.html"> activer les en-têtes CORS</a> sur votre serveur pour que la capture d'image fonctionne</li>
+      <li>La capture d'images devrait fonctionner sur les appareils mobiles lors de l'utilisation des dernières versions de Chrome et Firefox</li>
+      <li>La capture d'image n'est pas prise en charge pour les vidéos sécurisées à l'aide de DRM</li>
+      <li>La capture d'images n'est pas prise en charge pour les comptes d'essai restreints&nbsp;; vous pouvez contacter Brightcove pour supprimer cette restriction</li>
     </ul>
-    <p>If image capture is not available, the image capture button will <strong>usually</strong> be disabled. The exception to this rule is that if the video was ingested using a legacy profile. In this case, the button will be enabled, but image capture will not work. The workaround is to <a href="/media/retranscoding-videos-using-media-module.html">retranscode</a> or <a href="/media/replacing-video-source-file.html">replace</a> the video using a Dynamic Delivery or Context Aware Encoding profile and then image capture will be available.</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="steps">Steps to capture new poster and thumbnail images</h2>
-    <p>To capture a new poster or thumbnail image, follow these steps:</p>
+    <p>Si la capture d'image n'est pas disponible, le bouton de capture d'image est<strong> généralement</strong> désactivé. L'exception à cette règle est que si la vidéo a été ingérée à l'aide d'un profil hérité. Dans ce cas, le bouton sera activé, mais la capture d'image ne fonctionnera pas. La solution consiste à<a href="/media/retranscoding-videos-using-media-module.html"> retranscoder</a> ou à<a href="/media/replacing-video-source-file.html"> remplacer</a> la vidéo à l'aide d'un profil Dynamic Delivery ou Context Aware Encoding, puis la capture d'image sera disponible.</p>  </section><section class="bcls-section">
+    <h2 id="steps">Étapes à suivre pour capturer de nouvelles affiches et images miniatures</h2>
+    <p>Pour capturer une nouvelle affiche ou une nouvelle image miniature, procédez comme suit:</p>
     <ol class="bcls-tasklist-restart">
-      <li>Open the <i data-feather="video"></i> <strong>Media</strong>  module.</li>
-      <li>Click the link for the video you want to edit.</li>
-      <li>Using the preview player at the top of the page, play the video and pause on the frame you would like to save as the poster/thumbnail image. You can also scrub across the player progress bar to jump to another frame.</li>
-      <li>Click <span class="button-blue"><i class="button-icon" data-feather="camera"></i>Capture</span>.</li>
-      <li>The preview player at the top of the page will display the current video frame. Use the checkboxes to select whether new <strong>Poster</strong> and/or <strong>Thumbnail</strong> images will be captured.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/node15620-preview-edit.png" /></figure>
+      <li>Ouvrez le<strong> module</strong> Médias.</li>
+      <li>Cliquez sur le lien correspondant à la vidéo que vous souhaitez modifier.</li>
+      <li>À l'aide du lecteur d'aperçu en haut de la page, lisez la vidéo et faites une pause sur l'image que vous souhaitez enregistrer en tant qu'affiche/miniature. Vous pouvez également parcourir la barre de progression du lecteur
+ pour passer à une autre image.</li>
+      <li>Cliquez sur<span class="button-blue"> Capture</span>.</li>
+      <li>Le lecteur de prévisualisation en haut de la page affiche l'image vidéo actuelle. Utilisez les cases à cocher pour sélectionner si les nouvelles<strong> images</strong> d'<strong>affiches et/ou de</strong> vignettes seront capturées. <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/node15620-preview-edit.png" /></figure>
       </li>
-      <li>Click <span class="button-blue">Save</span> to save the new images. It may take a minute for the processing to complete and for the images to appear in the Media module.</li>
-    </ol>
-  </section>
-  <section class="bcls-section">
+      <li>Cliquez sur<span class="button-blue"> Enregistrer</span> pour enregistrer les nouvelles images. Cela peut prendre une minute pour terminer le traitement et pour que les images apparaissent dans le module Médias.</li>
+    </ol>  </section><section class="bcls-section">
     <h2 id="Limitations">Limitations</h2>
     <ul>
-      <li>The ingestion system does not allow concurrent jobs on the same video. Therefore, if you attempt to capture images while the video is being ingested or retranscoded, the image capture will fail.</li>
-    </ul>
-  </section>
-</article>
+      <li>Le système d'ingestion n'autorise pas les tâches simultanées sur la même vidéo. Par conséquent, si vous tentez de capturer des images alors que la vidéo est ingérée ou retranscodée, la capture d'image échouera.</li>
+    </ul>   </section></article>

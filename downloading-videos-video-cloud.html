@@ -1,73 +1,52 @@
 <article class="bcls-article">
-  <h1>{{ page.title }}</h1>
-  <summary>{{ page.description }}</summary>
-  <section class="bcls-section">
-    <p>There are a number of ways that videos can be downloaded from a {{ site.product_short }} account. Videos can be downloaded using the Media or Social modules, by using the APIs and a download link can be added to a player allowing viewers to download content.</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="mediamodule">Downloading videos using the Media module</h2>
-    <p>You can download a rendition of a video using the Media module. If the cloud icon next to the video name in the Media module is grey (<img alt="" src="/assets/images/s-media-img/node14363-legacy-icon.png" />), the video was ingested using a legacy ingest profile and both MP4 and HLS renditions can be downloaded in the Media module. A green cloud icon (<img alt="" src="/assets/images/s-media-img/node14363-dd-icon.png" />) indicates that the video was ingested using Dynamic Delivery and if an ingest profile that creates MP4 renditions was selected, the MP4 renditions can be downloaded.</p>
-    <aside class="bcls-aside bcls-aside--information">
-      Notes:
+  <h1>{{page.title}}</h1> <summary>{{page.description}}</summary> <section class="bcls-section">
+    <p>Les vidéos peuvent être téléchargées de différentes manières à partir d'un compte {{site.product_short}}. Les vidéos peuvent être téléchargées à l'aide des modules Médias ou Réseaux sociaux, en utilisant les API et un lien de téléchargement peut être ajouté à un lecteur permettant aux spectateurs de télécharger du contenu.</p>  </section><section class="bcls-section">
+    <h2 id="mediamodule">Téléchargement de vidéos à l'aide du module Médias</h2>
+    <p>Vous pouvez télécharger un rendu d'une vidéo à l'aide du module Médias. Si l'icône du nuage à côté du nom de la vidéo dans le module Media est grise (<img alt="" src="/assets/images/s-media-img/node14363-legacy-icon.png" />), la vidéo a été ingérée à l'aide d'un profil d'acquisition hérité et les rendus MP4 et HLS peuvent être téléchargés dans le module Media. Une icône de nuage verte (<img alt="" src="/assets/images/s-media-img/node14363-dd-icon.png" />) indique que la vidéo a été ingérée à l'aide de la diffusion dynamique et si un profil d'acquisition qui crée des rendus MP4 a été sélectionné, les rendus MP4 peuvent être téléchargés.</p> <aside class="bcls-aside bcls-aside--information"> Remarques:
       <ul>
-        <li>The Video Files section in the video properties page will also indicate what type of ingestion profile was used.</li>
+        <li>La section Fichiers vidéo de la page des propriétés de la vidéo indique également quel type de profil d'ingestion a été utilisé.</li>
         <li>
-          If you would like to have a 1080p rendition available for download, you will need to <a href="/admin/creating-ingest-profiles-dynamic-delivery.html">create a custom ingest profile</a> and make sure that it includes at least one of the following renditions:
+          Si vous souhaitez qu'un rendu 1080p soit disponible au téléchargement, vous devez<a href="/admin/creating-ingest-profiles-dynamic-delivery.html"> créer un profil d'acquisition personnalisé</a> et vous assurer qu'il inclut au moins l'un des formats associés suivants:
           <ul>
-            <li>progressive3500</li>
-            <li>progressive4000</li>
+            <li>Progressif 3500</li>
+            <li>progressif 4000</li>
           </ul>
         </li>
-      </ul>
-    </aside>
-    <p>To download a video using the Media module, follow these steps:</p>
+      </ul> </aside>
+    <p>Pour télécharger une vidéo à l'aide du module Médias, procédez comme suit:</p>
     <ol class="bcls-tasklist-restart">
-      <li>Open the <strong>Media</strong> module.</li>
-{% if site.product_short == "Beacon" or site.product_short == "CorpTV" %}
-      <li>In the panel navigation, click<strong> All videos</strong>.</li>
+      <li>Ouvrez le<strong> module</strong> Médias.</li>
+{% if site.product_short == Beacon-fr/ ou site.product_short == CorpTV-fr/ %}
+      <li>Dans le panneau de navigation, cliquez<strong> sur Toutes les vidéos</strong>.</li>
 {% endif %}
-      <li>Click the link for the video you want to download.</li>
-{% if site.product_short == "Beacon" or site.product_short == "CorpTV" %}
-      <li>Click the <strong>Video and Tracks</strong> tab.</li>
+      <li>Cliquez sur le lien correspondant à la vidéo que vous souhaitez télécharger.</li>
+{% if site.product_short == Beacon-fr/ ou site.product_short == CorpTV-fr/ %}
+      <li>Cliquez sur l'<strong>onglet</strong> Vidéo et pistes.</li>
 {% endif %}
-      <li>Locate the <strong>Video Files</strong> section.</li>
-      <li>Check the type of transcoding that was used:
+      <li>Localisez la<strong> section Fichiers</strong> vidéo.</li>
+      <li>Vérifiez le type de transcodage utilisé:
         <ul>
-          <li><strong>Dynamic Delivery</strong> (green cloud icon, example below) - Right-click on a link in the <strong>Dimensions</strong> column for the rendition to download; note that a clickable download link will only display if MP4 renditions have been created</li>
-          <li><strong>Legacy</strong> (grey cloud icon) - Right-click on link in the <strong>Format</strong> column for the rendition to download</li>
-        </ul>
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/node14363-click-download-link.png" /></figure>
+          <li><strong>Diffusion dynamique</strong> (icône de nuage vert, exemple ci-dessous): cliquez avec le bouton droit sur un lien dans la<strong> colonne</strong> Dimensions pour le format associé à télécharger&nbsp;; notez qu'un lien de téléchargement cliquable ne s'affichera que si des rendus MP4 ont été créés</li>
+          <li><strong>Legacy</strong> (icône de nuage gris) - Cliquez avec le bouton droit sur le lien dans la<strong> colonne</strong> Format pour le format associé à télécharger</li>
+        </ul> <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/node14363-click-download-link.png" /></figure>
       </li>
-    </ol>
-    <aside class="bcls-aside bcls-aside--information">Note: The renditions generated by Dynamic Delivery have a Time to live (TTL) of 6 hours. Links that are generated will be valid for 6 hours.</aside>
-    <p>It is important to understand that URLs for renditions and images are not fixed. Brightcove reconfigures the storage of media assets from time to time and when this happens, URLs for specific assets will change. If you are relying on hard-coded URLs to these assets, the links may break at some point. The best way to prevent links to media from breaking is to retrieve them from {{ site.product_short }} at runtime using the CMS API.</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="socialmodule">Downloading videos using the Social module</h2>
-    <p>The Social module provides the ability to copy the video URL or download a video source file. When downloading, the highest quality MP4 rendition will be downloaded.</p>
-    <p>To download a video using the Social module, follow these steps:</p>
+    </ol> <aside class="bcls-aside bcls-aside--information">Remarque: Les rendus générés par Dynamic Delivery ont une durée de vie (TTL) de 6 heures. Les liens générés seront valides pendant 6 heures.</aside>
+    <p>Il est important de comprendre que les URL des rendus et des images ne sont pas corrigées. Brightcove reconfigure le stockage des ressources multimédias de temps à autre et lorsque cela se produit, les URL de ressources spécifiques changent. Si vous utilisez des URL codées en dur vers ces ressources, les liens peuvent être rompus à un moment ou à un autre. Le meilleur moyen d'empêcher la rupture des liens vers les médias est de les récupérer à partir de {{site.product_short}} au moment de l'exécution à l'aide de l'API CMS.</p>  </section><section class="bcls-section">
+    <h2 id="socialmodule">Téléchargement de vidéos à l'aide du module Social</h2>
+    <p>Le module Social permet de copier l'URL de la vidéo ou de télécharger un fichier source vidéo. Lors du téléchargement, le rendu MP4 de la plus haute qualité sera téléchargé.</p>
+    <p>Pour télécharger une vidéo à l'aide du module Social, procédez comme suit:</p>
     <ol class="bcls-tasklist-restart">
-      <li>Open Brightcove Social.</li>
-      <li>Click <strong>Videos</strong> in the left navigation. A list of videos in your {{ site.product_short }} account will display.</li>
-      <li>Click on the video to download and then click <strong>Download</strong>.
-        <aside class="bcls-aside bcls-aside--information">Note: If there are no MP4 renditions, the <strong>Download</strong> link will be disabled.</aside>
-        <aside class="bcls-aside bcls-aside--information">Note: You cannot download videos that have DRM enabled (lock appears in the video thumbnail). If you select a DRM enabled video, the <strong>Download</strong> button will be disabled.</aside>
+      <li>Ouvrez Brightcove Social.</li>
+      <li>Cliquez sur<strong> Vidéos</strong> dans le menu de navigation de gauche. Une liste des vidéos de votre compte {{site.product_short}} s'affichera.</li>
+      <li>Cliquez sur la vidéo à télécharger, puis cliquez sur<strong> Télécharger</strong>. <aside class="bcls-aside bcls-aside--information">Remarque: S'il n'existe aucun rendu MP4, le<strong> lien de</strong> téléchargement sera désactivé.</aside> <aside class="bcls-aside bcls-aside--information">Remarque: Vous ne pouvez pas télécharger de vidéos pour lesquelles la gestion des droits numériques est activée (le verrou apparaît dans la miniature de la vidéo). Si vous sélectionnez une vidéo compatible DRM, le<strong> bouton</strong> Télécharger sera désactivé.</aside>
       </li>
-      <li>Copy the video URL or click the link to open the video in your browser. <span class="bcl-aside">Right click the video to save the source file locally.</span>
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/node16344-download-info.png" /></figure>
+      <li>Copiez l'URL de la vidéo ou cliquez sur le lien pour ouvrir la vidéo dans votre navigateur. <span class="bcl-aside">Cliquez avec le bouton droit sur la vidéo pour enregistrer le fichier source localement.</span> <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/node16344-download-info.png" /></figure>
       </li>
-      <li>Click <span class="button-blue"> Done</span> .</li>
-    </ol>
-  </section>
-  <section class="bcls-section">
-    <h2 id="cmsapi">Accessing video properties using the CMS API</h2>
-    <p>The <span translate="No">CMS API</span> can be used to retrieve metadata, including video URLs, for any video in a {{ site.product_short }} account. Development skills are required to use the CMS API. For information on accessing video properties using the CMS API, see the <a href="https://apis.support.brightcove.com/cms/managing-videos/using-cms-api-retrieve-video-data.html">Using the CMS API: Retrieve Video Data</a> developer document.</p>
-    <p>Brightcove Learning Services has also created a sample <span translate="No">CMS API</span> app that you can use to get download links: <a href="https://apis.support.brightcove.com/cms/code-samples/cms-api-sample-download-links.html">CMS API Sample: Download Links</a>.</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="link">Creating a download link for video files</h2>
-    <p>If you have development skills, it is possible to place a download link in the player control bar to give viewers the option of downloading content.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/node14363-download-plugin.png" /></figure>
-    <p>You can also display a download link as a player overlay or below the player. For more information on how to do this, including sample code, see <a href="https://player.support.brightcove.com/code-samples/brightcove-player-sample-download-video-plugin.html">Brightcove Player Sample: Download Video Plugin</a>.</p>
-  </section>
-</article>
+      <li>Cliquez sur<span class="button-blue"> Terminé</span>.</li>
+    </ol>  </section><section class="bcls-section">
+    <h2 id="cmsapi">Accès aux propriétés vidéo à l'aide de l'API CMS</h2>
+    <p>L'API<span translate="No"> CMS</span> peut être utilisée pour récupérer les métadonnées, y compris les URL des vidéos, pour n'importe quelle vidéo d'un compte {{site.product_short}}. Des compétences en développement sont requises pour utiliser l'API CMS. Pour plus d'informations sur l'accès aux propriétés vidéo à l'aide de l'API CMS, consultez la section<a href="https://apis.support.brightcove.com/cms/managing-videos/using-cms-api-retrieve-video-data.html"> Utilisation de l'API CMS: Récupérer le document du</a> développeur Video Data.</p>
+    <p>Brightcove Learning Services a également créé un exemple d'<span translate="No">application API</span> CMS que vous pouvez utiliser pour obtenir des liens de téléchargement: <a href="https://apis.support.brightcove.com/cms/code-samples/cms-api-sample-download-links.html">Exemple d'API CMS: Liens de téléchargement</a>.</p>  </section><section class="bcls-section">
+    <h2 id="link">Création d'un lien de téléchargement pour les fichiers vidéo</h2>
+    <p>Si vous avez des compétences en développement, il est possible de placer un lien de téléchargement dans la barre de contrôle du lecteur pour donner aux spectateurs la possibilité de télécharger du contenu.</p> <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/node14363-download-plugin.png" /></figure>
+    <p>Vous pouvez également afficher un lien de téléchargement en superposition du lecteur ou en dessous du lecteur. Pour plus d'informations sur la procédure à suivre, y compris un exemple de code, voir Exemple de lecteur<a href="https://player.support.brightcove.com/code-samples/brightcove-player-sample-download-video-plugin.html"> Brightcove: Téléchargez le plugin vidéo</a>.</p>   </section></article>

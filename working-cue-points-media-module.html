@@ -1,70 +1,53 @@
 <article class="bcls-article">
-  <h1>{{ page.title }}</h1>
-  <summary>{{ page.description }}</summary>
-  <section class="bcls-section">
-    <p>A cue point is a marker at a precise time point in the duration of a video. You can use cue points to trigger mid-roll ads (that is, ads that occur during playback of the video content, like a commercial break) or to separate chapters or scenes in a long-form video.</p>
-    <p>There are two types of cue points, but both simply supply a string value to the <strong>type</strong> property of the cue point object. The appropriate value is helpful only if used in custom JavaScript while processing the cue point information.&nbsp;</p>
+  <h1>{{page.title}}</h1> <summary>{{page.description}}</summary> <section class="bcls-section">
+    <p>Un point de repère est un marqueur à un moment précis de la durée d'une vidéo. Vous pouvez utiliser des points de repère pour déclencher des publicités mid-roll (c'est-à-dire des publicités qui apparaissent pendant la lecteur du contenu vidéo, comme une pause publicitaire) ou pour séparer des chapitres ou des scènes dans une vidéo de longue durée.</p>
+    <p>Il existe deux types de points de repère, mais les deux fournissent simplement une valeur de chaîne à la<strong> propriété</strong> type de l'objet point de repère. La valeur appropriée n'est utile que si elle est utilisée dans du JavaScript personnalisé lors du traitement des informations de point de repère.&nbsp;</p>
     <ul>
-      <li><strong>Ad</strong> - Assigns the string value of <strong>AD</strong> to the <strong>type</strong> property</li>
-      <li><strong>Code</strong> - Assigns the string value of <strong>CODE</strong> to the <strong>type</strong> property</li>
+      <li><strong>Ad</strong> - Attribue la valeur de chaîne de<strong> AD</strong> à la<strong> propriété</strong> type</li>
+      <li><strong>Code</strong> - Attribue la valeur de chaîne de<strong> CODE</strong> à la<strong> propriété</strong> type</li>
     </ul>
-    <p>Cue points can be added to videos using the Media module or by using the Catalog API. For more information on adding cue points using the Catalog API, see the developer document <a href="https://player.support.brightcove.com/general/implementing-cue-points-programmatically.html">Implementing Cue Points Programmatically</a>.</p>
-    <aside class="bcls-aside bcls-aside--information">Notes: 
-      <li>Cue points cannot be added to live remote asset videos</li>
-      <li>Cue points need to be separated by at least one second.</li></aside>
-    
-  </section>
-  <section class="bcls-section">
-    <h2 id="add">Adding cue points</h2>
-    <p>To add cue points to a video, follow these steps:</p>
+    <p>Les points de repère peuvent être ajoutés aux vidéos à l'aide du module Médias ou de l'API Catalog. Pour plus d'informations sur l'ajout de points de repère à l'aide de l'API Catalog, consultez le document du développeur<a href="https://player.support.brightcove.com/general/implementing-cue-points-programmatically.html"> Implementing Cue Points</a> Programmatically</p> <aside class="bcls-aside bcls-aside--information">Remarques: 
+      <li>Les points de repère ne peuvent pas être ajoutés aux vidéos de ressources distantes en</li>
+      <li>Les points de repère doivent être séparés d'au moins une seconde.</li></aside>  </section><section class="bcls-section">
+    <h2 id="add">Ajout de points de repère</h2>
+    <p>Pour ajouter des points de repère à une vidéo, procédez comme suit:</p>
     <ol class="bcls-tasklist-restart">
-    <li>Open the <strong>Media</strong> module.</li>
-      <li>Click the video title link to open the video properties page.</li>
-      <li>Use the preview player to play the video. Pause the video at the point where you want to add a cue point.</li>
-      <li>Click <span class="button-blue-text-bordered"> Add cue point</span>.</li>
-      <li>If needed, adjust the <strong>Timecode (hh:mm:ss)</strong> values for the cue point. Note that the <strong>seconds</strong> field supports milliseconds after the decimal point.</li>
-      <li>Select the <strong>Type</strong> of cue point and then add the appropriate metadata.
+    <li>Ouvrez le<strong> module</strong> Médias.</li>
+      <li>Cliquez sur le lien du titre de la vidéo pour ouvrir la page des propriétés de la vidéo.</li>
+      <li>Utilisez le lecteur de prévisualisation pour lire la vidéo. Mettez la vidéo en pause à l'endroit où vous souhaitez ajouter un point de repère.</li>
+      <li>Cliquez sur<span class="button-blue-text-bordered"> Ajouter un point de repère</span>.</li>
+      <li>Si nécessaire, ajustez les<strong> valeurs du</strong> code temporel (hh:mm:ss) pour le point de repère. Notez que le<strong> champ</strong> secondes prend en charge les millisecondes après la virgule décimale.</li>
+      <li>Sélectionnez le<strong> type</strong> de point de repère, puis ajoutez les métadonnées appropriées.
         <ul>
-          <li><strong>ad</strong> - An ad request will be made. When using ad cue points, the player should be <a href="/players/configuring-player-advertising-using-players-module.html">configured for advertising</a>.</li>
-          <li><strong>code</strong> - Cue points will be handled programmatically. See the <a href="https://player.support.brightcove.com/general/implementing-cue-points-programmatically.html">Implementing Cue Points Programmatically</a> developer document for more information.</li>
-        </ul>
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/node15151-add-code-cue-point.png" /></figure>
+          <li><strong>ad</strong> - Une demande d'annonce sera effectuée. Lorsque vous utilisez des points de repère publicitaires, le lecteur doit être<a href="/players/configuring-player-advertising-using-players-module.html"> configuré pour la publicité</a>.</li>
+          <li><strong>code</strong> - Les points de repère seront gérés par programmation. Consultez le document du<a href="https://player.support.brightcove.com/general/implementing-cue-points-programmatically.html"> développeur</a> Implémentation des points de repère par programmation pour plus d'informations.</li>
+        </ul> <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/node15151-add-code-cue-point.png" /></figure>
       </li>
-      <li>Enter a <strong>Name</strong> for the cue point. The name value can be accessed <a href="https://player.support.brightcove.com/general/implementing-cue-points-programmatically.html">programmatically</a>.</li>
-      <li>Enter <strong>Metadata</strong> (for code cue points) or <strong>Key/Value Pairs</strong> (for ad cue points).
+      <li>Entrez un<strong> nom</strong> pour le point de repère. La valeur du nom est accessible<a href="https://player.support.brightcove.com/general/implementing-cue-points-programmatically.html"> par programme</a>.</li>
+      <li>Entrez<strong> des métadonnées</strong> (pour les points de repère de code) ou des paires<strong> clé/valeur</strong> (pour les points de repère publicitaires).
         <ul>
-          <li><strong>Metadata</strong> - Optional metadata that is stored with the cue point. Metadata can be accessed <a href="https://player.support.brightcove.com/general/implementing-cue-points-programmatically.html">programmatically</a>. One example of when you might want to use a code cue point and pass metadata is when you want to display different calls to action as the video is playing. See the <a href="https://player.support.brightcove.com/code-samples/brightcove-player-sample-cue-points-display-cta.html">Brightcove Player Sample: Cue Points Display CTA</a> for an example.</li>
-          <li><strong>Key/Value Pairs</strong> - Key/value pairs that can be passed to an ad request. A key-value pair is a set of two linked data items: a key, which is a unique identifier for some item of data, and the value, which is either the data that is identified or a pointer to the location of that data. Key/value pairs can be used to help provide more targeted advertisements. Whatever is entered here will be copied into the ad tag where the <code translate="No">{mediainfo.ad_keys}</code> macro is inserted. For more information, see <a href="https://player.support.brightcove.com/plugins/advertising-ima3-plugin.html#Ad_macros_and_the_serverUrl">Advertising with the IMA3 Plugin</a>.</li>
+          <li><strong>Métadonnées</strong>: métadonnées facultatives stockées avec le point de repère. Les métadonnées sont accessibles<a href="https://player.support.brightcove.com/general/implementing-cue-points-programmatically.html"> par programme</a>. Par exemple, vous pouvez utiliser un point de repère de code et transmettre des métadonnées lorsque vous souhaitez afficher différents appels à l'action pendant la lecteur de la vidéo. Consultez l'exemple de lecteur<a href="https://player.support.brightcove.com/code-samples/brightcove-player-sample-cue-points-display-cta.html"> Brightcove: Les points de repère affichent</a> le CTA par exemple.</li>
+          <li><strong>Paires clé/valeur</strong>: paires clé/valeur pouvant être transmises à une demande d'annonce. Une paire clé-valeur est un ensemble de deux éléments de données liés: une clé, qui est un identifiant unique pour certains éléments de données, et la valeur, qui est soit les données identifiées, soit un pointeur vers l'emplacement de ces données. Les paires clé/valeur peuvent être utilisées pour fournir des publicités plus ciblées. Tout ce qui est saisi ici sera copié dans la balise d'annonce où la<code translate="No"> macro</code> {mediainfo.ad_keys} est insérée. Pour plus d'informations, consultez<a href="https://player.support.brightcove.com/plugins/advertising-ima3-plugin.html#Ad_macros_and_the_serverUrl"> Publicité avec le plugin IMA3</a>.</li>
         </ul>
       </li>
     </ol>
-    <p>After cue points are added to a video, at runtime, the cue points are converted into HTML5 WebVTT cue elements. When this conversion takes place, some of the cue point data, like type and cue point time, are converted into the text track. The cue point time value will be mapped into the WebVTT cue <code translate="No">startTime</code> and <code translate="No">endTime</code> properties. See <a href="https://dev.w3.org/html5/webvtt/#the-vttcue-interface">this document</a> for more information on the VTTCue interface.</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="edit">Editing cue points</h2>
-    <p>To edit cue points in a video, follow these steps:</p>
+    <p>Une fois les points de repère ajoutés à une vidéo, au moment de l'exécution, les points de repère sont convertis en éléments de repère HTML5 WebVTT. Lorsque cette conversion a lieu, certaines des données de point de repère, telles que le type et l'heure du point de repère, sont converties dans la piste de texte. La valeur temporelle du point de repère sera mappée dans les<code translate="No"> propriétés</code> StartTime<code translate="No"> et</code> EndTime du signal WebVTT. Consultez<a href="https://dev.w3.org/html5/webvtt/#the-vttcue-interface"> ce document</a> pour plus d'informations sur l'interface VTTCue.</p>  </section><section class="bcls-section">
+    <h2 id="edit">Édition des points de repère</h2>
+    <p>Pour modifier les points de repère d'une vidéo, procédez comme suit:</p>
     <ol class="bcls-tasklist-restart">
-      <li>Open the <strong>Media</strong> module.</li>
-      <li>Click the video title link to open the video properties page.</li>
-      <li>Click the cue point to edit in the timeline.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/node15151-select-cue-point.png" /></figure>
-        <aside class="bcls-aside bcls-aside--information">Note: Once in edit mode, the <strong>Previous</strong> and <strong>Next</strong> buttons can be used to navigate to other cue points.</aside>
+      <li>Ouvrez le<strong> module</strong> Médias.</li>
+      <li>Cliquez sur le lien du titre de la vidéo pour ouvrir la page des propriétés de la vidéo.</li>
+      <li>Cliquez sur le point de repère pour le modifier dans la chronologie. <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/node15151-select-cue-point.png" /></figure> <aside class="bcls-aside bcls-aside--information">Remarque: Une fois en mode édition, les<strong> boutons</strong> Précédent<strong> et</strong> Suivant peuvent être utilisés pour accéder à d'autres points de repère.</aside>
       </li>
-      <li>Edit the cue point properties and then click <span class="button-blue"> Save</span> .</li>
-    </ol>
-    <aside class="bcls-aside bcls-aside--information">Note: It is not possible to have multiple cue points with the same timecode.</aside>
-  </section>
-  <section class="bcls-section">
-    <h2 id="delete">Deleting cue points</h2>
-    <p>To delete cue points, follow these steps:</p>
+      <li>Modifiez les propriétés du point de repère, puis cliquez sur<span class="button-blue"> Enregistrer</span>.</li>
+    </ol> <aside class="bcls-aside bcls-aside--information">Remarque: Il n'est pas possible d'avoir plusieurs points de repère avec le même code temporel.</aside> </section> <section class="bcls-section">
+    <h2 id="delete">Supprimer des points de repère</h2>
+    <p>Pour supprimer des points de repère, procédez comme suit:</p>
     <ol class="bcls-tasklist-restart">
-      <li>Open the <strong>Media</strong> module.</li>
-      <li>Click the video title link to open the video properties page.</li>
-      <li>Click the cue point to delete in the timeline.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/node15151-select-cue-point.png" /></figure>
+      <li>Ouvrez le<strong> module</strong> Médias.</li>
+      <li>Cliquez sur le lien du titre de la vidéo pour ouvrir la page des propriétés de la vidéo.</li>
+      <li>Cliquez sur le point de repère à supprimer dans la chronologie. <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/node15151-select-cue-point.png" /></figure>
       </li>
-      <li>Click the Delete icon (<img alt="" src="/assets/images/s-media-img/node15151-delete-icon.png" />) next to the cue point properties.</li>
-      <li>Confirm the deletion.</li>
-    </ol>
-  </section>
-</article>
+      <li>Cliquez sur l'icône Supprimer (<img alt="" src="/assets/images/s-media-img/node15151-delete-icon.png" />) en regard des propriétés du point de repère.</li>
+      <li>Confirmez la suppression.</li>
+    </ol>   </section></article>

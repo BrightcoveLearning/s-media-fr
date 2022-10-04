@@ -1,72 +1,43 @@
 <article class="bcls-article">
-  <h1>{{ page.title }}</h1>
-  <summary>{{ page.description }}</summary>
-  <section class="bcls-section">
-    <h2 id="open">Accessing the Media module</h2>
-    <p>To access the Media module, login to <a href="https://studio.brightcove.com"> {{ site.product_short }} Studio</a> and click <strong>Media</strong> in the primary navigation. By default, a list of videos in the account will appear. Click <strong>All series</strong> in the panel navigation  to display a list of series in the account.</p>
-    {% if site.product_short == "Beacon" %}
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/media-page-home-series-beacon.png" /></figure>
-   {% endif %}
-    <p>The body of the page will display the following:</p>
+  <h1>{{page.title}}</h1> <summary>{{page.description}}</summary> <section class="bcls-section">
+    <h2 id="open">Accès au module Media</h2>
+    <p>Pour accéder au module Media, connectez-vous à<a href="https://studio.brightcove.com"> {{site.product_short}} Studio</a> et cliquez sur<strong> Media</strong> dans la navigation principale. Par défaut, une liste des vidéos du compte s'affiche. Cliquez sur<strong> Toutes les séries</strong> dans le panneau de navigation pour afficher la liste des séries du compte.</p>
+    {% if site.product_short == Balise-fr/ %}<figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/media-page-home-series-beacon.png" /></figure> {% endif %}
+    <p>Le corps de la page affiche les éléments suivants:</p>
     <ul>
-      <li>Series landscape image </li>
-      <li>Series name</li>
-      <li>Series ID - System assigned  ID (unique across all Brightcove accounts)</li>
-      <li>Status
+      <li>Image paysage de la série </li>
+      <li>Nom de la série</li>
+      <li>Series ID: ID attribué au système (unique sur tous les comptes Brightcove)</li>
+      <li>Statut
         <ul>
-          <li><img alt="" src="/assets/images/s-media-img/icon-green-eye.png" /> - Indicates the series is published (visible in {{ site.product_short }} apps)</li>
-          <li><img alt="" src="/assets/images/s-media-img/icon-red-eye.png" /> - Indicates the series is unpublished (not visible in {{ site.product_short }} apps)</li>
+          <li><img alt="" src="/assets/images/s-media-img/icon-green-eye.png" /> - Indique que la série est publiée (visible dans {{site.product_short}} applications)</li>
+          <li><img alt="" src="/assets/images/s-media-img/icon-red-eye.png" /> - Indique que la série n'est pas publiée (non visible dans les applications {{site.product_short}})</li>
         </ul>
       </li>
-    </ul>
-  </section>
-  <section class="bcls-section">
-    <h2 id="series">Creating a series</h2>
-    <p>Series can be created by clicking <strong>Create series</strong> on the <strong>All series</strong> page. For more information, see <a href="/media/creating-series-seasons-episodes.html">Creating Series, Seasons & Episodes</a>.</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="publish">Publishing and unpublishing a series</h2>
-    <p>The <strong>Status</strong> column in the series list indicates if a series is published or unpublished:</p>
+    </ul>  </section><section class="bcls-section">
+    <h2 id="series">Création d'une série</h2>
+    <p>La série peut être créée en cliquant sur<strong> Créer une série</strong> sur la<strong> page</strong> Toutes les séries. Pour plus d'informations, voir<a href="/media/creating-series-seasons-episodes.html"> Création de séries, de saisons et d'épisodes</a>.</p>  </section><section class="bcls-section">
+    <h2 id="publish">Publier et annuler la publication d'une série</h2>
+    <p>La<strong> colonne</strong> État de la liste des séries indique si une série est publiée ou non publiée:</p>
     <ul>
-      <li><img alt="" src="/assets/images/s-media-img/icon-green-eye.png" /> - Series is published  (visible in {{ site.product_short }} apps)</li>
-      <li><img alt="" src="/assets/images/s-media-img/icon-red-eye.png" /> - Series is unpublished (not visible in {{ site.product_short }} apps)</li>
+      <li><img alt="" src="/assets/images/s-media-img/icon-green-eye.png" /> - La série est publiée (visible dans {{site.product_short}} applications)</li>
+      <li><img alt="" src="/assets/images/s-media-img/icon-red-eye.png" /> - La série n'est pas publiée (non visible dans {{site.product_short}} applications)</li>
     </ul>
-    <p>To publish a series, select the checkbox next to the series name and then click <strong>Publish</strong>. To unpublish, select the checkbox next to the series name and then click <strong>Unpublish</strong>. Series that are unpublished will not be visible in {{ site.product_short }} apps.</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="delete">Deleting series</h2>
-    <p>To delete a series, click the checkbox next to the series thumbnail to delete and then click the delete button (<img alt="" src="/assets/images/s-media-img/icon-delete.png" />). Confirm the delete by clicking the <strong>Delete</strong> button.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/media-confirm-delete-series.png" /></figure>
-    <p>Series with any associated seasons cannot be deleted and will display an error message.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/media-delete-series-error.png" /></figure>
-  </section>
-  <section class="bcls-section">
-    <h2 id="edit">Editing series details</h2>
-    <p>To edit the series details, click on the series name to open the series details page. See <a href="/media/editing-series-details.html">Editing Series Details</a> for more information.</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="search">Searching series</h2>
-    <p>The <strong>Search series</strong> field at the top of the page can be used to search for a series. The search will search the series names.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/media-search-series.png" /></figure>
-  </section>
-  <section class="bcls-section">
-    <h2 id="videos">Managing videos</h2>
-    <p>Clicking <strong>All videos</strong> in the left navigation will display a list of all videos in the account. For more information, see <a href="/media/managing-videos.html">Managing Videos</a>.</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="folder">Adding videos to folders</h2>
-    <p>Videos can be added to folders to help organize content. For more information on working with folders, see <a href="/media/organizing-videos-using-folders.html">Organizing Videos Using Folders</a>.</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="remote">Adding remote videos</h2>
-    <p>With remote videos, you maintain your video files on your own or a third-party system and then provide Video Cloud with the URL of the video files. For more information on adding remote videos, see <a href="/media/working-remote-asset-videos.html">Working with Remote Asset Videos</a>.</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="addplaylist">Adding videos to playlists</h2>
-    <p>Playlists can be created to group related video content. For more information on working with playlists, see <a href="/media/creating-and-managing-playlists.html">Creating and Managing Playlists</a>.</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="upload">Uploading videos</h2>
-    <p>Clicking <strong>Upload Videos</strong> in the left navigation will open the Upload module in a new browser tab. The Upload module is used to upload videos to the account. For more information, see <a href="/media/uploading-videos-using-upload-module.html">Uploading Videos</a>.</p>
-  </section>
-</article>
+    <p>Pour publier une série, cochez la case en regard du nom de la série, puis cliquez sur<strong> Publier</strong>. Pour annuler la publication, cochez la case en regard du nom de la série, puis cliquez sur<strong> Dépublier</strong>. Les séries non publiées ne seront pas visibles dans les applications {{site.product_short}}.</p>  </section><section class="bcls-section">
+    <h2 id="delete">Suppression de séries</h2>
+    <p>Pour supprimer une série, cochez la case en regard de la miniature de la série à supprimer, puis cliquez sur le bouton Supprimer (<img alt="" src="/assets/images/s-media-img/icon-delete.png" />). Confirmez la suppression en cliquant sur le<strong> bouton</strong> Supprimer.</p> <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/media-confirm-delete-series.png" /></figure>
+    <p>Les séries associées à des saisons ne peuvent pas être supprimées et un message d'erreur s'affichera.</p>   <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/media-delete-series-error.png" /></figure></section><section class="bcls-section">
+    <h2 id="edit">Modifier les détails des séries</h2>
+    <p>Pour modifier les détails de la série, cliquez sur le nom de la série pour ouvrir la page des détails de la série. Pour plus d'informations, consultez la section<a href="/media/editing-series-details.html"> Modification</a> des détails des séries</p>  </section><section class="bcls-section">
+    <h2 id="search">Séries de recherche</h2>
+    <p>Le champ<strong> Rechercher</strong> une série en haut de la page peut être utilisé pour rechercher une série. La recherche recherchera les noms des séries.</p>   <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/media-search-series.png" /></figure></section><section class="bcls-section">
+    <h2 id="videos">Gérer les vidéos</h2>
+    <p>Cliquez sur<strong> Toutes les vidéos</strong> dans le menu de navigation de gauche pour afficher la liste de toutes les vidéos du compte. Pour plus d'informations, consultez<a href="/media/managing-videos.html"> la section Gestion des vidéos</a>.</p>  </section><section class="bcls-section">
+    <h2 id="folder">Ajout de vidéos aux dossiers</h2>
+    <p>Les vidéos peuvent être ajoutées à des dossiers pour faciliter l'organisation du contenu. Pour plus d'informations sur l'utilisation des dossiers, consultez la section<a href="/media/organizing-videos-using-folders.html"> Organisation des vidéos à l'aide de dossiers</a>.</p>  </section><section class="bcls-section">
+    <h2 id="remote">Ajout de vidéos distantes</h2>
+    <p>Avec les vidéos distantes, vous conservez vos fichiers vidéo sur votre propre système ou sur un système tiers, puis vous fournissez à Video Cloud l'URL des fichiers vidéo. Pour plus d'informations sur l'ajout de vidéos distantes, consultez la section<a href="/media/working-remote-asset-videos.html"> Utilisation des vidéos de ressources distantes</a>.</p>  </section><section class="bcls-section">
+    <h2 id="addplaylist">Ajout de vidéos à des listes de lecteur</h2>
+    <p>Des listes de lecteur peuvent être créées pour regrouper le contenu vidéo associé. Pour plus d'informations sur l'utilisation des listes de lecteur, consultez la section<a href="/media/creating-and-managing-playlists.html"> Création et gestion de listes de lecteur</a>.</p>  </section><section class="bcls-section">
+    <h2 id="upload">Mise en ligne de vidéos</h2>
+    <p>Cliquez sur<strong> Télécharger des vidéos</strong> dans le menu de navigation de gauche pour ouvrir le module Upload dans un nouvel onglet du navigateur. Le module Upload est utilisé pour télécharger des vidéos sur le compte. Pour plus d'informations, consultez la section<a href="/media/uploading-videos-using-upload-module.html"> Chargement de vidéos</a>.</p>   </section></article>

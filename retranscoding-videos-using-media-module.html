@@ -1,38 +1,22 @@
 <article class="bcls-article">
-  <h1>{{ page.title }}</h1>
-  <summary>{{ page.description }}</summary>
-  <section class="bcls-section">
-    {% if site.product_short == "Video Cloud" %}
-    <div class="training-video-player-ipx" data-experience="5a73630f7afd7a00101bc1b5" data-video-ids="4671520752001">&nbsp;</div>
-    <script src="https://players.brightcove.net/20318290001/experience_5a73630f7afd7a00101bc1b5/live.js"></script>
-   {% endif %}
-    <p>Brightcove reserves the right to update the default ingest profiles associated with {{ site.product_short }} accounts. You may also have the need to update your own, custom ingest profiles. When ingest profiles change, you may wish to have existing videos in your account retranscoded so that they have renditions that correspond to the new ingest profile settings.</p>
-    <aside class="bcls-aside bcls-aside--information">Note: The ability to retranscode existing videos is available only for Professional and Enterprise accounts. If you are interested in this feature, please contact your Account Manager.</aside>
-    <p>Videos can be retranscoded using the Media module or by using the Dynamic Ingest API. Using the <span translate="No">Dynamic Ingest API</span> may be a better solution when you have a large number of videos that require retranscoding. To retranscode videos using the Dynamic Ingest API, see the <a href="https://apis.support.brightcove.com/dynamic-ingest/getting-started/overview-dynamic-ingest-api-dynamic-delivery.html">Dynamic Ingest API Overview</a> developer document.</p>
-    <aside class="bcls-aside bcls-aside--information">Note: You cannot retranscode videos that have been shared to your account.</aside>
-    <aside class="bcls-aside bcls-aside--information">Note: Only videos that were uploaded using the Upload module or using the Dynamic Ingest API, can be retranscoded. If the video can't be retranscoded, the retranscode will fail.</aside>
-    <aside class="bcls-aside bcls-aside--information">Note: videos can only be retranscoded if the video master was archived when the video was added to the account. Older videos may not have a master, depending on the ingest profile that was used.</aside>
-  </section>
-  <section class="bcls-section">
-    <h2 id="steps">Steps to retranscode a video</h2>
-    <p>Follow these steps to replace the existing renditions for a video.</p>
+  <h1>{{page.title}}</h1> <summary>{{page.description}}</summary> <section class="bcls-section"> {% if site.product_short == Video Cloud-fr/ %}
+    <div class="training-video-player-ipx" data-experience="5a73630f7afd7a00101bc1b5" data-video-ids="4671520752001">&nbsp;</div> <script src="https://players.brightcove.net/20318290001/experience_5a73630f7afd7a00101bc1b5/live.js"></script> {% endif %}
+    <p>Brightcove se réserve le droit de mettre à jour les profils d'acquisition par défaut associés aux comptes {{site.product_short}}. Vous pouvez également avoir besoin de mettre à jour vos propres profils d'acquisition personnalisés. Lorsque les profils d'acquisition changent, vous pouvez souhaiter que les vidéos existantes de votre compte soient retranscodées afin qu'elles aient des rendus correspondant aux nouveaux paramètres de profil d'ingestion.</p> <aside class="bcls-aside bcls-aside--information">Remarque: La possibilité de retranscoder des vidéos existantes n'est disponible que pour les comptes Professional et Enterprise. Si cette fonctionnalité vous intéresse, veuillez contacter votre Account Manager.</aside>
+    <p>Les vidéos peuvent être retranscodées à l'aide du module Media ou de l'API Dynamic Ingest. L'utilisation de l'API<span translate="No"> Dynamic Ingest</span> peut être une meilleure solution lorsque vous avez un grand nombre de vidéos qui nécessitent un retranscodage. Pour retranscoder des vidéos à l'aide de l'API Dynamic Ingest, consultez le document destiné aux développeurs<a href="https://apis.support.brightcove.com/dynamic-ingest/getting-started/overview-dynamic-ingest-api-dynamic-delivery.html"> Dynamic Ingest</a> API Overview.</p> <aside class="bcls-aside bcls-aside--information">Remarque: Vous ne pouvez pas retranscoder les vidéos qui ont été partagées sur votre compte.</aside> <aside class="bcls-aside bcls-aside--information">Remarque: Seules les vidéos qui ont été téléchargées à l'aide du module Upload ou de l'API Dynamic Ingest peuvent être retranscodées. Si la vidéo ne peut pas être retranscodée, le retranscodage échouera.</aside> <aside class="bcls-aside bcls-aside--information">Remarque: les vidéos ne peuvent être retranscodées que si le masque vidéo a été archivé lorsque la vidéo a été ajoutée au compte. Les vidéos plus anciennes peuvent ne pas avoir de master, selon le profil d'ingestion utilisé.</aside> </section> <section class="bcls-section">
+    <h2 id="steps">Étapes pour retranscoder une vidéo</h2>
+    <p>Suivez ces étapes pour remplacer les rendus existants d'une vidéo.</p>
     <ol class="bcls-tasklist-restart">
-      <li>Open the <strong>Media</strong>  module.</li>
-      <li>Click on the video you want to retranscode.</li>
-{% if site.product_short == "Beacon" or site.product_short == "CorpTV" %}
-      <li>Click the <strong>Video and Tracks</strong> tab.</li>
+      <li>Ouvrez le<strong> module</strong> Médias.</li>
+      <li>Cliquez sur la vidéo que vous souhaitez retranscoder.</li>
+{% if site.product_short == Beacon-fr/ ou site.product_short == CorpTV-fr/ %}
+      <li>Cliquez sur l'<strong>onglet</strong> Vidéo et pistes.</li>
 {% endif %}
-      <li>In the <strong>Video Files</strong> section, click  <span class="button-blue-text-bordered">Retranscode</span>.</li>
-      <li>Select an ingest profile to use.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/node15921-retranscode-settings.png" /></figure>
+      <li>Dans la<strong> section Fichiers</strong> vidéo, cliquez sur<span class="button-blue-text-bordered"> Retranscoder</span>.</li>
+      <li>Sélectionnez un profil d'acquisition à utiliser. <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/node15921-retranscode-settings.png" /></figure>
         <!-- <aside class="bcls-aside bcls-aside--information">Note: Videos that were initially transcoded using a Dynamic Delivery or Context Aware ingest profile can only be retranscoded using one of those ingest profile types. Videos transcoded using a Legacy ingest profile can be retranscoded with any type of profile.</aside> --> 
       </li>
-      <li> Check <strong>Keep existing thumbnail and poster images</strong> to keep the existing images. If you uncheck this box, new images will be generated based upon the image settings in the selected ingest profile.
-        <aside class="bcls-aside bcls-aside--information">Note that if you check the box, the existing images will be preserved - however, <strong>the image URLs will change</strong>.</aside>
-        <aside class="bcls-aside bcls-aside--information">Note: If the account is enabled for forensic watermarking, there will be an option to either add a forensic watermark or keep the existing forensic watermark.</aside>
+      <li> Cochez la case<strong> Conserver les images de vignettes et</strong> d'affiches existantes pour conserver les images existantes. Si vous décochez cette case, de nouvelles images seront générées en fonction des paramètres d'image du profil d'acquisition sélectionné. <aside class="bcls-aside bcls-aside--information">Notez que si vous cochez la case, les images existantes seront conservées, mais<strong> les URL des images changeront</strong>.</aside> <aside class="bcls-aside bcls-aside--information">Remarque: Si le compte est activé pour le filigrane judiciaire, il sera possible d'ajouter un filigrane légal ou de conserver le filigrane légal existant.</aside>
       </li>
-      <li>Click <span class="button-blue"> Retranscode</span> .</li>
+      <li>Cliquez sur<span class="button-blue"> Retranscoder</span>.</li>
     </ol>
-    <p>While the new renditions are being created, the video will remain playable using the existing renditions.</p>
-  </section>
-</article>
+    <p>Pendant la création des nouveaux rendus, la vidéo restera lisible en utilisant les rendus existants.</p>   </section></article>
